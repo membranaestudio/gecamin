@@ -20,7 +20,7 @@ window.app = {
 		},
 
 		/**
-		 * Smooth scroll
+		 * Smooth scrolling options
 		 */
 		smoothScroll: {
 			enabled: true,
@@ -30,7 +30,7 @@ window.app = {
 		},
 
 		/**
-		 * Virtual scroll
+		 * Options for components that use virtual scroll
 		 */
 		virtualScroll: {
 			easing: {
@@ -50,6 +50,8 @@ window.app = {
 				touch: 0.6
 			}
 		},
+
+
 		/**
 		 * Photoswipe lightbox
 		 */
@@ -60,6 +62,7 @@ window.app = {
 			initialZoomLevel: 'fit',
 			secondaryZoomLevel: 2.5,
 			maxZoomLevel: 4,
+			// "X" (close) button
 			close: {
 				custom: true,
 				label: false,
@@ -71,6 +74,7 @@ window.app = {
 					color: 'var(--color-accent-dark-theme)'
 				}
 			},
+			// Prev & next gallery arrows
 			arrows: {
 				custom: true,
 				cursor: {
@@ -95,19 +99,24 @@ window.app = {
 		},
 
 		/**
-		 * Animationes
+		 * Animations options
 		 */
 		animations: {
 			triggerHook: 0.10,
-			speed: {
+			speed: { // slow down or speed up the animations
 				preloader: 1.0,
 				onScrollReveal: 1.0,
 				overlayMenuOpen: 1.0,
 				overlayMenuClose: 1.25,
 			},
 			curvedMasks: true,
-			curvedMasksForceRepaint: true // fix Safari
+			curvedMasksForceRepaint: true // fix Safari flickering
 		},
+
+		/**
+		 * SVG shape used for creating "drawing" effect
+		 */
+		circleTemplate: `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"><ellipse cx="50%" cy="50%" rx="48%" ry="48%" fill="none"></svg>`,
 
 		/**
 		 * Preload components
@@ -115,29 +124,38 @@ window.app = {
 		preloadComponents: true
 	},
 
-	// Contenedor externo
+	// Outer content container
 	containerEl: document.querySelector('#page-wrapper'),
-	// Contendor interno
+
+	// Inner content container
 	contentEl: document.querySelector('#page-wrapper__content'),
 
-
 	init: () => {
+		// Verifica si la app
 		app.checkIsLocalFile();
 
 		app.loadPreloader()
+			// Carga el preloader y luego precarga para componentes y dependencias. 
 			.then(() => app.injectPreloadTags())
+
+			//  Carga desplazamiento suave y el header manera asíncrona. 
 			.then(() => Promise.all([
 				app.loadScroll(),
 				app.loadHeader()
 			]))
+			// Inicializa los componentes de la página, cargando solo el primero de ellos.
 			.then(() => app.componentsManager.init({
 				scope: app.containerEl,
 				loadOnlyFirst: true
 			})[0])
+			//  Inicializa el resto de los componentes de la página. 
 			.then(() => Promise.all(app.componentsManager.init({
 				scope: app.containerEl
 			})))
+			//  Realiza un desplazamiento suave a un ancla específica en la página
 			.then(() => app.utilities.scrollToAnchorFromHash())
+
+			//  Inicia la carga perezosa de elementos y actualiza scrollTrigger
 			.then(() => {
 				app.loadLazy();
 				ScrollTrigger.refresh();
@@ -146,14 +164,15 @@ window.app = {
 
 	setup: () => {
 		/**
-		 * GSAP: desactiva advertencias en elementos nulos
+		 * GSAP: turn off console warnings when
+		 * attempting to manipulate the null target
 		 */
 		gsap.config({
 			nullTargetWarn: false
 		});
 
 		/**
-		 * GSAP: registrar dependencias
+		 * GSAP: register dependant plugins
 		 */
 		gsap.registerPlugin(DrawSVGPlugin);
 		gsap.registerPlugin(ScrollTrigger);
@@ -161,20 +180,27 @@ window.app = {
 		gsap.registerPlugin(MorphSVGPlugin);
 
 		/**
-		 * SrollTrigger: En dispositivos mobiles no recalcula altura si aparece o desaparece la barra inferior
-
+		 * Don't recalculate ScrollTrigger instances
+		 * when mobile bottom bar is automatically hiding or showing
 		 */
 		ScrollTrigger.config({
 			ignoreMobileResize: true
 		});
 	},
 
+	// Instancia de la clase Utilities para proporcionar funciones de utilidad en la aplicación
 	utilities: new Utilities(),
+	// Instancia de la clase Animations para manejar las animaciones en la aplicación
 	animations: new Animations(),
+	// Instancia de la clase Forms para manejar los formularios en la aplicación
 	forms: new Forms(),
+	// Instancia de la clase HoverEffect para gestionar efectos hover en la aplicación
 	hoverEffect: new HoverEffect(),
+
 	assetsManager: new AssetsManager(),
+
 	componentsManager: new ComponentsManager(),
+
 	lazy: null,
 
 	assets: {
@@ -202,11 +228,6 @@ window.app = {
 			type: 'script',
 			src: './js/vendor/arts-parallax.min.js',
 			id: 'arts-parallax-js'
-		}],
-		'arts-cursor-follower': [{
-			type: 'script',
-			src: './js/vendor/arts-cursor-follower.min.js',
-			id: 'arts-cursor-follower-js'
 		}],
 		'circle-type': [{
 			type: 'script',
@@ -266,7 +287,7 @@ window.app = {
 		},
 		'Header': {
 			dependencies: ['arts-header'],
-			file: './components/Header.js'
+			file: './components/Header/Header.js'
 		},
 		'MenuOverlay': {
 			dependencies: ['arts-infinite-list'],
@@ -334,10 +355,6 @@ window.app = {
 			dependencies: [],
 			file: './components/Scroll.js'
 		},
-		'AJAX': {
-			dependencies: ['barba'],
-			file: './components/AJAX.js'
-		},
 		'Masthead': {
 			dependencies: [],
 			file: './components/Masthead.js'
@@ -354,10 +371,6 @@ window.app = {
 			dependencies: ['arts-horizontal-scroll'],
 			file: './components/HorizontalScroll.js'
 		},
-		'CursorFollower': {
-			dependencies: ['arts-cursor-follower'],
-			file: './components/CursorFollower.js'
-		},
 		'PSWP': {
 			dependencies: ['photoswipe'],
 			file: './components/PSWP.js'
@@ -373,10 +386,6 @@ window.app = {
 		'Grid': {
 			dependencies: ['isotope'],
 			file: './components/Grid.js'
-		},
-		'AutoScrollNext': {
-			dependencies: [],
-			file: './components/AutoScrollNext.js'
 		},
 		'FixedHeader': {
 			dependencies: [],
@@ -440,7 +449,8 @@ window.app = {
 		}
 	},
 
-	// Lazy Loading
+	
+	// Inicializa la carga perezosa de elementos en la aplicación
 	loadLazy: () => {
 		return new Promise((resolve) => {
 			app.lazy = new LazyLoad({
@@ -453,9 +463,8 @@ window.app = {
 		});
 	},
 
-	// Deslazamiento a una sección especifica : Lenis
+	// Inicializa el desplazamiento suave en la aplicación y realiza un desplazamiento suave a la posición inicial si se especifica, luego devuelve una promesa
 	loadScroll: (resetPosition = true) => {
-
 		if (app.shouldLoadSmoothScroll()) {
 			app.components.Scroll.dependencies.push('lenis');
 		}
@@ -471,17 +480,19 @@ window.app = {
 			}).then(resetPosition ? () => app.utilities.scrollTo({
 				target: 0,
 				delay: 0,
-				duration: 0.05
-			}) : null).then(() => resolve(true));
+				duration: 0.05,
+				cb: () => resolve(true)
+			}) : () => resolve(true));
 		});
 	},
 
-	// Determina si esta o no activo smooth scroll : Lenis
+	// Verifica si se debe cargar el desplazamiento suave en función de si el dispositivo no es táctil y la opción de desplazamiento suave está habilitada en la configuración de la aplicación
 	shouldLoadSmoothScroll() {
 		return ScrollTrigger.isTouch !== 1 && app.utilities.isEnabledOption(app.options.smoothScroll);
 	},
 
-	// Header 
+
+	// Carga y devuelve el componente del encabezado de la página utilizando el gestor de componentes de la aplicación, con opciones especificadas en la configuración de la aplicación.
 	loadHeader: () => {
 		const el = document.querySelector('#page-header');
 
@@ -494,14 +505,13 @@ window.app = {
 		});
 	},
 
-	// / Lugar para crear preloader
+
+	// Resuelve la promesa para permitir que la inicialización continúe. 
 	loadPreloader() {
-		return new Promise((resolve) => {
-			resolve(true);
-		});
+		return Promise.resolve(true);
 	},
 
-	// Maneja carga de componentes
+	// manejar la precarga de recursos necesarios para los componentes de la aplicación
 	injectPreloadTags: ({
 		container
 	} = {
@@ -563,7 +573,6 @@ window.app = {
 		});
 	}
 };
-
 
 app.setup();
 app.init();

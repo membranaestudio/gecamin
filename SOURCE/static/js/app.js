@@ -1,10 +1,7 @@
 window.app = {
-	/**
-	 * --- Template Options ---
-	 */
 	options: {
 		/**
-		 * Header options
+		 * Header (ASLI)
 		 */
 		header: {
 			sticky: {
@@ -23,7 +20,7 @@ window.app = {
 		},
 
 		/**
-		 * Smooth scrolling options
+		 * Smooth scroll
 		 */
 		smoothScroll: {
 			enabled: true,
@@ -33,7 +30,7 @@ window.app = {
 		},
 
 		/**
-		 * Options for components that use virtual scroll
+		 * Virtual scroll
 		 */
 		virtualScroll: {
 			easing: {
@@ -53,26 +50,6 @@ window.app = {
 				touch: 0.6
 			}
 		},
-
-		/**
-		 * Loading screen options
-		 */
-		preloader: {
-			enabled: false,
-			timeScale: 1,
-			loadingRotation: 90,
-			loadingSteps: [
-				[20, 40],
-				[50, 80],
-				[100, 100]
-			],
-			finalDelay: 0.4,
-			finalOffset: '<20%',
-			finalRotation: 180,
-			toggleLoadClass: 'preloader_loaded',
-		},
-
-		
 		/**
 		 * Photoswipe lightbox
 		 */
@@ -83,7 +60,6 @@ window.app = {
 			initialZoomLevel: 'fit',
 			secondaryZoomLevel: 2.5,
 			maxZoomLevel: 4,
-			// "X" (close) button
 			close: {
 				custom: true,
 				label: false,
@@ -95,7 +71,6 @@ window.app = {
 					color: 'var(--color-accent-dark-theme)'
 				}
 			},
-			// Prev & next gallery arrows
 			arrows: {
 				custom: true,
 				cursor: {
@@ -120,52 +95,19 @@ window.app = {
 		},
 
 		/**
-		 * Auto transition to the next portfolio page
-		 * at the bottom
-		 */
-		autoScrollNext: {
-			webGL: {
-				enabled: false,
-				vertices: 16,
-			},
-			onSceneProgress: {
-				speed: 8,
-				amplitude: 4,
-				segments: 4,
-				scalePlane: 1.1,
-				scaleTexture: 1,
-			},
-			onSceneIdle: {
-				speed: 4,
-				amplitude: 2,
-				segments: 4,
-				scalePlane: 1,
-				scaleTexture: 1.2,
-			},
-			scrollingClass: 'auto-scroll-next_scrolling',
-			completeClass: 'auto-scroll-next_complete',
-			toggleHeaderVisibility: true
-		},
-
-		/**
-		 * Animations options
+		 * Animationes
 		 */
 		animations: {
 			triggerHook: 0.10,
-			speed: { // slow down or speed up the animations
+			speed: {
 				preloader: 1.0,
 				onScrollReveal: 1.0,
 				overlayMenuOpen: 1.0,
 				overlayMenuClose: 1.25,
 			},
 			curvedMasks: true,
-			curvedMasksForceRepaint: true // fix Safari flickering
+			curvedMasksForceRepaint: true // fix Safari
 		},
-
-		/**
-		 * SVG shape used for creating "drawing" effect
-		 */
-		circleTemplate: `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"><ellipse cx="50%" cy="50%" rx="48%" ry="48%" fill="none"></svg>`,
 
 		/**
 		 * Preload components
@@ -173,55 +115,45 @@ window.app = {
 		preloadComponents: true
 	},
 
-	// Outer content container
+	// Contenedor externo
 	containerEl: document.querySelector('#page-wrapper'),
-
-	// Inner content container
+	// Contendor interno
 	contentEl: document.querySelector('#page-wrapper__content'),
 
+
 	init: () => {
-		// Verifica si el archivo se está ejecutando localmente y muestra un mensaje de error si es así. 
 		app.checkIsLocalFile();
 
 		app.loadPreloader()
-			// Carga el preloader de la página y luego inyecta etiquetas de precarga para componentes, archivos y dependencias. 
 			.then(() => app.injectPreloadTags())
-
-			//  Carga el desplazamiento suave y el encabezado de la página de manera asíncrona. 
 			.then(() => Promise.all([
 				app.loadScroll(),
 				app.loadHeader()
 			]))
-			// Inicializa los componentes de la página, cargando solo el primero de ellos.
 			.then(() => app.componentsManager.init({
 				scope: app.containerEl,
 				loadOnlyFirst: true
 			})[0])
-			//  Inicializa el resto de los componentes de la página. 
 			.then(() => Promise.all(app.componentsManager.init({
 				scope: app.containerEl
 			})))
-			//  Realiza un desplazamiento suave a un ancla específica en la página, si se ha proporcionado en la URL. 
 			.then(() => app.utilities.scrollToAnchorFromHash())
-			//  Inicia la carga perezosa de elementos, carga la interfaz gráfica de usuario (GUI) y actualiza el controlador de desplazamiento. 
 			.then(() => {
 				app.loadLazy();
-				app.loadGUI();
 				ScrollTrigger.refresh();
 			});
 	},
 
 	setup: () => {
 		/**
-		 * GSAP: turn off console warnings when
-		 * attempting to manipulate the null target
+		 * GSAP: desactiva advertencias en elementos nulos
 		 */
 		gsap.config({
 			nullTargetWarn: false
 		});
 
 		/**
-		 * GSAP: register dependant plugins
+		 * GSAP: registrar dependencias
 		 */
 		gsap.registerPlugin(DrawSVGPlugin);
 		gsap.registerPlugin(ScrollTrigger);
@@ -229,8 +161,8 @@ window.app = {
 		gsap.registerPlugin(MorphSVGPlugin);
 
 		/**
-		 * Don't recalculate ScrollTrigger instances
-		 * when mobile bottom bar is automatically hiding or showing
+		 * SrollTrigger: En dispositivos mobiles no recalcula altura si aparece o desaparece la barra inferior
+
 		 */
 		ScrollTrigger.config({
 			ignoreMobileResize: true
@@ -238,17 +170,11 @@ window.app = {
 	},
 
 	utilities: new Utilities(),
-
 	animations: new Animations(),
-
 	forms: new Forms(),
-
 	hoverEffect: new HoverEffect(),
-
 	assetsManager: new AssetsManager(),
-
 	componentsManager: new ComponentsManager(),
-
 	lazy: null,
 
 	assets: {
@@ -276,6 +202,11 @@ window.app = {
 			type: 'script',
 			src: './js/vendor/arts-parallax.min.js',
 			id: 'arts-parallax-js'
+		}],
+		'arts-cursor-follower': [{
+			type: 'script',
+			src: './js/vendor/arts-cursor-follower.min.js',
+			id: 'arts-cursor-follower-js'
 		}],
 		'circle-type': [{
 			type: 'script',
@@ -403,6 +334,10 @@ window.app = {
 			dependencies: [],
 			file: './components/Scroll.js'
 		},
+		'AJAX': {
+			dependencies: ['barba'],
+			file: './components/AJAX.js'
+		},
 		'Masthead': {
 			dependencies: [],
 			file: './components/Masthead.js'
@@ -418,6 +353,10 @@ window.app = {
 		'HorizontalScroll': {
 			dependencies: ['arts-horizontal-scroll'],
 			file: './components/HorizontalScroll.js'
+		},
+		'CursorFollower': {
+			dependencies: ['arts-cursor-follower'],
+			file: './components/CursorFollower.js'
 		},
 		'PSWP': {
 			dependencies: ['photoswipe'],
@@ -473,19 +412,16 @@ window.app = {
 		}
 	},
 
+	// Verifica si la app se está ejecutando localmente.
 	checkIsLocalFile: () => {
 		if (window.location.protocol === 'file:') {
 			const
 				labelElement = document.createElement('div'),
-				errorMessage = 'Please use a web-server to view this page.',
-				helpURL = 'https://docs.artemsemkin.com/asli/html/getting-started/classic-workflow.html',
-				helpLabel = 'Learn More';
+				errorMessage = 'Utilice un servidor web para ver esta página.';
 
 			labelElement.id = 'localFilesystem';
 			labelElement.className = 'text-center';
 			labelElement.innerHTML += `<div class="strong mb-4">${errorMessage}</div>`;
-			labelElement.innerHTML += `<a class="button button_solid bg-dark-3 ui-element" href="${helpURL}" target="_blank">${helpLabel}</a>`;
-
 			gsap.set(labelElement, {
 				position: 'fixed',
 				top: '50%',
@@ -500,74 +436,11 @@ window.app = {
 			});
 
 			document.body.append(labelElement);
-
 			throw new Error(label);
 		}
 	},
 
-	loadGUI: () => {
-		if (!app.shouldLoadGUI()) {
-			return;
-		}
-
-		let el = document.querySelector('.js-gui');
-		let mq;
-
-		if (!el) {
-			el = document.createElement('div');
-			el.classList.add('js-gui');
-
-			document.body.appendChild(el);
-		}
-
-		if (app.shouldLoadGUI()) {
-			mq = window.matchMedia('(min-width: 992px)');
-
-			if (mq.matches) {
-				return load({
-					matches: true
-				});
-			} else {
-				if (typeof mq.addEventListener === 'function') {
-					mq.addEventListener('change', load);
-				} else {
-					mq.addListener(load);
-				}
-			}
-		} else {
-			return load({
-				matches: true
-			});
-		}
-
-		function load(event) {
-			if (event && event.matches) {
-				if (mq) {
-					if (typeof mq.removeEventListener === 'function') {
-						mq.removeEventListener('change', this);
-					} else {
-						mq.removeListener(this);
-					}
-				}
-
-				return app.componentsManager.loadComponent({
-					el,
-					loadInnerComponents: false,
-					parent: null,
-					storage: app.componentsManager.instances.persistent,
-					name: 'Gui',
-					options: app.options.gui,
-				});
-			}
-		}
-	},
-
-	shouldLoadGUI: () => {
-		const currentURL = new URL(window.location.href);
-
-		return currentURL.searchParams.has('gui') && currentURL.searchParams.get('gui') !== 'false';
-	},
-
+	// Lazy Loading
 	loadLazy: () => {
 		return new Promise((resolve) => {
 			app.lazy = new LazyLoad({
@@ -580,7 +453,9 @@ window.app = {
 		});
 	},
 
+	// Deslazamiento a una sección especifica : Lenis
 	loadScroll: (resetPosition = true) => {
+
 		if (app.shouldLoadSmoothScroll()) {
 			app.components.Scroll.dependencies.push('lenis');
 		}
@@ -596,20 +471,17 @@ window.app = {
 			}).then(resetPosition ? () => app.utilities.scrollTo({
 				target: 0,
 				delay: 0,
-				duration: 0.05,
-				cb: () => resolve(true)
-			}) : () => resolve(true));
+				duration: 0.05
+			}) : null).then(() => resolve(true));
 		});
 	},
 
+	// Determina si esta o no activo smooth scroll : Lenis
 	shouldLoadSmoothScroll() {
 		return ScrollTrigger.isTouch !== 1 && app.utilities.isEnabledOption(app.options.smoothScroll);
 	},
 
-	
-
-	
-
+	// Header 
 	loadHeader: () => {
 		const el = document.querySelector('#page-header');
 
@@ -622,47 +494,17 @@ window.app = {
 		});
 	},
 
-
-
-	shouldNotLoadCursor() {
-		return !app.options.cursorFollower || (!!app.options.cursorFollower && !app.options.cursorFollower.enabled);
-	},
-
-	shouldLoadCursor() {
-		return app.utilities.isEnabledOption(app.options.cursorFollower) && !!app.options.cursorFollower.matchMedia;
-	},
-
+	// / Lugar para crear preloader
 	loadPreloader() {
 		return new Promise((resolve) => {
-			const el = document.querySelector('#js-preloader');
-
-			if (el) {
-				if (app.shouldLoadPreloader()) {
-					app.componentsManager.loadComponent({
-						el,
-						loadInnerComponents: true,
-						parent: null,
-						storage: app.componentsManager.instances.persistent,
-						options: app.options.preloader,
-					}).then(() => resolve(true));
-				} else {
-					el.style.display = 'none';
-
-					resolve(true);
-				}
-			} else {
-				resolve(true);
-			}
+			resolve(true);
 		});
 	},
 
-	shouldLoadPreloader() {
-		return app.utilities.isEnabledOption(app.options.preloader);
-	},
-
-	setLoaded: () => { },
-
-	injectPreloadTags: ({ container } = {
+	// Maneja carga de componentes
+	injectPreloadTags: ({
+		container
+	} = {
 		container: app.containerEl
 	}) => {
 		return new Promise((resolve) => {
@@ -685,7 +527,10 @@ window.app = {
 
 					// Preload component files if there are any
 					if (files && files.length) {
-						files.forEach(({ type, src }) => {
+						files.forEach(({
+							type,
+							src
+						}) => {
 							app.assetsManager.injectPreload({
 								src,
 								rel,
@@ -698,7 +543,10 @@ window.app = {
 					if (dependencies && dependencies.length) {
 						dependencies.forEach((dep) => {
 							if (dep in app.assets) {
-								app.assets[dep].forEach(({ type, src }) => {
+								app.assets[dep].forEach(({
+									type,
+									src
+								}) => {
 									app.assetsManager.injectPreload({
 										src,
 										rel,
@@ -716,8 +564,6 @@ window.app = {
 	}
 };
 
-app.loaded = new Promise((resolve) => {
-	app.setLoaded = resolve;
-});
+
 app.setup();
 app.init();

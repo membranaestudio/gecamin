@@ -18,7 +18,7 @@ const
   compilation = {
     src: '../SOURCE', // source dir (current)
     dist: '../HTML', // compilation dir
-    minify: true
+    minify: false
   };
 
 /* ======================================================================== */
