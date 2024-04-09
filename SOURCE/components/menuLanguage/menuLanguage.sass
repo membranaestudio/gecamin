@@ -1,0 +1,24 @@
+.menu-language
+	position: relative
+	+reset-list
+	margin-left: 2.5em
+	font-size: 14px
+	line-height: 2
+	> li
+		position: relative
+		display: inline-block
+		&:not(:last-child)
+			margin-right: 5px
+		a
+			display: block
+			padding: 4px 6px
+			color: var(--color-dark-1)
+			border: 2px solid var(--color-dark-1)
+			border-radius: 50%
+			font-weight: 500
+	> li.current-menu-item
+		> a
+			color: var(--color-accent)
+			background: var(--color-dark-2)
+			border: 2px solid var(--color-dark-2)
+			color: var(--color-light-1)

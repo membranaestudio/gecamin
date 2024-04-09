@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/countdown@2"></script>
+</head>
+<body>
+
+  <div id="countdown"></div>
+
+  <script>
+    // Establece la fecha final para el contador regresivo (año, mes - 1, día, hora, minuto, segundo)
+    var endDate = new Date('2024-04-10T00:00:00');
+
+    // Inicializa el contador regresivo
+    var countdown = new Countdown(endDate, function (ts) {
+      // Actualiza el contenido del elemento con id "countdown" cada segundo
+      document.getElementById('countdown').innerHTML = ts.days + "d " + ts.hours + "h " + ts.minutes + "m " + ts.seconds + "s";
+    }, Countdown.DAYS | Countdown.HOURS | Countdown.MINUTES | Countdown.SECONDS);
+
+    // Comienza el contador regresivo
+    countdown.start();
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/countdown@2"></script>
+</body>
+</html>

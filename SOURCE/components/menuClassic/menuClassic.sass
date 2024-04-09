@@ -2,17 +2,20 @@
 	position: relative
 	+reset-list
 	margin: 0 -0.25em
-	font-weight: bold
 	font-size: 14px
 	line-height: 2
 	> li
 		position: relative
 		display: inline-block
 		&:not(:last-child)
-			margin-right: 0.25em
+			margin-right: 10px
 		a
 			display: block
-			padding: 0.5em 1em
+			padding: 4px 18px
+			color: var(--color-dark-1)
+			border: 2px solid var(--color-dark-1)
+			border-radius: 30px
+			font-weight: 500
 	> li.menu-item-has-children
 		> a
 			&:after
@@ -47,6 +50,9 @@
 	> li.current-menu-item
 		> a
 			color: var(--color-accent)
+			background: var(--color-dark-2)
+			border: 2px solid var(--color-dark-2)
+			color: var(--color-light-1)
 	> li.current-menu-ancestor
 		> a
 			color: var(--color-accent)
@@ -96,8 +102,12 @@
 			transform: translate(0.5em, 0)
 			opacity: 0
 			visibility: hidden
-.ajax-loading
-	.menu-classic
-		pointer-events: auto
-		*
-			pointer-events: auto
+	.register
+		background: var(--color-dark-1)
+		color: var(--color-light-1)
+		text-transform: uppercase
+		span
+			margin-right: 4px
+			font-size: 20px
+			position: relative
+			top: 4px

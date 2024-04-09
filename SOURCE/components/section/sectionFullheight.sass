@@ -1,13 +1,19 @@
+\:root
+	--height-marquee: 80px
+
 .section-fullheight
 	display: flex
+	flex-direction: column
 .section-fullheight__inner
 	position: relative
-	display: flex
-	flex-direction: column
-	justify-content: center
 	width: 100%
-	min-height: 100vh
+	min-height: calc( 100vh - var(--height-marquee) )
 	z-index: 50
+
+.section-fullheight__marquee
+	height: var(--height-marquee)
+	background: var(--color-dark-2)
+
 .section-fullheight__inner_mobile
 	height: calc(var(--fix-bar-vh, 1vh) * 100)
 	min-height: 0vh

@@ -29,6 +29,7 @@ export default class MyCustomComponent extends BaseComponent {
 
   // Component code goes here
   init() {
+    console.log('test2')
     // You can organize it in functions
     this.myFunction1();
     this.myFunction2();

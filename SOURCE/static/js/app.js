@@ -1,7 +1,7 @@
 window.app = {
 	options: {
 		/**
-		 * Header (ASLI)
+		 * Header options
 		 */
 		header: {
 			sticky: {
@@ -20,7 +20,7 @@ window.app = {
 		},
 
 		/**
-		 * Smooth scroll
+		 * Smooth scrolling options
 		 */
 		smoothScroll: {
 			enabled: true,
@@ -30,7 +30,7 @@ window.app = {
 		},
 
 		/**
-		 * Virtual scroll
+		 * Options for components that use virtual scroll
 		 */
 		virtualScroll: {
 			easing: {
@@ -50,6 +50,8 @@ window.app = {
 				touch: 0.6
 			}
 		},
+
+
 		/**
 		 * Photoswipe lightbox
 		 */
@@ -60,6 +62,7 @@ window.app = {
 			initialZoomLevel: 'fit',
 			secondaryZoomLevel: 2.5,
 			maxZoomLevel: 4,
+			// "X" (close) button
 			close: {
 				custom: true,
 				label: false,
@@ -71,6 +74,7 @@ window.app = {
 					color: 'var(--color-accent-dark-theme)'
 				}
 			},
+			// Prev & next gallery arrows
 			arrows: {
 				custom: true,
 				cursor: {
@@ -95,18 +99,18 @@ window.app = {
 		},
 
 		/**
-		 * Animationes
+		 * Animations options
 		 */
 		animations: {
 			triggerHook: 0.10,
-			speed: {
+			speed: { // slow down or speed up the animations
 				preloader: 1.0,
 				onScrollReveal: 1.0,
 				overlayMenuOpen: 1.0,
 				overlayMenuClose: 1.25,
 			},
-			curvedMasks: true,
-			curvedMasksForceRepaint: true // fix Safari
+			curvedMasks: false,
+			curvedMasksForceRepaint: false // fix Safari flickering
 		},
 
 		/**
@@ -145,25 +149,19 @@ window.app = {
 	},
 
 	setup: () => {
-		/**
-		 * GSAP: desactiva advertencias en elementos nulos
-		 */
+		// GSAP: desactiva advertencias en elementos nulos
+
 		gsap.config({
 			nullTargetWarn: false
 		});
 
-		/**
-		 * GSAP: registrar dependencias
-		 */
+		// GSAP: registrar dependencias
 		gsap.registerPlugin(DrawSVGPlugin);
 		gsap.registerPlugin(ScrollTrigger);
 		gsap.registerPlugin(ScrollToPlugin);
 		gsap.registerPlugin(MorphSVGPlugin);
 
-		/**
-		 * SrollTrigger: En dispositivos mobiles no recalcula altura si aparece o desaparece la barra inferior
-
-		 */
+		// SrollTrigger: En dispositivos mobiles no recalcula altura si aparece o desaparece la barra inferior
 		ScrollTrigger.config({
 			ignoreMobileResize: true
 		});
@@ -183,30 +181,15 @@ window.app = {
 			src: './js/vendor/arts-header.min.js',
 			id: 'arts-header-js'
 		}],
-		'arts-fullpage-slider': [{
-			type: 'script',
-			src: './js/vendor/arts-fullpage-slider.min.js',
-			id: 'arts-fullpage-slider-js'
-		}],
 		'arts-infinite-list': [{
 			type: 'script',
 			src: './js/vendor/arts-infinite-list/arts-infinite-list.min.js',
 			id: 'arts-infinite-list-js'
 		}],
-		'arts-horizontal-scroll': [{
-			type: 'script',
-			src: './js/vendor/arts-horizontal-scroll.min.js',
-			id: 'arts-horizontal-scroll-js'
-		}],
 		'arts-parallax': [{
 			type: 'script',
 			src: './js/vendor/arts-parallax.min.js',
 			id: 'arts-parallax-js'
-		}],
-		'arts-cursor-follower': [{
-			type: 'script',
-			src: './js/vendor/arts-cursor-follower.min.js',
-			id: 'arts-cursor-follower-js'
 		}],
 		'circle-type': [{
 			type: 'script',
@@ -226,11 +209,6 @@ window.app = {
 			type: 'script',
 			src: './js/vendor/lenis.min.js',
 			id: 'lenis-js'
-		}],
-		'barba': [{
-			type: 'script',
-			src: './js/vendor/barba.min.js',
-			id: 'barba-js'
 		}],
 		'curtains': [{
 			type: 'script',
@@ -252,51 +230,17 @@ window.app = {
 			src: './js/vendor/isotope.pkgd.min.js',
 			id: 'isotope-js'
 		}],
-		'dat-gui': [{
+		'swipper': [{
 			type: 'script',
-			src: './js/vendor/dat.gui.min.js',
-			id: 'dat-gui-js'
+			src: './js/vendor/swiper.min.js',
+			id: 'swiper-js'
 		}]
 	},
 
 	components: {
-		'Preloader': {
-			dependencies: [],
-			file: './components/Preloader.js'
-		},
 		'Header': {
 			dependencies: ['arts-header'],
-			file: './components/Header.js'
-		},
-		'MenuOverlay': {
-			dependencies: ['arts-infinite-list'],
-			file: './components/MenuOverlay.js'
-		},
-		'MenuClassic': {
-			dependencies: [],
-			file: './components/MenuClassic.js'
-		},
-		'SliderFullpageBackgroundsMask': {
-			dependencies: ['arts-fullpage-slider'],
-			files: [{
-				type: 'script',
-				src: './js/components/SliderFullpageBase.js',
-				id: 'slider-fullpage-base-js'
-			}],
-			file: './components/SliderFullpageBackgroundsMask.js'
-		},
-		'SliderFullpageBackgroundsSlide': {
-			dependencies: ['arts-fullpage-slider'],
-			files: [{
-				type: 'script',
-				src: './js/components/SliderFullpageBase.js',
-				id: 'slider-fullpage-base-js'
-			}],
-			file: './components/SliderFullpageBackgroundsSlide.js'
-		},
-		'SliderTestimonials': {
-			dependencies: ['arts-fullpage-slider'],
-			file: './components/SliderTestimonials.js'
+			file: './components/Header/Header.js'
 		},
 		'InfiniteList': {
 			dependencies: ['arts-infinite-list'],
@@ -334,29 +278,17 @@ window.app = {
 			dependencies: [],
 			file: './components/Scroll.js'
 		},
-		'AJAX': {
-			dependencies: ['barba'],
-			file: './components/AJAX.js'
-		},
 		'Masthead': {
 			dependencies: [],
 			file: './components/Masthead.js'
 		},
 		'Content': {
 			dependencies: [],
-			file: './components/Content.js'
+			file: './components/content/Content.js'
 		},
 		'Parallax': {
 			dependencies: ['arts-parallax'],
 			file: './components/Parallax.js'
-		},
-		'HorizontalScroll': {
-			dependencies: ['arts-horizontal-scroll'],
-			file: './components/HorizontalScroll.js'
-		},
-		'CursorFollower': {
-			dependencies: ['arts-cursor-follower'],
-			file: './components/CursorFollower.js'
 		},
 		'PSWP': {
 			dependencies: ['photoswipe'],
@@ -402,13 +334,17 @@ window.app = {
 			dependencies: [],
 			file: './components/Mask.js'
 		},
-		'Gui': {
-			dependencies: ['dat-gui', 'barba'],
-			file: './components/Gui.js'
+		'Swipper': {
+			dependencies: ['swipper'],
+			file: './components/swiper/Swiper.js'
+		},
+		'CountDown': {
+			dependencies: [],
+			file: './components/countdown/CountDown.js'
 		},
 		'MyCustomComponent': {
 			dependencies: [],
-			file: './components/MyCustomComponent.js'
+			file: './components/myCustomComponent/MyCustomComponent.js'
 		}
 	},
 
@@ -484,12 +420,12 @@ window.app = {
 	// Header 
 	loadHeader: () => {
 		const el = document.querySelector('#page-header');
-
 		return app.componentsManager.loadComponent({
 			el,
 			loadInnerComponents: true,
 			storage: app.componentsManager.instances.persistent,
 			parent: null,
+			name: 'Header',
 			options: app.options.header
 		});
 	},
@@ -505,8 +441,8 @@ window.app = {
 	injectPreloadTags: ({
 		container
 	} = {
-		container: app.containerEl
-	}) => {
+			container: app.containerEl
+		}) => {
 		return new Promise((resolve) => {
 			if (!!app.options.preloadComponents && container instanceof HTMLElement) {
 				const nextComponents = [...container.querySelectorAll('[data-arts-component-name]')];

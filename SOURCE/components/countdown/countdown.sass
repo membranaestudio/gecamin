@@ -1,0 +1,16 @@
+#countdown
+	display: flex
+	> div
+		position: relative
+		margin: 0px 24px
+		text-align: center
+		&::after
+			content: ':'
+			position: absolute
+			right: -20px
+			top: 50%
+			transform: translateY(-50%)
+			+fluid('font-size', 20, 30)
+		&:last-child
+			&::after
+				display: none

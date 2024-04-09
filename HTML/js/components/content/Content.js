@@ -21,9 +21,11 @@ export default class Content extends BaseComponent {
 		});
 
 		this.setup();
+
 	}
 
 	prepareAnimation() {
+
 		return new Promise((resolve) => {
 			const tl = gsap.timeline({
 				onComplete: () => {
