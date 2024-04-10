@@ -1081,7 +1081,7 @@ class BaseAnimation {
 					shape: 'rectangle',
 					ease: 'power3.inOut',
 					duration: 0.9,
-					scale: 1.2,
+					scale: 1.1,
 					// overwrite: true,
 					scaleInner: '.js-animated-mask-inner',
 				}
