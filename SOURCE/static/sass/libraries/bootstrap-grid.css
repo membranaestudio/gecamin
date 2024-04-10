@@ -319,9 +319,21 @@
   --bs-gutter-x: 3rem;
 }
 
+
 .g-5,
 .gy-5 {
   --bs-gutter-y: 3rem;
+}
+
+.g-6,
+.gx-6 {
+  --bs-gutter-x: 4rem;
+}
+
+
+.gx-6,
+.gy-6 {
+  --bs-gutter-y: 4rem;
 }
 
 @media (min-width: 576px) {
