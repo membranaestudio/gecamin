@@ -45,7 +45,7 @@
 		<div class="page-wrapper__content" id="page-wrapper__content">
 
 			<!-- SLIDER FULLHEIGHT -->
-			<!-- <div id="slider" class="section-fullheight-column">
+			<!-- <section id="slider" class="section-fullheight-column">
 				<script>
 					fetch('template/swiper.html')
 						.then(response => response.text())
@@ -54,7 +54,7 @@
 						})
 						.catch(error => console.error('Error al cargar el fragmento:', error));
 				</script>
-			</div> -->
+			</section> -->
 
 
 			<!-- LOGOS -->
@@ -227,7 +227,7 @@
 				</div>
 			</section> -->
 
-			<!-- IMG-->
+			<!-- IMG -->
 			<!-- <section class="section">
 				<div class="js-parallax h-600" data-arts-color-theme="dark" data-arts-component-name="Parallax"
 					data-arts-component-options="{inner: {factor: {y: 0.12}}}" data-arts-os-animation="true">
@@ -255,7 +255,16 @@
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
-								<img src="img/icons/icon_talks.svg" width="70" height="70" alt="" />
+
+								<div class="lazy-wrapper" style="width: 70px">
+									<img class="lazy"
+										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+										decoding="async" data-src="img/icons/icon_talks.svg" width="70" height="70"
+										alt="" />
+								</div>
+
+
+
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
 									<div class="js-counter-up__number h2 color-dark-2">20</div>
@@ -267,7 +276,16 @@
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
-								<img src="img/icons/icon_talks.svg" width="70" height="70" alt="" />
+
+								<div class="lazy-wrapper" style="width: 70px">
+									<img class="lazy"
+										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+										decoding="async" data-src="img/icons/icon_talks.svg" width="70" height="70"
+										alt="" />
+								</div>
+
+
+
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
 									<div class="js-counter-up__number h2 color-dark-2">20</div>
@@ -279,7 +297,16 @@
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
-								<img src="img/icons/icon_talks.svg" width="70" height="70" alt="" />
+
+								<div class="lazy-wrapper" style="width: 70px">
+									<img class="lazy"
+										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+										decoding="async" data-src="img/icons/icon_talks.svg" width="70" height="70"
+										alt="" />
+								</div>
+
+
+
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
 									<div class="js-counter-up__number h2 color-dark-2">20</div>
@@ -291,7 +318,16 @@
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
-								<img src="img/icons/icon_talks.svg" width="70" height="70" alt="" />
+
+								<div class="lazy-wrapper" style="width: 70px">
+									<img class="lazy"
+										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+										decoding="async" data-src="img/icons/icon_talks.svg" width="70" height="70"
+										alt="" />
+								</div>
+
+
+
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
 									<div class="js-counter-up__number h2 color-dark-2">20</div>
@@ -299,13 +335,15 @@
 								<h4 class="h4 color-dark-2 m-0">Participans</h4>
 							</div>
 						</div>
+
+
 					</div>
 				</div>
 			</section> -->
 
 
 			<!-- IMG + TEXT -->
-			<!-- <div class="section bg-light-2" data-arts-component-name="Content" data-arts-os-animation="true">
+			<!-- <section class="section bg-light-2" data-arts-component-name="Content" data-arts-os-animation="true">
 				<div class="width-img">
 					<div class="w-text">
 						<div class="px-4" style="max-width: 800px; margin: 0 auto;">
@@ -360,14 +398,279 @@
 					</div>
 
 				</div>
-			</div> -->
+			</section> -->
+
+
+			<!-- CONTENT + IMG -->
+			<!-- <section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true"
+				data-arts-color-theme="dark">
+				<div class="container bg-dark-1 " style="max-width: 1200px">
+					<div class="row ">
+						<div class="w-35 p-0">
+							<div class="js-parallax h-100" data-arts-component-name="Parallax"
+								data-arts-component-options="{inner: {factor: {y: 0.1}}}" data-arts-os-animation="true">
+								<div class="overflow-hidden h-100" data-arts-os-animation-name="animatedMaskFromTop">
+									<div class="js-animated-mask-inner h-100">
+										<img class="lazy of-cover js-parallax__inner"
+											src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+											decoding="async" data-src="img/home/img_early_bird_registration.jpg"
+											width="900" height="776" alt="" />
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="w-55 d-flex align-items-center">
+							<div class="text-strong py-2 px-4" data-arts-split-text-preset="animatedLines">
+								<h2 class="h2">Early Bird Registration until <span class="fw-bold">4, 2024</span> </h2>
+
+								<div class="mt-3">
+									<a class="button button_icon ui-element button_bordered color-accent" href="#">
+										<span class="button__label button__label-normal">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Conference Brochure</span>
+
+										</span>
+										<span class="button__label button__label-hover">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Conference Brochure</span>
+
+										</span>
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
 
 
 
 
 
 
-			<!-- FOOTER -->
+
+				</div>
+			</section> -->
+
+
+			<!-- CONTENT COLUMN -->
+			<!-- <section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5" data-arts-split-text-preset="animatedLines">
+							<h1 cass="h1">Streaming <br>Platform</h1>
+						</div>
+						<div class="col-md-7">
+							<div class="text-strong" data-arts-split-text-preset="animatedLines">
+								<p>Visit the <span>Congress 2024 Streaming Platform</span>, a space we have created to
+									enrich
+									the
+									technical program of the conference, which takes place in person.
+									Here, you will be able to access the Virtual Technical Courses that will be held
+									live.
+									They
+									will also be recorded and uploaded here so that you can watch them as many times as
+									you
+									want.
+
+								</p>
+								<div class="mt-small">
+									<a class="button button_icon ui-element button_bordered color-accent" href="#">
+										<span class="button__label button__label-normal">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Go to the platform</span>
+
+										</span>
+										<span class="button__label button__label-hover">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Go to the platform</span>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+
+			<!-- TAB -->
+			<section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
+				<div class="container">
+					<h1 data-arts-split-text-preset="animatedLines">Registration</h1>
+
+					<div class="row">
+						<div class="col-md-4 b-solid-black" data-arts-os-animation-name="animatedJump">
+							<div>
+								<h4 class="m-0 mb-3">General</h4>
+								<h4>$1070 <span class="h5 color-dark-2">usd</span></h4>
+								<p class="small">* You can review the details of the services you will have access to by
+									checking here.</p>
+
+								<div class="mt-5">
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+								</div>
+
+								<div class="mt-4 text-center">
+									<a class="button button_icon ui-element button_bordered color-accent" href="#">
+										<span class="button__label button__label-normal">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Get Started</span>
+
+										</span>
+										<span class="button__label button__label-hover">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Get Started</span>
+
+										</span>
+									</a>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-4 b-solid-black" data-arts-os-animation-name="animatedJump">
+							<div data-arts-split-text-preset="animatedLines">
+								<h4 class="m-0 mb-3">General</h4>
+								<h4>$1070 <span class="h5 color-dark-2">usd</span></h4>
+								<p class="small">* You can review the details of the services you will have access to by
+									checking here.</p>
+
+								<div class="mt-5" data-arts-split-text-preset="animatedLines">
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+									<div class="icon-list">
+										<div class="material-symbols-outlined">
+											arrow_outward
+										</div>
+										<p>Access to all plenary and technical sessions</p>
+									</div>
+								</div>
+
+								<div class="mt-4 text-center">
+									<a class="button button_icon ui-element button_bordered color-accent" href="#">
+										<span class="button__label button__label-normal">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Get Started</span>
+
+										</span>
+										<span class="button__label button__label-hover">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Get Started</span>
+
+										</span>
+									</a>
+								</div>
+
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+			</section>
+
+			<!-- BUTTON QUESTION -->
+			<section class="section my-medium text-center" data-arts-component-name="Content"
+				data-arts-os-animation="true">
+				<div data-arts-os-animation-name="animatedJump">
+					<a class="mb-5 button button_icon ui-element button_bordered color-accent" href="#">
+						<span class="button__label button__label-normal">
+							<span class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+							<span class="button__title">Conference Brochure</span>
+
+						</span>
+						<span class="button__label button__label-hover">
+							<span class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+							<span class="button__title">Conference Brochure</span>
+
+						</span>
+					</a>
+					<h5 class="h5 m-0"> Have a question?
+						<a href="maitlo:watercongress@gecamin.com">watercongress@gecamin.com</a>
+					</h5>
+				</div>
+			</section>
+
+
+
+
+
+
+
+
+			<!-- FOOTER -->|+
 			<footer class="footer borders-auto-opacity-solid" id="page-footer">
 				<script>
 					fetch('template/footer.html')
