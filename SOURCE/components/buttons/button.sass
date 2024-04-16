@@ -6,12 +6,15 @@
 	box-shadow: none
 	border-width: 2px
 	border-style: solid
-	padding: 16px 36px
+	padding: 10px 32px
 	border-radius: 96px
-	color: var(--color-dark-4)
+	color: var(--color-dark-1)
 	+trans2
 	transition-property: color, background-color, border-color
 	outline: none
+	&.padding_big
+		padding: 12px 40px
+
 	&:focus
 		outline: none
 	&:hover
@@ -35,6 +38,7 @@
 .button_icon
 	display: inline-flex
 	border: none
+	padding: 10px 24px
 	.button__label
 		padding: 0
 .button__label-hover
@@ -57,9 +61,11 @@
 .button__title
 	display: inline-block
 	transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out
+	letter-spacing: -0.5px
 .button__label
 	display: inline-block
-	padding: 16px 36px
+	+fluid('font-size', 16, 20)
+	font-weight: 600
 
 .button__icon
 	display: inline-flex
@@ -68,30 +74,21 @@
 	transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out
 	vertical-align: middle
 	margin-bottom: 0.1em
+	+fluid('font-size', 26, 38)
+	line-height: 1
+
 .button__icon_before
-	margin-right: 0.5em
+	margin-right: 0.1em
 .button__icon_after
 	margin-left: 0.25em
 	margin-right: -0.5em
 
 .button_fullwidth
 	width: 100%
+	padding: 6px 0px
 .button-fullwidth
 	.button
 		width: 100%
-
-@media screen and (max-width: $xl)
-	.button
-		padding: 12px 24px
 	.button__label
-		padding: 12px 24px
-
-@media screen and (max-width: $md)
-	.button
-		padding: 12px 24px
-	.button__label
-		padding: 12px 24px
-	.button__icon
-		// width: 43px
-		i
-			font-size: 20px
+		+fluid('font-size', 14, 17)
+		font-weight: 700

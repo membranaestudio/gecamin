@@ -2,15 +2,24 @@
 	display: flex
 	> div
 		position: relative
-		margin: 0px 24px
-		text-align: center
+		margin: 0px 28px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		.number
+			@extend h4
+			margin: 0 !important
+			padding: 0 !important
+			font-weight: 600 !important
+			letter-spacing: 1px !important
 		&::after
 			content: ':'
 			position: absolute
-			right: -20px
+			right: -27px
 			top: 50%
 			transform: translateY(-50%)
-			+fluid('font-size', 20, 30)
+			+fluid('font-size', 20, 26)
 		&:last-child
 			&::after
 				display: none

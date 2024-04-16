@@ -190,7 +190,7 @@ function browserSyncReload(done) {
 /* WATCHER */
 /* ======================================================================== */
 function watcher() {
-  watch(path.scripts.components, JScomponents );
+  watch(path.scripts.components, JScomponents);
   watch(path.scripts.app, JSapp);
   watch(path.scripts.separate, JSSeparateVendor);
   watch(path.scripts.concat.vendor, JSConcatVendor);
@@ -203,7 +203,7 @@ function watcher() {
 }
 
 exports.default = series(
-  parallel(JSapp, JScomponents,JSConcatVendor, JSConcatFramework, JSSeparateVendor, CSSVendor, CSSComponents),
+  parallel(JSapp, JScomponents, JSConcatVendor, JSConcatFramework, JSSeparateVendor, CSSVendor, CSSComponents),
   browserSync,
   watcher
 );

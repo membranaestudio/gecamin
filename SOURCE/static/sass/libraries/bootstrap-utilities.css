@@ -956,6 +956,9 @@
 .mb-5 {
   margin-bottom: 3rem !important;
 }
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
 
 .mb-auto {
   margin-bottom: auto !important;
@@ -1011,6 +1014,10 @@
 
 .p-5 {
   padding: 3rem !important;
+}
+
+.p-6 {
+  padding: 4rem !important;
 }
 
 .px-0 {
@@ -1119,6 +1126,10 @@
 
 .pe-5 {
   padding-right: 3rem !important;
+}
+
+.pe-6 {
+  padding-right: 4rem !important;
 }
 
 .pb-0 {

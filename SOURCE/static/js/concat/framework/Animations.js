@@ -1,7 +1,9 @@
 class Animations {
-	constructor({ duration } = {
-		duration: 1.2
-	}) {
+	constructor({
+		duration
+	} = {
+			duration: 1.2
+		}) {
 		this.defaults = {
 			duration
 		};
@@ -84,6 +86,8 @@ class Animations {
 			},
 		};
 
+		this._strongText();
+
 		this._animateTranslate();
 
 		this._animateScale();
@@ -93,6 +97,7 @@ class Animations {
 
 		this._animateCurtain();
 		this._hideCurtain();
+
 	}
 
 	_animateTranslate() {
@@ -654,4 +659,27 @@ class Animations {
 			extendTimeline: true,
 		});
 	}
+
+	_strongText() {
+		const paragraphList = document.querySelectorAll('.text-strong p');
+		if (paragraphList.length === 0) {
+			return;
+		}
+		paragraphList.forEach(paragraph => {
+			const text = paragraph.innerHTML;
+			const originalPhraseMatch = text.match(/<strong>(.*?)<\/strong>/);
+			if (originalPhraseMatch) {
+				const originalPhrase = originalPhraseMatch[1];
+				const words = originalPhrase.split(' ');
+				let newText = '';
+				words.forEach(function (word) {
+					newText += '<strong>' + word + '</strong> ';
+				});
+				const updatedText = text.replace(originalPhraseMatch[0], newText);
+				paragraph.innerHTML = updatedText;
+			}
+		});
+	}
+
+
 }

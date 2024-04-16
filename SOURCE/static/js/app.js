@@ -342,6 +342,14 @@ window.app = {
 			dependencies: [],
 			file: './components/countdown/CountDown.js'
 		},
+		'Acordion': {
+			dependencies: [],
+			file: './components/acordion/Acordion.js'
+		},
+		'Tabs': {
+			dependencies: [],
+			file: './components/tabs/Tabs.js'
+		},
 		'MyCustomComponent': {
 			dependencies: [],
 			file: './components/myCustomComponent/MyCustomComponent.js'

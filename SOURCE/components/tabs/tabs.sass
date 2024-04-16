@@ -1,0 +1,42 @@
+.tab-menu
+	display: flex
+	+fluid('margin-bottom', 20, 60)
+	@media screen and (max-width: $md)
+		flex-direction: column
+	a
+		cursor: pointer
+		color: var(--color-dark-1)
+		flex: 1
+		text-align: center
+		font-weight: 500
+		+fluid('font-size', 24, 38)
+		letter-spacing: -1px
+		span
+			color: var(--color-dark-2)
+			+fluid('font-size', 24, 32)
+			font-weight: 800
+			border-bottom: 2px solid var(--color-dark-2)
+			line-height: 0
+		@media screen and (max-width: $xs)
+			width: 100%
+			margin-bottom: 5px
+			padding: 6px 10px
+		&:hover
+			opacity: 0.95
+			+trans1
+	.active
+		color: var(--color-dark-2)
+		.js-arts-split-text__line:after
+			bottom: -1px
+			left: 0
+			content: ""
+			position: absolute
+			height: 5px
+			width: 100%
+			background: var(--color-dark-2)
+			z-index: 9999
+	.js-arts-split-text__line
+		+fluid('padding-bottom', 15, 30)
+		border-bottom: 1px solid #000
+		@media screen and (max-width: $md)
+			margin-bottom: 25px

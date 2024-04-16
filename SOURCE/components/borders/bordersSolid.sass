@@ -10,9 +10,23 @@
 .bb-solid
 	border-bottom: 3px solid var(--color-border-solid)
 
+.bb-solid-1
+	border-bottom: 1px solid var(--color-border-solid)
+
+.bb-solid-2
+	.js-arts-split-text__line
+		border-bottom: 3px solid var(--color-dark-1)
+
 .bl-solid
 	border-left: 3px solid var(--color-border-solid)
 
 .b-solid-black
-	border: 1px solid #000
-	padding: 30px
+	margin: 0px
+	> div:first-child
+		border-left: 1px solid
+	> div
+		border-right: 1px solid
+		border-color: #000
+		border-top: 1px solid
+		border-bottom: 1px solid
+		padding: 40px 20px 50px

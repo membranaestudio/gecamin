@@ -35,10 +35,10 @@ export default class CountDown extends BaseComponent {
 		const minutes = Math.max(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)), 0);
 		const seconds = Math.max(Math.floor((distance % (1000 * 60)) / 1000), 0);
 
-		document.querySelector(".days .h6").innerHTML = days;
-		document.querySelector(".hours .h6").innerHTML = hours;
-		document.querySelector(".minutes .h6").innerHTML = minutes;
-		document.querySelector(".seconds .h6").innerHTML = seconds;
+		document.querySelector(".days .number").innerHTML = days;
+		document.querySelector(".hours .number").innerHTML = hours;
+		document.querySelector(".minutes .number").innerHTML = minutes;
+		document.querySelector(".seconds .number").innerHTML = seconds;
 	}
 
 	countDown() {
@@ -52,7 +52,7 @@ export default class CountDown extends BaseComponent {
 
 			if (distance < 0) {
 				clearInterval(x);
-				document.getElementById("countdown").innerHTML = `<h6>${expiredText}</h6>`;
+				document.getElementById("countdown").innerHTML = `<h4>${expiredText}</h4>`;
 			}
 		}, 1000);
 	}
