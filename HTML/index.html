@@ -15,9 +15,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
-	<!-- Styles externos -->
+	<!-- Styles  -->
 	<link rel="stylesheet" type="text/css" href="css/vendor.css" />
-	<!-- Styles propios-->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<!-- Favicon -->
 
@@ -44,8 +43,6 @@
 	<main class="page-wrapper bg-light-1" id="page-wrapper">
 		<div class="page-wrapper__content" id="page-wrapper__content">
 
-
-
 			<!-- SLIDER FULLHEIGHT -->
 			<section id="slider" class="section-fullheight-column">
 				<script>
@@ -60,24 +57,29 @@
 
 
 			<!-- LOGOS -->
-			<section class="section section-logos-2 section-content py-small" data-arts-component-name="Content"
+			<section class="section section-logos-2 section-content pt-large pb-xsmall" data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<div class="container" data-arts-os-animation-name="animatedJump">
 					<div class="row">
-						<div class="col-md-2 d-flex align-items-center">
+						<div class="col-lg-2 d-flex align-items-center justify-content-center">
 							<h4 class="h4 m-0">Organizers</h4>
 						</div>
-						<div class="col-md-10">
+						<div class="col-lg-10">
 							<div data-arts-component-name="Swipper" data-arts-os-animation="true"
 								data-arts-component-options="{
-                        autoplay: {
-                        delay: 6000
-                        },
-                        slidesPerView: 4,
-                        loop: true,
-                        spaceBetween: 60,
-                        grabCursor: true
-                    }">
+									autoplay: {
+										delay: 6000
+									},
+									slidesPerView: 2,
+									loop: true,
+									spaceBetween: 60,
+									grabCursor: true,
+									breakpoints: {
+										576: {slidesPerView: 3},
+										991: {slidesPerView: 4},
+										1199: {slidesPerView: 4}
+									}
+								}">
 								<div class="swiper ps-4">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
@@ -137,8 +139,8 @@
 			<section class="section section-content py-small" data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<div class="container">
-					<div class="row g-6">
-						<div class="col-md-3">
+					<div class="row g-3 g-md-4 g-lg-4 g-xl-5 g-xxl-6">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
@@ -148,15 +150,14 @@
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
 									<img class="lazy of-cover"
 										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-										decoding="async"
-										data-src="img/icons/flecha_diagonal.svg"/>
+										decoding="async" data-src="img/icons/flecha_diagonal.svg" />
 								</div>
 								<h4 class="color-dark-2 h3 fw-500 mt-2 mb-0">Recived <br>Abstracts</h2>
 							</div>
-							<div class="w-100 bt-solid mt-3" data-arts-os-animation-name="animatedBorderHorizontal">
+							<div class="w-100 bt-solid mt-3 d-none d-lg-block" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
@@ -166,15 +167,14 @@
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
 									<img class="lazy of-cover"
 										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-										decoding="async"
-										data-src="img/icons/flecha_diagonal.svg"/>
+										decoding="async" data-src="img/icons/flecha_diagonal.svg" />
 								</div>
 								<h4 class="color-dark-2 h3 fw-500 mt-2 mb-0">Recived <br>Abstracts</h2>
 							</div>
-							<div class="w-100 bt-solid mt-3" data-arts-os-animation-name="animatedBorderHorizontal">
+							<div class="w-100 bt-solid mt-3 d-none d-lg-block" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
@@ -184,15 +184,14 @@
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
 									<img class="lazy of-cover"
 										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-										decoding="async"
-										data-src="img/icons/flecha_diagonal.svg"/>
+										decoding="async" data-src="img/icons/flecha_diagonal.svg" />
 								</div>
 								<h4 class="color-dark-2 h3 fw-500 mt-2 mb-0">Recived <br>Abstracts</h2>
 							</div>
 							<div class="w-100 bt-solid mt-3" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
@@ -202,29 +201,35 @@
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
 									<img class="lazy of-cover"
 										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-										decoding="async"
-										data-src="img/icons/flecha_diagonal.svg"/>
+										decoding="async" data-src="img/icons/flecha_diagonal.svg" />
 								</div>
 								<h4 class="color-dark-2 h3 fw-500 mt-2 mb-0">Recived <br>Abstracts</h2>
 							</div>
 							<div class="w-100 bt-solid mt-3" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</section>
 
-			<!-- CONTENT COLUMN -->
-			<section class="section section-content py-medium" data-arts-component-name="Content"
+
+			<!-- CONTENT TITLE -->
+			<section class="section section-content pt-small pb-large" data-arts-component-name="Content"
 				data-arts-os-animation="true">
-				<div class="container">
+				<div class="container" data-arts-component-name="MoveResposive" data-arts-os-animation="true" data-arts-component-options="{
+            		initContent: '.move-init',
+					finishContent: '.move-finish',
+					screenWidth: 991
+         	 	}">
 					<div class="row">
-						<div class="col-md-5" data-arts-split-text-preset="animatedLines">
-							<h1 class="h1">About the Conference</h1>
-							<div class="mt-small">
+						<div class="col-lg-5" data-arts-split-text-preset="animatedLines">
+							<h1 class="h1">About the <br> Conference</h1>
+							<div class="mt-small move-init">
 								<a class="button button_icon ui-element button_bordered color-dark-2" href="#">
 									<span class="button__label button__label-normal">
-										<span class="button__icon button__icon_before material-symbols-outlined">download</span>
+										<span
+											class="button__icon button__icon_before material-symbols-outlined">download</span>
 										<span class="button__title">Conference Brochure</span>
 									</span>
 									<span class="button__label button__label-hover">
@@ -236,15 +241,16 @@
 								</a>
 							</div>
 						</div>
-						<div class="col-md-7">
+						<div class="col-lg-7">
 							<div class="text-strong strong-dark-2" data-arts-split-text-preset="animatedLines">
-								<p class="h5"><strong>Water Congress 2024</strong> is an opportunity to learn and
+								<p class="h4"><strong>Water Congress 2024</strong> is an opportunity to learn and
 									exchange knowledge,
 									practices and solutions over the most relevant water management issues related to
 									the global industry. The congress brings together executives, professionals and
 									academics mainly from areas related to the environment, sustainability and water
 									management.</p>
 							</div>
+							<div class="move-finish mt-4"></div>
 
 						</div>
 					</div>
@@ -268,14 +274,14 @@
 			</section>
 
 			<!-- TITLE + ICON COLUMN -->
-			<section class="section section-content py-medium " data-arts-component-name="Content"
+			<section class="section section-content py-large " data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<div class="container">
 					<div data-arts-split-text-preset="animatedLines">
-						<h1 class="h1 mb-small">2023 in numbers</h1>
+						<h1 class="h1 mb-small mt-0">2023 in numbers</h1>
 					</div>
-					<div class="row g-6">
-						<div class="col-md-3">
+					<div class="row g-3 g-md-4 g-lg-4 g-xl-5 g-xxl-6">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
@@ -291,12 +297,12 @@
 
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
-									<div class="js-counter-up__number h2 color-dark-2">20</div>
+									<div class="js-counter-up__number h2 fw-600 color-dark-2">20</div>
 								</div>
 								<h4 class="h3 color-dark-2 fw-500 m-0">Participans</h4>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
@@ -312,12 +318,12 @@
 
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
-									<div class="js-counter-up__number h2 color-dark-2">20</div>
+									<div class="js-counter-up__number h2 fw-600 color-dark-2">20</div>
 								</div>
 								<h4 class="h3 color-dark-2 fw-500 m-0">Participans</h4>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
@@ -333,12 +339,12 @@
 
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
-									<div class="js-counter-up__number h2 color-dark-2">20</div>
+									<div class="js-counter-up__number h2 fw-600 color-dark-2">20</div>
 								</div>
 								<h4 class="h3 color-dark-2 fw-500 m-0">Participans</h4>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid mb-4" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-os-animation-name="animatedJump">
@@ -354,11 +360,13 @@
 
 								<div class="js-counter-up mt-3 mb-0" data-arts-component-name="CounterUp"
 									data-arts-component-options="{}" data-arts-os-animation="true">
-									<div class="js-counter-up__number h2 color-dark-2">20</div>
+									<div class="js-counter-up__number h2 fw-600 color-dark-2">20</div>
 								</div>
 								<h4 class="h3 color-dark-2 fw-500 m-0">Participans</h4>
 							</div>
 						</div>
+					
+
 
 
 					</div>
@@ -370,14 +378,30 @@
 				<div class="width-img">
 					<div class="w-text">
 						<div class="px-4" style="max-width: 800px; margin: 0 auto;" data-arts-color-theme="light">
-							<div class="text-strong" data-arts-split-text-preset="animatedLines">
+							<div class="text-strong py-5" data-arts-split-text-preset="animatedLines">
 								<h2 class="h1">Committees</h2>
-								<p class="h5"><strong>The Organizing, Advisory and Editorial committees</strong> support
+								<p class="h4"><strong>The Organizing, Advisory and Editorial committees</strong> support
 									the promotion of
 									the conference. Likewise, they support by determining the technical focus of the
 									conference program. The editorial committee reviews the written works that are
 									received, establishing the highest technical quality. All committee members have a
 									special discount on registrations.</p>
+								<div class="mt-4">
+									<a class="button button_icon button_bordered" href="#">
+										<span class="button__label button__label-normal">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Conference Brochure</span>
+
+										</span>
+										<span class="button__label button__label-hover">
+											<span
+												class="button__icon button__icon_before material-icons keyboard_arrow_right"></span>
+											<span class="button__title">Conference Brochure</span>
+
+										</span>
+									</a>
+								</div>
 
 							</div>
 						</div>
@@ -396,9 +420,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="p-4 text-strong" data-arts-split-text-preset="animatedLines">
-							<h4 class="h3 mt-0 mb-2"><span class="fw-700">Ingrid Oyarzún /</span><span class="italic"> Congress Chair</span></h4>
-							<p class="m-0 h4 fw-200"><span class="fw-400"> President,</span> Eramet Ideas & VP Innovation,
+						<div class="p-3 p-lg-4 text-strong" data-arts-split-text-preset="animatedLines">
+							<h4 class="h3 mt-0 mb-2"><span class="fw-700">Ingrid Oyarzún /</span><span class="italic">
+									Congress Chair</span></h4>
+							<p class="m-0 h4 fw-200"><span class="fw-400"> President,</span> Eramet Ideas & VP
+								Innovation,
 								Eramet,
 								Francia.</p>
 						</div>
@@ -408,14 +434,14 @@
 				</div>
 			</section>
 
-			<!-- BANNER TEXT -->
-			<section id="banner-text" class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true"
-				data-arts-color-theme="dark">
+			<!-- BANNER  -->
+			<section id="banner-1" class="section my-medium" data-arts-component-name="Content"
+				data-arts-os-animation="true" data-arts-color-theme="dark">
 				<script>
-					fetch('template/banner_text.html')
+					fetch('template/banner_1.html')
 						.then(response => response.text())
 						.then(html => {
-							document.getElementById('banner-text').innerHTML = html;
+							document.getElementById('banner-1').innerHTML = html;
 						})
 						.catch(error => console.error('Error al cargar el fragmento:', error));
 				</script>
@@ -425,12 +451,13 @@
 			<section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-5" data-arts-split-text-preset="animatedLines">
+						<div class="col-lg-4 col-xl-5 " data-arts-split-text-preset="animatedLines">
 							<h1 cass="h1">Streaming <br>Platform</h1>
 						</div>
-						<div class="col-md-7">
+						<div class="col-lg-8 col-xl-7 pe-xl-5">
 							<div class="text-strong strong-dark-2" data-arts-split-text-preset="animatedLines">
-								<p class="h4">Visit the <strong>Congress 2024 Streaming Platform</strong>, a space we have created to
+								<p class="h4">Visit the <strong>Congress 2024 Streaming Platform</strong>, a space we
+									have created to
 									enrich
 									the
 									technical program of the conference, which takes place in person.
@@ -464,7 +491,8 @@
 			</section>
 
 			<!-- TAB -->
-			<section id="tabs" class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
+			<section id="tabs" class="section my-medium" data-arts-component-name="Content"
+				data-arts-os-animation="true">
 				<script>
 					fetch('template/tabs-payment.html')
 						.then(response => response.text())
@@ -489,14 +517,51 @@
 			</section>
 
 
+			<!-- BANNER  -->
+			<section id="banner-2" class="section my-medium" data-arts-component-name="Content"
+				data-arts-os-animation="true" data-arts-color-theme="dark">
+				<script>
+					fetch('template/banner_2.html')
+						.then(response => response.text())
+						.then(html => {
+							document.getElementById('banner-2').innerHTML = html;
+						})
+						.catch(error => console.error('Error al cargar el fragmento:', error));
+				</script>
+			</section>
+
 			<!-- LOGOS -->
-			<section id="logos" class="section my-medium section-logos" data-arts-component-name="Content"
+			<section id="logos-1" class="section my-medium section-logos" data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<script>
 					fetch('template/logos.html')
 						.then(response => response.text())
 						.then(html => {
-							document.getElementById('logos').innerHTML = html;
+							document.getElementById('logos-1').innerHTML = html;
+						})
+						.catch(error => console.error('Error al cargar el fragmento:', error));
+				</script>
+			</section>
+
+			<section id="logos-2" class="section pt-5 my-medium section-logos" data-arts-component-name="Content"
+				data-arts-os-animation="true">
+				<script>
+					fetch('template/logos.html')
+						.then(response => response.text())
+						.then(html => {
+							document.getElementById('logos-2').innerHTML = html;
+						})
+						.catch(error => console.error('Error al cargar el fragmento:', error));
+				</script>
+			</section>
+
+			<section id="logos-3" class="section pt-5 my-medium section-logos" data-arts-component-name="Content"
+				data-arts-os-animation="true">
+				<script>
+					fetch('template/logos.html')
+						.then(response => response.text())
+						.then(html => {
+							document.getElementById('logos-3').innerHTML = html;
 						})
 						.catch(error => console.error('Error al cargar el fragmento:', error));
 				</script>
@@ -505,19 +570,10 @@
 			<!-- UBICATION -->
 			<section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
 				<div class="container">
+					<h1 class="mb-4" data-arts-split-text-preset="animatedLines">Venue</h1>
 					<div class="row">
-						<div class="col-md-6 pointer-events-none">
-							<div class="w-100 h-100 overflow-hidden" data-arts-os-animation-name="animatedMaskFromTop">
-								<div class="w-100 h-100 js-animated-mask-inner overflow-hidden">
-									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.0503634046813!2d-70.6211914!3d-33.4219313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf602c223f45%3A0x40909fbe9afb107d!2sAv.%20Sta.%20Mar%C3%ADa%201742%2C%207500000%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1713295803277!5m2!1ses-419!2scl"
-										width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-										referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-								</div>
-							</div>
-						</div>
-						<div class="ps-lg-5 col-md-6">
+						<div class="col-md-6 ps-lg-5 mb-5 mb-md-0 order-md-2">
 							<div data-arts-split-text-preset="animatedLines">
 								<h2>Sheraton Santiago Hoteland Convention Center</h2>
 								<ul class="list-bullet" style="max-width: 360px;">
@@ -558,6 +614,17 @@
 							</div>
 
 						</div>
+						<div class="col-md-6 pointer-events-none">
+							<div class="w-100 h-100 overflow-hidden" data-arts-os-animation-name="animatedMaskFromTop">
+								<div class="w-100 h-100 js-animated-mask-inner overflow-hidden">
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.0503634046813!2d-70.6211914!3d-33.4219313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf602c223f45%3A0x40909fbe9afb107d!2sAv.%20Sta.%20Mar%C3%ADa%201742%2C%207500000%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1713295803277!5m2!1ses-419!2scl"
+										width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+										referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+								</div>
+							</div>
+						</div>
 
 
 					</div>
@@ -579,24 +646,18 @@
 				</script>
 			</footer>
 
-			<!-- - FOOTER -->
+
 
 		</div>
 	</main>
 	<!-- - MAIN CONTAINER -->
 
-	<!-- Mobile Loading Spinner -->
-	<svg class="spinner" id="loading-indicator" viewBox="25 25 50 50">
-		<circle cx="50" cy="50" r="24" fill="none"></circle>
-	</svg>
-	<!-- - Mobile Loading Spinner -->
-	<div class="blocking-curtain" id="page-blocking-curtain"></div>
 
 	<!-- TEMPLATE SCRIPTS -->
 	<script src="js/vendor.js"></script>
 	<script src="js/framework.js"></script>
 	<script src="js/app.js"></script>
-	<!-- - TEMPLATE SCRIPTS -->
+
 </body>
 
 </html>
