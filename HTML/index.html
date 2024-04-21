@@ -57,8 +57,8 @@
 
 
 			<!-- LOGOS -->
-			<section class="section section-logos-2 section-content pt-large pb-xsmall" data-arts-component-name="Content"
-				data-arts-os-animation="true">
+			<section class="section section-logos-2 section-content pt-large pb-xsmall"
+				data-arts-component-name="Content" data-arts-os-animation="true">
 				<div class="container" data-arts-os-animation-name="animatedJump">
 					<div class="row">
 						<div class="col-lg-2 d-flex align-items-center justify-content-center">
@@ -144,7 +144,7 @@
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
-								<div class="material-symbols-outlined w-100 ico-size-1 fix-left mb-4 mt-3">
+								<div class="material-symbols-outlined ico-size-1 fix-left mb-4 mt-3">
 									newsmode
 								</div>
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
@@ -154,14 +154,15 @@
 								</div>
 								<h4 class="color-dark-2 h3 fw-500 mt-2 mb-0">Recived <br>Abstracts</h2>
 							</div>
-							<div class="w-100 bt-solid mt-3 d-none d-lg-block" data-arts-os-animation-name="animatedBorderHorizontal">
+							<div class="w-100 bt-solid mt-3 d-none d-lg-block"
+								data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 						</div>
 						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
-								<div class="material-symbols-outlined w-100 ico-size-1 fix-left mb-4 mt-3">
+								<div class="material-symbols-outlined ico-size-1 fix-left mb-4 mt-3">
 									newsmode
 								</div>
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
@@ -171,14 +172,15 @@
 								</div>
 								<h4 class="color-dark-2 h3 fw-500 mt-2 mb-0">Recived <br>Abstracts</h2>
 							</div>
-							<div class="w-100 bt-solid mt-3 d-none d-lg-block" data-arts-os-animation-name="animatedBorderHorizontal">
+							<div class="w-100 bt-solid mt-3 d-none d-lg-block"
+								data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 						</div>
 						<div class="col-6 col-lg-3">
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
-								<div class="material-symbols-outlined w-100 ico-size-1 fix-left mb-4 mt-3">
+								<div class="material-symbols-outlined ico-size-1 fix-left mb-4 mt-3">
 									newsmode
 								</div>
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
@@ -195,7 +197,7 @@
 							<div class="w-100 bt-solid" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 							<div data-arts-split-text-preset="animatedLines">
-								<div class="material-symbols-outlined w-100 ico-size-1 fix-left mb-4 mt-3">
+								<div class="material-symbols-outlined ico-size-1 fix-left mb-4 mt-3">
 									newsmode
 								</div>
 								<div class="lazy-wrapper mb-2" style="width: 18px;">
@@ -208,7 +210,7 @@
 							<div class="w-100 bt-solid mt-3" data-arts-os-animation-name="animatedBorderHorizontal">
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</section>
@@ -217,7 +219,8 @@
 			<!-- CONTENT TITLE -->
 			<section class="section section-content pt-small pb-large" data-arts-component-name="Content"
 				data-arts-os-animation="true">
-				<div class="container" data-arts-component-name="MoveResposive" data-arts-os-animation="true" data-arts-component-options="{
+				<div class="container" data-arts-component-name="MoveResposive" data-arts-os-animation="true"
+					data-arts-component-options="{
             		initContent: '.move-init',
 					finishContent: '.move-finish',
 					screenWidth: 991
@@ -365,7 +368,7 @@
 								<h4 class="h3 color-dark-2 fw-500 m-0">Participans</h4>
 							</div>
 						</div>
-					
+
 
 
 
@@ -491,16 +494,20 @@
 			</section>
 
 			<!-- TAB -->
-			<section id="tabs" class="section my-medium" data-arts-component-name="Content"
-				data-arts-os-animation="true">
-				<script>
-					fetch('template/tabs-payment.html')
-						.then(response => response.text())
-						.then(html => {
-							document.getElementById('tabs').innerHTML = html;
-						})
-						.catch(error => console.error('Error al cargar el fragmento:', error));
-				</script>
+			<section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
+				<div class="container">
+					<h1 class="mb-small" data-arts-split-text-preset="animatedLines">Registration</h1>
+					<div id="tabs">
+						<script>
+							fetch('template/tabs-payment.html')
+								.then(response => response.text())
+								.then(html => {
+									document.getElementById('tabs').innerHTML = html;
+								})
+								.catch(error => console.error('Error al cargar el fragmento:', error));
+						</script>
+					</div>
+				</div>
 			</section>
 
 			<!-- BUTTON QUESTION -->
@@ -625,17 +632,12 @@
 								</div>
 							</div>
 						</div>
-
-
 					</div>
-
 				</div>
-
-
 			</section>
 
 			<!-- FOOTER -->
-			<footer class="footer bg-dark-1 mt-medium" id="page-footer" data-arts-color-theme="dark">
+			<footer class="footer bg-dark-1" id="page-footer" data-arts-color-theme="dark">
 				<script>
 					fetch('template/footer.html')
 						.then(response => response.text())
