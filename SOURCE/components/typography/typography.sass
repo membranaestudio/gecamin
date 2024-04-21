@@ -50,9 +50,13 @@ a
 .italic
 	font-style: italic
 
+.xxl
+	@include fluid-type(var(--display-xxl-min-font-size), var(--display-xxl-max-font-size))
+	font-weight: var(--display-xxl-font-weight)
+	letter-spacing: var(--display-xxl-letter-spacing)
+
 .xl
 	@include fluid-type(var(--display-xl-min-font-size), var(--display-xl-max-font-size))
-	color: var(--display-xl-color-light-theme)
 	font-weight: var(--display-xl-font-weight)
 	letter-spacing: var(--display-xl-letter-spacing)
 
