@@ -20,7 +20,6 @@ export default class Swipper extends BaseComponent {
                 grabCursor: false,
                 autoHeight: false,
                 lazy: false,
-
             },
             innerElements: {
                 swippers: '.swiper',
@@ -30,7 +29,6 @@ export default class Swipper extends BaseComponent {
                 scrollbar: ".swiper-scrollbar"
             }
         });
-
         this.setup();
     }
 

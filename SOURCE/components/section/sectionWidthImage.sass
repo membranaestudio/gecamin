@@ -1,12 +1,28 @@
 \:root
-	--width-img: 520px
+	--width-img: 500px
+	@media screen and (max-width: $xxl)
+		--width-img: 480px
+	@media screen and (max-width: $xl)
+		--width-img: 420px
+	@media screen and (max-width: $lg)
+		--width-img: 380px
+	@media screen and (max-width: $md)
+		--width-img: 300px
+	@media screen and (max-width: $sm)
+		--width-img: 100%
 
 .width-img
 	display: flex
-
+	@media screen and (max-width: $sm)
+		flex-direction: column
 	.w-text
 		width: calc( 100% - var(--width-img) )
 		align-self: center
+		@media screen and (max-width: $sm)
+			width: 100%
 
 	.w-img
 		width: var(--width-img)
+		.h3
+			@media screen and (max-width: $lg)
+				+fluid('font-size', 20, 25)

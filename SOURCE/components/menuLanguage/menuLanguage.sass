@@ -1,14 +1,20 @@
 .menu-language
 	position: relative
 	+reset-list
-	margin-left: 2.5em
+	+fluid('margin-left', -10, 35)
 	font-size: 14px
 	line-height: 2
+	@media screen and (max-width: $xl)
+		font-size: 13px
+		@media screen and (max-width: $lg)
+			font-size: 12.5px
 	> li
 		position: relative
 		display: inline-block
 		&:not(:last-child)
 			margin-right: 5px
+			@media screen and (max-width: $lg)
+				margin-right: 2px
 		a
 			display: block
 			padding: 4px 6px

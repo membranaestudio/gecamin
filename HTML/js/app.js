@@ -350,6 +350,10 @@ window.app = {
 			dependencies: [],
 			file: './components/tabs/Tabs.js'
 		},
+		'MoveResposive': {
+			dependencies: [],
+			file: './components/moveResponsive/moveReponsive.js'
+		},
 		'MyCustomComponent': {
 			dependencies: [],
 			file: './components/myCustomComponent/MyCustomComponent.js'

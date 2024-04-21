@@ -3,6 +3,9 @@
 	.row
 		> div
 			padding: 30px 18px
+			@media screen and (max-width: $md)
+				padding: 20px 12px
+
 	.lazy-wrapper
 		position: relative
 		&::after
@@ -25,5 +28,6 @@
 		.swiper-pagination
 			bottom: 0px
 	.h4
-		position: relative
-		top: -20px
+		@media screen and (min-width: $md)
+			position: relative
+			top: -20px

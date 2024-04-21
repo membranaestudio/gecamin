@@ -1183,10 +1183,16 @@
     --bs-gutter-x: 3rem;
   }
 
+  .g-xl-6,
+.gx-xl-6 {
+    --bs-gutter-x: 4rem;
+  }
+
   .g-xl-5,
 .gy-xl-5 {
     --bs-gutter-y: 3rem;
   }
+  
 }
 @media (min-width: 1400px) {
   .col-xxl {
@@ -1394,6 +1400,11 @@
   .g-xxl-5,
 .gx-xxl-5 {
     --bs-gutter-x: 3rem;
+  }
+
+  .g-xxl-6,
+.gx-xxl-6 {
+    --bs-gutter-x: 4rem;
   }
 
   .g-xxl-5,

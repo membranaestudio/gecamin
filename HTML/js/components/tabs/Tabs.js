@@ -10,10 +10,6 @@ export default class Tabs extends BaseComponent {
       loadInnerComponents,
       parent,
       element,
-      // Component default options
-      defaults: {
-
-      },
       innerElements: {
         tabs: '[data-tab]'
       }
@@ -29,11 +25,9 @@ export default class Tabs extends BaseComponent {
       const contentId = tab.getAttribute('data-tab');
       const contentElement = document.getElementById(contentId);
       this.elements.contents.push(contentElement);
-
       tab.addEventListener('click', this.showTab.bind(this));
     });
 
-    // Agregar la clase 'active' al primer botón y 'd-none' a los contenidos excepto el primero
     this.elements.tabs[0].classList.add('active');
     this.elements.contents.forEach((content, index) => {
       if (index !== 0) {
@@ -56,24 +50,24 @@ export default class Tabs extends BaseComponent {
       }
     });
 
-    const contenido = document.getElementById(currentTarget.getAttribute('data-tab'));
+    const content = document.getElementById(currentTarget.getAttribute('data-tab'));
 
     tl.to(this.current, {
       y: '100px',
       autoAlpha: 0,
       onComplete: () => {
         this.current.classList.add("d-none");
-        this.current = contenido;
-        contenido.classList.remove("d-none");
+        this.current = content;
+        content.classList.remove("d-none");
       }
     });
 
-    tl.set(contenido, {
+    tl.set(content, {
       y: '100px',
       autoAlpha: 0,
     });
 
-    tl.to(contenido, {
+    tl.to(content, {
       y: '0',
       autoAlpha: 1,
     });
