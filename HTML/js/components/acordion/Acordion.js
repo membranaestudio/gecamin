@@ -10,14 +10,6 @@ export default class MyCustomComponent extends BaseComponent {
             loadInnerComponents,
             parent,
             element,
-            // Component default options
-            defaults: {
-
-            },
-            // Component inner elements
-            innerElements: {
-                summary: 'summary'
-            }
         });
         this.setup();
     }

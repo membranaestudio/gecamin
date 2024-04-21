@@ -354,6 +354,10 @@ window.app = {
 			dependencies: [],
 			file: './components/moveResponsive/moveReponsive.js'
 		},
+		'Accordion': {
+			dependencies: [],
+			file: './components/acordion/Accordion.js'
+		},
 		'MyCustomComponent': {
 			dependencies: [],
 			file: './components/myCustomComponent/MyCustomComponent.js'
