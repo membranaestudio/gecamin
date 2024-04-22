@@ -1,6 +1,5 @@
 .b-solid
 	border: 3px solid var(--color-border-solid)
-
 .bt-solid
 	border-top: 3px solid var(--color-border-solid)
 
@@ -57,8 +56,15 @@
 		border-bottom: 1px solid var(--color-dark-4)
 		padding: 35px 0px
 		display: flex
+		@media screen and (max-width: $md)
+			padding: 25px 0px
+
 	p
 		margin: 0
 	span
 		margin-right: 15px
 		white-space: nowrap
+
+.bb-solid-2-animatedLines
+	.js-arts-split-text__line
+		border-bottom: 2px solid

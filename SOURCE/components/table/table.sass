@@ -16,3 +16,29 @@
 		border-left: 0.5px solid
 		border-right: 0.5px solid
 		border-color: var(--color-dark-4)
+
+.table_border-2
+	text-align: center
+	border: 1px solid var(--color-dark-4)
+	> div
+		border-left: 0.5px solid
+		border-right: 0.5px solid
+	h4
+		margin: 0
+		+fluid('padding-top', 16, 24)
+		+fluid('padding-bottom', 16, 24)
+		border-top: 1px solid var(--color-dark-4)
+		&:first-child
+			border: none
+
+.table_border-3
+	text-align: center
+	> div
+		border: 1px solid var(--color-dark-4)
+	h4
+		margin: 0
+		+fluid('padding-top', 16, 24)
+		+fluid('padding-bottom', 16, 24)
+		border-top: 1px solid var(--color-dark-4)
+		&:first-child
+			border: none

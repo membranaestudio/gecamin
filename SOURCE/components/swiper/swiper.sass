@@ -1,3 +1,13 @@
 /* SWIPPER */
 .swiper-pagination-bullet-active
 	background: var(--color-dark-1)
+.swipper-padding
+	.swiper-slide:first-child
+		+fluid('margin-left', 20, 160)
+	.swiper-slide:last-child
+		maring-right: 20px
+
+.swiper-container
+	overflow: visible
+	+fluid('padding-left', 0, 160)
+	+fluid('padding-right', 15, 30)
