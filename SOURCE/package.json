@@ -1,10 +1,10 @@
 {
-  "name": "asli",
-  "version": "1.2.0",
-  "description": "AJAX Portfolio HTML5 Template",
+  "name": "gecamin",
+  "version": "1.0",
+  "description": "",
   "main": "gulpfile.js",
-  "author": "Artem Semkin",
-  "license": "ISC",
+  "author": "membranaestudio",
+  "license": "",
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
