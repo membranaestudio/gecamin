@@ -12,7 +12,7 @@ class Utilities {
 
     // Media query para detectar dispositivos con mouse
     this.mqPointer = window.matchMedia(`(hover: hover) and (pointer: fine)`);
-    
+
     // Inicializar las funciones al instanciar
     this.init();
   }

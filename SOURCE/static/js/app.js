@@ -240,7 +240,7 @@ window.app = {
 	components: {
 		'Header': {
 			dependencies: ['arts-header'],
-			file: './components/Header/Header.js'
+			file: './components/header/Header.js'
 		},
 		'InfiniteList': {
 			dependencies: ['arts-infinite-list'],

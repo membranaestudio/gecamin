@@ -183,6 +183,7 @@ function browserSync(done) {
 
 function browserSyncReload(done) {
   server.reload();
+
   done();
 }
 
