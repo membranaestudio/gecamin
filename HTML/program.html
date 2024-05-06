@@ -111,7 +111,7 @@
 
 
 
-		
+
 
 
 
@@ -121,12 +121,15 @@
 			<section class="section section-content py-medium" data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<div class="container">
+					<button id="downloadButton" class="btn btn-primary">Descargar PDF</button>
+
+
+
 					<div class="tecnical_program" data-arts-component-name="TecnicalProgram"
 						data-arts-os-animation="true">
 
 						<div class="accordion-item">
-							<div class="accordion-button" data-arts-color-theme="dark"
-								data-arts-os-animation-name="animatedJump">
+							<div class="accordion-button is-open" data-arts-color-theme="dark">
 								<div class="accordion-wrapper bg-dark-2">
 									<span class="arrow material-symbols-outlined">
 										expand_more
@@ -142,11 +145,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="accordion-content" data-arts-os-animation-name="animatedJump">
+							<div id="content-to-capture" class="accordion-content">
 								<div class="accordion-wrapper">
 
-									<div class="row accordion__head">
-										<div class="col-md-2">
+									<div class="row accordion__head height-item">
+										<div class="col-md-2 primero">
 											<h4>Hour</h4>
 										</div>
 										<div class="col-md-10">
@@ -159,63 +162,40 @@
 										</div>
 									</div>
 
-									<div class="row">
-										<div class="col-md-2">
+
+									<div class="row height-item">
+										<div class="col-md-2 segundo">
 											<h2>18:00</h2>
 										</div>
 										<div class="col-md-10">
-											<div class="tag bg-dark-1">SPA</div>
+											<div class="tag bg-dark-1">
+												<span>SPA</span>
+											</div>
 											<p><strong>Welcoleme Words</strong></p>
-											<ul>
-												<li><strong>Mimy Mackenzie</strong>, Conference Manager, Gecamin, Chile
-												</li>
-												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
-													consectetur, adipisicing elit. Maiores tenetur minima quam
-													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
-													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
-												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
-													consectetur, adipisicing elit. Maiores tenetur minima quam
-													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
-													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
-												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
-													consectetur, adipisicing elit. Maiores tenetur minima quam
-													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
-													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
-											</ul>
+											<p><strong>• Mimy Mackenzie</strong>, Conference Manager, Gecamin,
+												Chile</p>
+											<p><strong>• Mimy Mackenzie</strong>, Conference Manager, Gecamin,
+												Chile</p>
+											<p>• <strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
+												consectetur, adipisicing elit. Maiores tenetur minima quam
+												temporibus ut! Culpa libero quo voluptate fuga magni,
+												exercitationem
+												natus, totam deserunt non reprehenderit aliquid qui nulla modi?</p>
+
+
+
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-md-2">
-											<h2>18:00</h2>
-										</div>
-										<div class="col-md-10">
-											<div class="tag bg-dark-1">SPA</div>
-											<p><strong>Welcoleme Words</strong></p>
-											<ul>
-												<li><strong>Mimy Mackenzie</strong>, Conference Manager, Gecamin, Chile
-												</li>
-												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
-													consectetur, adipisicing elit. Maiores tenetur minima quam
-													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
-													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
-												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
-													consectetur, adipisicing elit. Maiores tenetur minima quam
-													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
-													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
-												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
-													consectetur, adipisicing elit. Maiores tenetur minima quam
-													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
-													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
-											</ul>
-										</div>
-									</div>
+
+
+
 
 
 
 								</div>
 
 							</div>
-							<div class="accordion-finish" data-arts-os-animation-name="animatedJump">
+							<div class="accordion-finish">
 								<div class="accordion-wrapper">
 									<div class="row g-6">
 										<div class="w-lg-20 br-solid">
@@ -241,17 +221,7 @@
 								</div>
 
 							</div>
-
-
 						</div>
-
-
-
-
-
-
-
-
 
 					</div>
 				</div>
@@ -259,78 +229,14 @@
 
 
 
-			
 
 
-	<button id="downloadButton" class="btn btn-primary">Descargar PDF</button>
-			<div class="container" id="content-to-capture">
-				<div class="row">
-					<div class="col-6">
-						<h2 class="title">Título 1</h2>
-						<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi
-							accusantium
-							corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit. Exercitationem.</p>
-					</div>
-					<div class="col-6">
-						<h2 class="title">Título 1</h2>
-						<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi
-							accusantium
-							corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit. Exercitationem.</p>
-					</div>
-					<div class="col-6">
-						<h2 class="title">Título 1</h2>
-						<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi
-							accusantium
-							corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit. Exercitationem.</p>
-					</div>
-					<div class="col-6">
-						<h2 class="title">Título 1</h2>
-						<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi
-							accusantium
-							corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit. Exercitationem.</p>
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class="container" id="content-to-capture">
-				<div class="row">
-					<div class="col-6">
-						<h2 class="title">Título 2</h2>
-						<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi
-							accusantium
-							corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit. Exercitationem. quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit. Exercitationem. quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit.d.</p>
-
-					</div>
-					<div class="col-6">
-						<h2 class="title">Título 2</h2>
-						<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi
-							accusantium
-							corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa
-							voluptas fugit
-							odio cupiditate doloremque suscipit. Exercitationem.</p>
-					</div>
-				</div>
-
-			</div>
 
 
-			<div class="container" id="content-to-capture">
+
+
+
+			<!-- <div class="container" id="content-to-capture">
 
 				<div class="row">
 					<div class="col-6">
@@ -342,7 +248,7 @@
 					</div>
 
 				</div>
-			</div>
+			</div> -->
 
 
 
@@ -381,3 +287,20 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+
+
+
