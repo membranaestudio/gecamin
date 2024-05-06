@@ -17,8 +17,9 @@ export default class TecnicalProgram extends BaseComponent {
         this.accordionProgram();
         this.DownloadPDF();
         this.applyPDFStyles()
-       
+
     }
+
     accordionProgram() {
         const accordionBtns = document.querySelectorAll(".accordion-button");
         accordionBtns.forEach((accordion) => {
@@ -47,86 +48,82 @@ export default class TecnicalProgram extends BaseComponent {
     }
 
 
-   CreatePDF() {
-    const pdfWidth = 1380;
-    const pdfHeight = 1600;
-    const headerHeight = 174;
-    const spaceBelowHeader = 80;
-    const pdf = new jspdf.jsPDF({
-        orientation: 'portrait',
-        unit: 'px',
-        format: [pdfWidth, pdfHeight]
-    });
-    console.log('PDF inicializado');
-    const containers = document.querySelectorAll('#content-to-capture');
-    console.log('Contenedores encontrados:', containers.length);
-    let currentPageHeight = headerHeight + spaceBelowHeader;
-    const pageHeight = pdf.internal.pageSize.height - 30;
-    const captureWidth = 1300;
-    let promiseChain = Promise.resolve();
-
-    const addHeader = () => {
-        return new Promise(resolveHeader => {
-            const img = new Image();
-            img.src = 'header.png';
-            img.onload = () => {
-                pdf.addImage(img, 'PNG', 0, 0, pdfWidth, headerHeight);
-                console.log('Encabezado añadido');
-                resolveHeader();
-            };
+    CreatePDF() {
+        const pdfWidth = 1380;
+        const pdfHeight = 1600;
+        const headerHeight = 174;
+        const spaceBelowHeader = 80;
+        const pdf = new jspdf.jsPDF({
+            orientation: 'portrait',
+            unit: 'px',
+            format: [pdfWidth, pdfHeight]
         });
-    };
+        console.log('PDF inicializado');
+        const containers = document.querySelectorAll('#content-to-capture');
+        console.log('Contenedores encontrados:', containers.length);
+        let currentPageHeight = headerHeight + spaceBelowHeader;
+        const pageHeight = pdf.internal.pageSize.height - 30;
+        const captureWidth = 1300;
+        let promiseChain = Promise.resolve();
 
-    promiseChain = promiseChain.then(() => addHeader());
+        const addHeader = () => {
+            return new Promise(resolveHeader => {
+                const img = new Image();
+                img.src = 'header.png';
+                img.onload = () => {
+                    pdf.addImage(img, 'PNG', 0, 0, pdfWidth, headerHeight);
+                    console.log('Encabezado añadido');
+                    resolveHeader();
+                };
+            });
+        };
 
-    this.applyPDFStyles(); // Asegurarse de que los estilos se aplican antes de empezar a procesar los elementos
+        promiseChain = promiseChain.then(() => addHeader());
+        this.applyPDFStyles();
 
-    containers.forEach((container, index) => {
-        Array.from(container.querySelectorAll('.height-item')).forEach((heightItem, idx) => {
-            promiseChain = promiseChain.then(() => {
-                return new Promise((resolveRow) => {
-                    const clone = heightItem.cloneNode(true);
-                    clone.classList.add('pdf-style');
-                    document.body.appendChild(clone);
-                    console.log(`Clon ${idx + 1} de contenedor ${index + 1} añadido al cuerpo para inspección, por favor revise en el navegador:`, clone.outerHTML);
+        containers.forEach((container, index) => {
+            Array.from(container.querySelectorAll('.height-item')).forEach((heightItem, idx) => {
+                promiseChain = promiseChain.then(() => {
+                    return new Promise((resolveRow) => {
+                        const clone = heightItem.cloneNode(true);
+                        clone.classList.add('pdf-style');
+                        document.body.appendChild(clone);
+                        console.log(`Clon ${idx + 1} de contenedor ${index + 1} preparado para inspección, por favor revise en el navegador:`, clone.outerHTML);
 
-                    // Espera a inspeccionar visualmente antes de proceder
-                    setTimeout(() => {
-                        html2canvas(clone, {
-                            onclone: (document) => {
-                                console.log('Clonando para html2canvas:', document.body.innerHTML);
-                            },
-                            scale: 2,
-                            width: captureWidth
-                        }).then(canvas => {
-                            document.body.removeChild(clone);
-                            const imgData = canvas.toDataURL('image/png');
-                            const imgWidth = captureWidth;
-                            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-                            const marginLeft = (pdfWidth - imgWidth) / 2;
-                            if (currentPageHeight + imgHeight > pageHeight) {
-                                pdf.addPage();
-                                currentPageHeight = headerHeight + spaceBelowHeader;
-                                console.log('Nueva página añadida');
-                            }
-                            pdf.addImage(imgData, 'JPEG', marginLeft, currentPageHeight, imgWidth, imgHeight);
-                            currentPageHeight += imgHeight;
-                            resolveRow();
-                        });
-                    }, 5000); // Tiempo para inspeccionar el clon antes de procesarlo
+                        setTimeout(() => {
+                            html2canvas(clone, {
+                                scale: 2,
+                                width: captureWidth
+                            }).then(canvas => {
+                                document.body.removeChild(clone);
+                                const imgData = canvas.toDataURL('image/jpeg'); // Asegúrate de que el formato coincida
+                                const imgWidth = captureWidth;
+                                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                                const marginLeft = (pdfWidth - imgWidth) / 2;
+
+                                if (currentPageHeight + imgHeight > pageHeight) {
+                                    pdf.addPage();
+                                    currentPageHeight = headerHeight + spaceBelowHeader;
+                                    console.log('Nueva página añadida');
+                                }
+
+                                pdf.addImage(imgData, 'JPEG', marginLeft, currentPageHeight, imgWidth, imgHeight);
+                                currentPageHeight += imgHeight;
+                                resolveRow();
+                            });
+                        }, 5000);
+                    });
                 });
             });
         });
-    });
 
-    promiseChain.then(() => {
-        pdf.save('technical_program2.pdf');
-        console.log('PDF guardado correctamente.');
-    }).catch(err => {
-        console.error('Error al generar el PDF:', err);
-    });
-}
-
+        promiseChain.then(() => {
+            pdf.save('technical_program2.pdf');
+            console.log('PDF guardado correctamente.');
+        }).catch(err => {
+            console.error('Error al generar el PDF:', err);
+        });
+    }
 
 
     applyPDFStyles() {

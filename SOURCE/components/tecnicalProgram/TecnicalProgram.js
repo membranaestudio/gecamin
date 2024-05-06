@@ -79,8 +79,7 @@ export default class TecnicalProgram extends BaseComponent {
         };
 
         promiseChain = promiseChain.then(() => addHeader());
-
-        this.applyPDFStyles(); // Asegurarse de que los estilos se aplican antes de empezar a procesar los elementos
+        this.applyPDFStyles();
 
         containers.forEach((container, index) => {
             Array.from(container.querySelectorAll('.height-item')).forEach((heightItem, idx) => {
@@ -89,32 +88,30 @@ export default class TecnicalProgram extends BaseComponent {
                         const clone = heightItem.cloneNode(true);
                         clone.classList.add('pdf-style');
                         document.body.appendChild(clone);
-                        console.log(`Clon ${idx + 1} de contenedor ${index + 1} añadido al cuerpo para inspección, por favor revise en el navegador:`, clone.outerHTML);
+                        console.log(`Clon ${idx + 1} de contenedor ${index + 1} preparado para inspección, por favor revise en el navegador:`, clone.outerHTML);
 
-                        // Espera a inspeccionar visualmente antes de proceder
                         setTimeout(() => {
                             html2canvas(clone, {
-                                onclone: (document) => {
-                                    console.log('Clonando para html2canvas:', document.body.innerHTML);
-                                },
                                 scale: 2,
                                 width: captureWidth
                             }).then(canvas => {
                                 document.body.removeChild(clone);
-                                const imgData = canvas.toDataURL('image/png');
+                                const imgData = canvas.toDataURL('image/jpeg'); // Asegúrate de que el formato coincida
                                 const imgWidth = captureWidth;
                                 const imgHeight = (canvas.height * imgWidth) / canvas.width;
                                 const marginLeft = (pdfWidth - imgWidth) / 2;
+
                                 if (currentPageHeight + imgHeight > pageHeight) {
                                     pdf.addPage();
                                     currentPageHeight = headerHeight + spaceBelowHeader;
                                     console.log('Nueva página añadida');
                                 }
+
                                 pdf.addImage(imgData, 'JPEG', marginLeft, currentPageHeight, imgWidth, imgHeight);
                                 currentPageHeight += imgHeight;
                                 resolveRow();
                             });
-                        }, 5000); // Tiempo para inspeccionar el clon antes de procesarlo
+                        }, 5000);
                     });
                 });
             });
