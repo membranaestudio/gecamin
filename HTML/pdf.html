@@ -10,7 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 	<style>
 		#content-to-capture {
-			max-width: 1200px;
+			max-width: 1300px;
 			/* Visualización normal limitada a 1000px */
 			margin: auto;
 		}
@@ -78,7 +78,7 @@
 					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
 					odio cupiditate doloremque suscipit. Exercitationem. quibusdam nulla, animi nam commodi ipsa voluptas fugit
 					odio cupiditate doloremque suscipit.  Exercitationem. quibusdam nulla, animi nam commodi ipsa voluptas fugit
-					odio cupiditate doloremque suscipit. Exercitationem. quibusdam nulla. </p>
+					odio cupiditate doloremque suscipit. Exercitationem. quibusdam nulladsffd.</p>
 		
 			</div>
 			<div class="col-6">
@@ -93,50 +93,26 @@
 
 
 	<div class="container" id="content-to-capture">
+		
 		<div class="row">
 			<div class="col-6">
 				<h2 class="title">Título 3</h2>
-				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
-					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
-					odio cupiditate doloremque suscipit. Exercitationem.</p>
-			</div>
-			<div class="col-6">
-				<h2 class="title">Título 3</h2>
-				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
-					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
-					odio cupiditate doloremque suscipit. Exercitationem.</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-6">
-				<h2 class="title">Título 3</h2>
-				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
-					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
-					odio cupiditate doloremque suscipit. Exercitationem.</p>
 			</div>
 			<div class="col-6" data-change-class="col-3">
 				<h2 class="title">Título 3</h2>
-				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
-					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
-					odio cupiditate doloremque suscipit. Exercitationem.</p>
-			</div>
-			<div class="col-3 d-none" data-add-content="add-pdf-example">
 
 			</div>
+			
 		</div>
 	</div>
 
 	
-
-
-
-
 <script>
 function downloadPDF() {
   const pdf = new jspdf.jsPDF({
     orientation: 'portrait',
     unit: 'px',
-    format: [1080, 1400] // Configurar el tamaño de la página
+    format: [1080, 1200] // Configurar el tamaño de la página
   });
 
   const containers = document.querySelectorAll('.container[id="content-to-capture"]');
@@ -172,28 +148,28 @@ function downloadPDF() {
           clone.style.maxWidth = '1000px';
           document.body.appendChild(clone);
 
-          html2canvas(clone, { scale: 1.4, width: 1600 }).then(canvas => {
-            document.body.removeChild(clone);
-            const imgData = canvas.toDataURL('image/png');
-            const imgHeight = (canvas.height * 1080) / canvas.width;
+          html2canvas(clone, { scale: 1.4, width: 1200 }).then(canvas => {
+				document.body.removeChild(clone);
+				const imgData = canvas.toDataURL('image/png');
+				const imgWidth = 1000; // Ancho de la captura original
+				const imgHeight = (canvas.height * imgWidth) / canvas.width;
+				const marginLeft = (1200 - imgWidth) / 2; // Calcular el margen izquierdo para centrar
+				if (currentPageHeight + imgHeight > pageHeight) {
+					pdf.addPage();
+					currentPageHeight = 0;
+				}
+				pdf.addImage(imgData, 'JPEG', marginLeft, currentPageHeight, imgWidth, imgHeight, undefined, 'FAST');
+				currentPageHeight += imgHeight;
+				resolveRow();
+			});
 
-            // Verificar si el contenido actual cabe en la página actual
-            if (currentPageHeight + imgHeight > pageHeight) {
-              pdf.addPage();
-              currentPageHeight = 0; // Resetear altura acumulada para la nueva página
-            }
-
-            pdf.addImage(imgData, 'JPEG', 0, currentPageHeight, 1080, imgHeight, undefined, 'FAST');
-            currentPageHeight += imgHeight;
-            resolveRow(); // Resolver la promesa de la fila actual
-          });
         });
       });
     });
   });
 
   promiseChain.then(() => {
-    pdf.save('output.pdf'); // Guardar el PDF una vez que todas las promesas se hayan resuelto
+    pdf.save('test.pdf'); // Guardar el PDF una vez que todas las promesas se hayan resuelto
   });
 }
 </script>
