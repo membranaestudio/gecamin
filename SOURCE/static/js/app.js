@@ -358,6 +358,10 @@ window.app = {
 			dependencies: [],
 			file: './components/acordion/Accordion.js'
 		},
+		'TecnicalProgram': {
+			dependencies: [],
+			file: './components/tecnicalProgram/TecnicalProgram.js'
+		},
 		'MyCustomComponent': {
 			dependencies: [],
 			file: './components/myCustomComponent/MyCustomComponent.js'

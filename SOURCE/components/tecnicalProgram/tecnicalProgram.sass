@@ -1,0 +1,108 @@
+.tecnical_program
+	h1,h2,h3,h4,h5,h6
+		margin: 0 !important
+	.accordion-wrapper
+			padding: 30px
+			border-radius: 10px
+			+trans1				
+	.br-solid
+		border-right: 2px solid 
+	.bb-solid
+		border-bottom: 1px solid #000	
+	.by-solid
+		border-top: 1px solid 	
+		border-bottom: 1px solid #000	
+
+
+	.accordion-button
+		cursor: pointer
+		position: relative
+		margin-bottom: 30px
+		.arrow
+			position: absolute
+			right: 5px
+			top: 50%
+			transform: translateY(-50%)
+			+fluid('font-size',40, 60)
+		.accordion-wrapper
+			+fluid('padding-right',50, 70)
+		&:hover
+			.accordion-wrapper
+				background: var(--color-dark-1) !important
+				+trans1		
+	.accordion-finish
+		.accordion-wrapper
+			border: 2px solid var(--color-dark-1)
+		.sponsor
+			display: flex
+			justify-content: end
+			.lazy-wrapper
+				max-width: 200px
+				margin-left: 15px
+
+	.accordion-content
+		max-height: 0
+		overflow: hidden
+		transition: max-height 0.2s ease-in-out
+		h4
+			text-transform: uppercase
+			text-align: center
+			font-weight: 600
+		
+		.row
+			border-bottom: 1px solid var(--color-dark-4)
+			&:last-child
+				border: none
+			> div
+				padding-top: 25px
+				+fluid('padding-top', 20, 30)
+				+fluid('padding-bottom', 20, 30)
+		.accordion__head
+			background: var(--color-light-2)
+			.col-md-2:nth-child(1), .col-md-10:nth-child(2)
+				h4
+					font-weight: 700 !important
+			.col-md-2:not(:nth-child(1)), .col-md-10:not(:nth-child(2))
+				+fluid('padding-top', 30, 45)
+				+fluid('padding-bottom', 30, 45)
+			.col-md-2, .col-md-10
+				
+				border-top: 1px solid var(--color-dark-4)
+			.col-md-2
+				&::after
+					background: var(--color-light-2)
+		p, li
+			color: var(--color-dark-4)
+			line-height: 1.6 !important
+		p
+			margin: 15px 0	
+		strong
+			font-weight: 700 !important
+		li
+			margin-bottom: 15px
+			@extend .h5
+			font-weight: 400 !important 
+			&:last-child
+				margin-bottom: 0
+			
+			strong
+					color: var(--color-dark-1)
+					border-bottom: 1.5px solid var(--color-dark-1)
+					
+
+		.col-md-2
+			position: relative
+			&::after
+				content:''
+				position: absolute
+				right: 0
+				height: calc( 100% + 2px)
+				width: 25px
+				display: block
+				top: -1px
+				background: #fff
+		.padding-1
+			+fluid('padding-top', 20, 50)
+			+fluid('padding-bottom', 40, 80)
+		.padding-2
+			+fluid('padding-bottom',20, 50)

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Gecamin</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="description" content />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+	<!-- Styles  -->
+	<link rel="stylesheet" type="text/css" href="css/vendor.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<!-- Favicon -->
+
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header class="header js-header header_classic-menu-right" id="page-header" data-arts-component-name="Header">
+		<script>
+			fetch('template/header.html')
+				.then(response => response.text())
+				.then(html => {
+					document.getElementById('page-header').innerHTML = html;
+				})
+				.catch(error => console.error('Error al cargar el fragmento:', error));
+		</script>
+	</header>
+
+
+
+
+	<!-- MAIN CONTAINER -->
+	<main class="page-wrapper bg-light-1" id="page-wrapper">
+		<div class="page-wrapper__content" id="page-wrapper__content">
+
+
+			<!--  TITLE -->
+			<section class="section section-content mt-header-height bg-dark-2" data-arts-component-name="Content"
+				data-arts-os-animation="true" data-arts-color-theme="dark">
+				<div class="container py-4 py-lg-5">
+					<div data-arts-split-text-preset="animatedChars">
+						<h1 class="xxl">Technical Program</h1>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- BIG BUTTONS 2 COLUMN  -->
+			<!-- <section class="section section-content py-small" data-arts-component-name="Content"
+				data-arts-os-animation="true">
+				<div class="container" style="max-width: 800px;">
+					<div class="row g-6 overflow-hidden">
+						<div class="col-md-6 mb-3 mb-lg-0">
+							<a class="button button_icon button_bordered button-big overflow-hidden"
+								data-arts-os-animation-name="animatedJumpScale" href="#">
+								<span class="button__label button__label-normal">
+									<span
+										class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_right">
+										download
+									</span>
+									<span class="button__title">Abstract <br> template</span>
+
+								</span>
+								<span class="button__label button__label-hover">
+									<span
+										class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_righ">
+									download</span>
+									<span class="button__title">Abstract <br> template</span>
+
+								</span>
+							</a>
+						</div>
+						<div class="col-md-6 mb-3 mb-lg-0">
+							<a class="button button_icon button_bordered button-big overflow-hidden"
+								data-arts-os-animation-name="animatedJumpScale" href="#">
+								<span class="button__label button__label-normal">
+									<span
+										class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_right">
+										download
+									</span>
+									<span class="button__title">Abstract <br> template</span>
+
+								</span>
+								<span class="button__label button__label-hover">
+									<span
+										class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_righ">
+									download</span>
+									<span class="button__title">Abstract <br> template</span>
+
+								</span>
+							</a>
+						</div>
+
+					</div>
+					
+				</div>
+			</section> -->
+
+
+
+			<!-- ACCORDION TEAM -->
+			<section class="section section-content py-medium" data-arts-component-name="Content"
+				data-arts-os-animation="true">
+				<div class="container">
+					<div class="tecnical_program" data-arts-component-name="TecnicalProgram"
+						data-arts-os-animation="true">
+
+						<div class="accordion-item">
+							<div class="accordion-button" data-arts-color-theme="dark"
+								data-arts-os-animation-name="animatedJump">
+								<div class="accordion-wrapper bg-dark-2">
+									<span class="arrow material-symbols-outlined">
+										expand_more
+									</span>
+									<div class="row g-6">
+										<div class="w-lg-20 br-solid">
+											<h3 class="h3 fw-600">9:40 - 10:20</h3>
+										</div>
+										<div class="w-lg-80">
+											<h3 class="fw-600">Innaugural Ceremony</h3>
+											<h3 class="fw-400">Ballroom A & B</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-content" data-arts-os-animation-name="animatedJump">
+								<div class="accordion-wrapper">
+
+									<div class="row accordion__head">
+										<div class="col-md-2">
+											<h4>Hour</h4>
+										</div>
+										<div class="col-md-10">
+											<h4>Ballroom A&B</h4>
+										</div>
+										<div class="col-md-2">
+										</div>
+										<div class="col-md-10">
+											<h2>Innaugural Ceremony</h2>
+										</div>
+									</div>
+								
+									<div class="row">
+										<div class="col-md-2">
+											<h2>18:00</h2>
+										</div>
+										<div class="col-md-10">
+											<div class="tag bg-dark-1">SPA</div>
+											<p><strong>Welcoleme Words</strong></p>
+											<ul>
+												<li><strong>Mimy Mackenzie</strong>, Conference Manager, Gecamin, Chile
+												</li>
+												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
+													consectetur, adipisicing elit. Maiores tenetur minima quam
+													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
+													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
+												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
+													consectetur, adipisicing elit. Maiores tenetur minima quam
+													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
+													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
+												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
+													consectetur, adipisicing elit. Maiores tenetur minima quam
+													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
+													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
+											</ul>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-2">
+											<h2>18:00</h2>
+										</div>
+										<div class="col-md-10">
+											<div class="tag bg-dark-1">SPA</div>
+											<p><strong>Welcoleme Words</strong></p>
+											<ul>
+												<li><strong>Mimy Mackenzie</strong>, Conference Manager, Gecamin, Chile
+												</li>
+												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
+													consectetur, adipisicing elit. Maiores tenetur minima quam
+													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
+													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
+												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
+													consectetur, adipisicing elit. Maiores tenetur minima quam
+													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
+													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
+												<li><strong>Mimy Mackenzie</strong>, Lorem ipsum dolor sit amet
+													consectetur, adipisicing elit. Maiores tenetur minima quam
+													temporibus ut! Culpa libero quo voluptate fuga magni, exercitationem
+													natus, totam deserunt non reprehenderit aliquid qui nulla modi?</li>
+											</ul>
+										</div>
+									</div>
+
+
+
+								</div>
+
+							</div>
+							<div class="accordion-finish" data-arts-os-animation-name="animatedJump">
+								<div class="accordion-wrapper">
+									<div class="row g-6">
+										<div class="w-lg-20 br-solid">
+											<h3 class="h3 fw-600">9:40 - 10:20</h3>
+										</div>
+										<div class="w-lg-40">
+											<h3 class="fw-600">Innaugural Ceremony</h3>
+											<h3 class="fw-400">Ballroom A & B</h3>
+										</div>
+										<div class="w-lg-40">
+											<div class="sponsor">
+												<div class="lazy-wrapper">
+													<img class="lazy"
+														src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+														decoding="async" data-src="img/sponsor/logo_arcadis.jpg" alt />
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+
+						</div>
+
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+
+
+			<!-- FOOTER -->
+			<footer class="footer bg-dark-1" id="page-footer" data-arts-color-theme="dark">
+				<script>
+					fetch('template/footer.html')
+						.then(response => response.text())
+						.then(html => {
+							document.getElementById('page-footer').innerHTML = html;
+						})
+						.catch(error => console.error('Error al cargar el fragmento:', error));
+				</script>
+			</footer>
+
+
+
+
+
+		</div>
+	</main>
+	<!-- - MAIN CONTAINER -->
+
+
+	<!-- TEMPLATE SCRIPTS -->
+	<script src="js/vendor.js"></script>
+	<script src="js/framework.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>

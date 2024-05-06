@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Captura de PDF con jsPDF y html2canvas</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<style>
+		#content-to-capture {
+			max-width: 1200px;
+			/* Visualización normal limitada a 1000px */
+			margin: auto;
+		}
+
+		.title {
+			color: red;
+			font-size: 2vw
+		}
+
+		.content {
+			color: blue;
+			font-size: 2vw
+		}
+	</style>
+</head>
+
+<body>
+	<button class="btn btn-primary" onclick="downloadPDF()">Descargar PDF</button>
+
+	<div class="add-pdf-example">
+		<p>este una prueba</p>
+	</div>
+
+	<div class="add-pdf-example-2">
+		<p>este una prueba 2</p>
+	</div>
+
+
+	<div class="container" id="content-to-capture">
+		<div class="row">
+			<div class="col-6">
+				<h2 class="title">Título 1</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+			<div class="col-6">
+				<h2 class="title">Título 1</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+			<div class="col-6">
+				<h2 class="title">Título 1</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+			<div class="col-6">
+				<h2 class="title">Título 1</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<div class="container" id="content-to-capture">
+		<div class="row">
+			<div class="col-6">
+				<h2 class="title">Título 2</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem. quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit.  Exercitationem. quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem. quibusdam nulla. </p>
+		
+			</div>
+			<div class="col-6">
+				<h2 class="title">Título 2</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<div class="container" id="content-to-capture">
+		<div class="row">
+			<div class="col-6">
+				<h2 class="title">Título 3</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+			<div class="col-6">
+				<h2 class="title">Título 3</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<h2 class="title">Título 3</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+			<div class="col-6" data-change-class="col-3">
+				<h2 class="title">Título 3</h2>
+				<p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, excepturi accusantium
+					corporis culpa impedit nihil eaque explicabo quibusdam nulla, animi nam commodi ipsa voluptas fugit
+					odio cupiditate doloremque suscipit. Exercitationem.</p>
+			</div>
+			<div class="col-3 d-none" data-add-content="add-pdf-example">
+
+			</div>
+		</div>
+	</div>
+
+	
+
+
+
+
+<script>
+function downloadPDF() {
+  const pdf = new jspdf.jsPDF({
+    orientation: 'portrait',
+    unit: 'px',
+    format: [1080, 1400] // Configurar el tamaño de la página
+  });
+
+  const containers = document.querySelectorAll('.container[id="content-to-capture"]');
+  let currentPageHeight = 0;
+  const pageHeight = pdf.internal.pageSize.height - 30; // 30px para padding
+  let promiseChain = Promise.resolve(); // Iniciar una cadena de promesas
+
+  containers.forEach((container) => {
+    Array.from(container.querySelectorAll('.row')).forEach(row => {
+      promiseChain = promiseChain.then(() => {
+        return new Promise((resolveRow) => {
+          const clone = row.cloneNode(true);
+
+          // Procesar cambios de clase basados en data-change-class
+          const elementsToChange = clone.querySelectorAll('[data-change-class]');
+          elementsToChange.forEach(element => {
+            const newClass = element.getAttribute('data-change-class');
+            element.className = newClass;
+          });
+
+          // Procesar adición de contenido basados en data-add-content
+          const elementsToAddContent = clone.querySelectorAll('[data-add-content]');
+          elementsToAddContent.forEach(element => {
+            const contentClass = element.getAttribute('data-add-content');
+            const contentToAdd = document.querySelector('.' + contentClass);
+            if (contentToAdd) {
+              element.innerHTML = contentToAdd.innerHTML;
+              element.classList.remove('d-none');
+            }
+          });
+
+          // Estilos para la captura
+          clone.style.maxWidth = '1000px';
+          document.body.appendChild(clone);
+
+          html2canvas(clone, { scale: 1.4, width: 1600 }).then(canvas => {
+            document.body.removeChild(clone);
+            const imgData = canvas.toDataURL('image/png');
+            const imgHeight = (canvas.height * 1080) / canvas.width;
+
+            // Verificar si el contenido actual cabe en la página actual
+            if (currentPageHeight + imgHeight > pageHeight) {
+              pdf.addPage();
+              currentPageHeight = 0; // Resetear altura acumulada para la nueva página
+            }
+
+            pdf.addImage(imgData, 'JPEG', 0, currentPageHeight, 1080, imgHeight, undefined, 'FAST');
+            currentPageHeight += imgHeight;
+            resolveRow(); // Resolver la promesa de la fila actual
+          });
+        });
+      });
+    });
+  });
+
+  promiseChain.then(() => {
+    pdf.save('output.pdf'); // Guardar el PDF una vez que todas las promesas se hayan resuelto
+  });
+}
+</script>
+
+
+
+
+
+</body>
+
+</html>
