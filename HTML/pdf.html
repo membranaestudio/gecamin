@@ -30,14 +30,7 @@
 <body>
 	<button class="btn btn-primary" onclick="downloadPDF()">Descargar PDF</button>
 
-	<div class="add-pdf-example">
-		<p>este una prueba</p>
-	</div>
-
-	<div class="add-pdf-example-2">
-		<p>este una prueba 2</p>
-	</div>
-
+	
 
 	<div class="container" id="content-to-capture">
 		<div class="row">
@@ -148,7 +141,7 @@ function downloadPDF() {
           // Procesar cambios de clase y contenido aquí
           clone.style.maxWidth = captureWidth + 'px';
           document.body.appendChild(clone);
-          html2canvas(clone, { scale: 1.4, width: pdfWidth }).then(canvas => {
+          html2canvas(clone, { scale: 2, width: pdfWidth }).then(canvas => {
             document.body.removeChild(clone);
             const imgData = canvas.toDataURL('image/png');
             const imgWidth = captureWidth; // Ancho de la captura original

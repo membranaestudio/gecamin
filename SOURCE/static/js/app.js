@@ -234,7 +234,20 @@ window.app = {
 			type: 'script',
 			src: './js/vendor/swiper.min.js',
 			id: 'swiper-js'
-		}]
+		}],
+		'jspdf': [{
+			type: 'script',
+			src: './js/vendor/jspdf.umd.min.js',
+			id: 'jspdf-js'
+		}],
+		'html2canvas': [{
+			type: 'script',
+			src: './js/vendor/html2canvas.min.js',
+			id: 'html2canvas-js'
+		}],
+
+
+		
 	},
 
 	components: {
@@ -359,7 +372,7 @@ window.app = {
 			file: './components/acordion/Accordion.js'
 		},
 		'TecnicalProgram': {
-			dependencies: [],
+			dependencies: ['jspdf','html2canvas'],
 			file: './components/tecnicalProgram/TecnicalProgram.js'
 		},
 		'MyCustomComponent': {
