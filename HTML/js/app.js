@@ -375,6 +375,10 @@ window.app = {
 			dependencies: ['jspdf','html2canvas'],
 			file: './components/tecnicalProgram/TecnicalProgram.js'
 		},
+		'BackButton': {
+			dependencies: [],
+			file: './components/mobileProgram/BackButton.js'
+		},
 		'MyCustomComponent': {
 			dependencies: [],
 			file: './components/myCustomComponent/MyCustomComponent.js'

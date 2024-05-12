@@ -1,4 +1,4 @@
-export default class TecnicalProgram extends BaseComponent {
+export default class TechnicalProgram extends BaseComponent {
     constructor({
         name,
         loadInnerComponents,
@@ -9,37 +9,42 @@ export default class TecnicalProgram extends BaseComponent {
             name,
             loadInnerComponents,
             parent,
-            element,
+            element
         });
         this.setup();
     }
+
+    // Inicializa los componentes y comportamientos necesarios
     init() {
         this.accordionProgram();
         this.DownloadPDF();
-        this.applyPDFStyles()
-
+        this.applyPDFStyles();
     }
 
+    // 
     accordionProgram() {
-        const accordionBtns = document.querySelectorAll(".accordion-button");
-        accordionBtns.forEach((accordion) => {
-            accordion.onclick = function () {
-                this.classList.toggle("is-open");
-                let content = this.nextElementSibling;
+        const accordionBtns = document.querySelectorAll(".technical_button");
+        accordionBtns.forEach((accordionBtn) => {
+            accordionBtn.onclick = function () {
+                const accordionItem = accordionBtn.closest(".accordion-item");
+                accordionItem.classList.toggle("is-open");
+                let content = accordionBtn.nextElementSibling;
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
             };
-            // Abrir el elemento que tiene la clase "is-open" al cargar la página  
-            if (accordion.classList.contains("is-open")) {
-                let content = accordion.nextElementSibling;
+            const accordionItem = accordionBtn.closest(".accordion-item");
+            if (accordionItem.classList.contains("is-open")) {
+                let content = accordionBtn.nextElementSibling;
                 content.style.maxHeight = content.scrollHeight + "px";
             }
         });
     }
 
+
+    // Botón de descarga para iniciar la creación del PDF
     DownloadPDF() {
         const downloadButton = document.getElementById('downloadButton');
         downloadButton.addEventListener('click', () => {
@@ -47,12 +52,13 @@ export default class TecnicalProgram extends BaseComponent {
         });
     }
 
-
+    // Crea el PDF y maneja la lógica
     CreatePDF() {
         const pdfWidth = 1380;
         const pdfHeight = 1600;
         const headerHeight = 174;
         const spaceBelowHeader = 80;
+        const footerSpace = 80; // Espacio para el footer
         const pdf = new jspdf.jsPDF({
             orientation: 'portrait',
             unit: 'px',
@@ -62,23 +68,13 @@ export default class TecnicalProgram extends BaseComponent {
         const containers = document.querySelectorAll('#content-to-capture');
         console.log('Contenedores encontrados:', containers.length);
         let currentPageHeight = headerHeight + spaceBelowHeader;
-        const pageHeight = pdf.internal.pageSize.height - 30;
-        const captureWidth = 1300;
+        const pageHeight = pdf.internal.pageSize.height - footerSpace; // Ajustar la altura de la página para el footer
+        const captureWidth = 1260;
         let promiseChain = Promise.resolve();
+        const pdfCloneContainer = document.querySelector('.pdf-clone');
 
-        const addHeader = () => {
-            return new Promise(resolveHeader => {
-                const img = new Image();
-                img.src = 'header.png';
-                img.onload = () => {
-                    pdf.addImage(img, 'PNG', 0, 0, pdfWidth, headerHeight);
-                    console.log('Encabezado añadido');
-                    resolveHeader();
-                };
-            });
-        };
-
-        promiseChain = promiseChain.then(() => addHeader());
+        // Inicialmente añade el encabezado
+        promiseChain = promiseChain.then(() => this.addHeader(pdf, pdfWidth, headerHeight));
         this.applyPDFStyles();
 
         containers.forEach((container, index) => {
@@ -87,65 +83,76 @@ export default class TecnicalProgram extends BaseComponent {
                     return new Promise((resolveRow) => {
                         const clone = heightItem.cloneNode(true);
                         clone.classList.add('pdf-style');
-                        document.body.appendChild(clone);
-                        console.log(`Clon ${idx + 1} de contenedor ${index + 1} preparado para inspección, por favor revise en el navegador:`, clone.outerHTML);
-
+                        pdfCloneContainer.appendChild(clone);
+                        console.log(`Clon ${idx + 1} de contenedor ${index + 1} preparado para inspección:`, clone.outerHTML);
                         setTimeout(() => {
                             html2canvas(clone, {
                                 scale: 2,
                                 width: captureWidth
                             }).then(canvas => {
-                                document.body.removeChild(clone);
-                                const imgData = canvas.toDataURL('image/jpeg'); // Asegúrate de que el formato coincida
+                                pdfCloneContainer.removeChild(clone);
+                                const imgData = canvas.toDataURL('image/jpeg');
                                 const imgWidth = captureWidth;
                                 const imgHeight = (canvas.height * imgWidth) / canvas.width;
                                 const marginLeft = (pdfWidth - imgWidth) / 2;
-
                                 if (currentPageHeight + imgHeight > pageHeight) {
                                     pdf.addPage();
-                                    currentPageHeight = headerHeight + spaceBelowHeader;
-                                    console.log('Nueva página añadida');
+                                    // Añadir el encabezado en la nueva página y ajustar currentPageHeight
+                                    this.addHeader(pdf, pdfWidth, headerHeight).then(() => {
+                                        currentPageHeight = headerHeight + spaceBelowHeader; // Restablecer la altura de la página actual
+                                        pdf.addImage(imgData, 'JPEG', marginLeft, currentPageHeight, imgWidth, imgHeight);
+                                        currentPageHeight += imgHeight;
+                                        resolveRow();
+                                    });
+                                } else {
+                                    pdf.addImage(imgData, 'JPEG', marginLeft, currentPageHeight, imgWidth, imgHeight);
+                                    currentPageHeight += imgHeight;
+                                    resolveRow();
                                 }
-
-                                pdf.addImage(imgData, 'JPEG', marginLeft, currentPageHeight, imgWidth, imgHeight);
-                                currentPageHeight += imgHeight;
-                                resolveRow();
                             });
-                        }, 5000);
+                        }, 0);
                     });
                 });
             });
         });
-
         promiseChain.then(() => {
-            pdf.save('technical_program2.pdf');
+            pdf.save('test3.pdf');
             console.log('PDF guardado correctamente.');
         }).catch(err => {
             console.error('Error al generar el PDF:', err);
         });
     }
 
-
+    // Aplica estilos específicos para la generación del PDF
     applyPDFStyles() {
         const style = document.createElement('style');
         style.textContent = `
-        .pdf-style .tag span {
-            position: relative;
-            top: -12px !important;
-        }
-        .pdf-style p {
-            font-size: 18px !important;
-            line-height: 1.4 !important;
-        }
-        .pdf-style.height-item {
-            border-bottom: 5px solid red !important
-        }
-        
-    `;
+            .pdf-style .tag span {
+                position: relative;
+                top: -12px !important;
+            }
+            .pdf-style h4 {
+                position: relative;
+                top: -8px !important;
+            }
+            .pdf-style span.bb-solid {
+                border: none !important;
+            }
+        `;
         document.head.appendChild(style);
-        console.log('Estilos PDF aplicados:', style.textContent); // Mostrar los estilos aplicados en la consola
+        console.log('Estilos PDF aplicados:', style.textContent);
     }
 
-
-
+    // Función auxiliar para añadir el encabezado al PDF
+    addHeader(pdf, pdfWidth, headerHeight) {
+        return new Promise(resolveHeader => {
+            const img = new Image();
+            img.src = 'header.png';
+            img.onload = () => {
+                pdf.addImage(img, 'PNG', 0, 0, pdfWidth, headerHeight);
+                console.log('Encabezado añadido');
+                resolveHeader();
+            };
+        });
+    }
 }

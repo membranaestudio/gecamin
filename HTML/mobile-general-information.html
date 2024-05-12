@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Gecamin</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="description" content />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+	<!-- Styles  -->
+	<link rel="stylesheet" type="text/css" href="css/vendor.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<!-- Favicon -->
+
+
+
+
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header class="header js-header heacer-mobile" id="page-header" data-arts-component-name="Header">
+		<script>
+			fetch('template/header-mobile.html')
+				.then(response => response.text())
+				.then(html => {
+					document.getElementById('page-header').innerHTML = html;
+				})
+				.catch(error => console.error('Error al cargar el fragmento:', error));
+		</script>
+	</header>
+
+
+
+
+	<!-- MAIN CONTAINER -->
+	<main class="page-wrapper bg-light-1" id="page-wrapper">
+		<div class="page-wrapper__content" id="page-wrapper__content">
+
+
+
+			<!--  BACK BUTTON + TITLE + ACCORDION -->
+			<section class="section section-content pt-header-height" data-arts-component-name="Content"
+				data-arts-os-animation="true">
+				<div class="container">
+					<div class="back-button" data-arts-os-animation-name="animatedJump">
+						<a href="#" data-arts-component-name="BackButton">
+							<img src="img/icons/icon_back.svg" width="40" height="40" loading="eager" />
+							<h4>General Information</h4>
+						</a>
+					</div>
+					<div class="bb-solid-gray mb-paragraph" data-arts-component-name="Acordion"
+						data-arts-os-animation="true">
+
+						<div class="accordion border-gray" data-arts-os-animation-name="animatedJump">
+							<div class="icon">
+								<span class="arrow material-symbols-outlined">
+									expand_more
+								</span>
+							</div>
+							<h2 class="h5 fw-400">Main Sponsor</h2>
+						</div>
+						<div class="accordion-content" data-arts-os-animation-name="animatedJump">
+							<div class="padding-2">
+								<p> Lorem ipsum dolor, sit amet consectetur
+									adipisicing elit.
+									Inventore expedita earum velit
+									quas soluta quasi tenetur iusto corporis eum cupiditate impedit, illo
+									placeat.
+									Perspiciatis, cum. Sit quia cumque quis beatae?</p>
+							</div>
+
+						</div>
+
+
+						<div class="accordion border-gray" data-arts-os-animation-name="animatedJump">
+							<div class="icon">
+								<span class="arrow material-symbols-outlined">
+									expand_more
+								</span>
+							</div>
+							<h2 class="h5 fw-400">Parking</h2>
+						</div>
+						<div class="accordion-content" data-arts-os-animation-name="animatedJump">
+							<div class="padding-2">
+								<p>Paid parking is available at the Sheraton Hotel (venue), subject to availability.</p>
+								<div class="mt-3 mb-4">
+									<p class="fw-600">Preferential parking rates for participants:</p>
+									<p class="color-gray-1 paragraph-4">(Ticket Sale Service is only available at
+										Gecamin Stand Payment method: Cash and Credit Cards) </p>
+									<p>Half Day( until 6 hours): CLP $8.000 / USD $10</p>
+								</div>
+								<p class="fw-600">Opening hours for Parking Ticket Sale:</p>
+								<p>Wednesday: <span class="color-red"> 11:00 - 21:00 hrs</span></p>
+								<p>Thursday: <span class="color-red"> 08:50 - 20:00 hrs.</span></p>
+								<p>Friday: <span class="color-red"> 08:50 - 17:30 hrs.</span></p>
+
+							</div>
+
+						</div>
+
+
+						<div class="accordion border-gray" data-arts-os-animation-name="animatedJump">
+							<div class="icon">
+								<span class="arrow material-symbols-outlined">
+									expand_more
+								</span>
+							</div>
+							<h2 class="h5 fw-400">Internet</h2>
+						</div>
+						<div class="accordion-content" data-arts-os-animation-name="animatedJump">
+							<div class="padding-2">
+								<p> Complimentary Wi-Fi is available in all areas of the
+									Congress (NO password required)</p>
+								<p class="fw-800">WiFi Network: <span class="color-red">Water Congress</span></p>	
+
+							</div>
+
+						</div>
+
+
+
+					</div>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</main>
+	<!-- - MAIN CONTAINER -->
+
+
+	<!-- TEMPLATE SCRIPTS -->
+	<script src="js/vendor.js"></script>
+	<script src="js/framework.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

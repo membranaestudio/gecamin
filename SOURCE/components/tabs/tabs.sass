@@ -9,6 +9,9 @@
 		flex: 1
 		text-align: center
 		font-weight: 500
+		border-bottom: 1px solid #000
+		padding-bottom: 20px
+		line-height: 1.3
 
 		span
 			color: var(--color-dark-2)
@@ -24,6 +27,11 @@
 			opacity: 0.95
 			+trans1
 	.active
+		border-bottom: solid var(--color-dark-2)
+		color: var(--color-dark-2)
+		+fluid('border-width', 3, 5)
+
+	.active_
 		color: var(--color-dark-2)
 		.js-arts-split-text__line:after
 			bottom: -1px
@@ -39,3 +47,5 @@
 		border-bottom: 1px solid #000
 		@media screen and (max-width: $md)
 			margin-bottom: 25px
+
+
