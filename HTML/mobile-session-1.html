@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Gecamin</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="description" content />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+	<!-- Styles  -->
+	<link rel="stylesheet" type="text/css" href="css/vendor.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<!-- Favicon -->
+
+
+
+
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header class="header js-header heacer-mobile" id="page-header" data-arts-component-name="Header">
+		<script>
+			fetch('template/header-mobile.html')
+				.then(response => response.text())
+				.then(html => {
+					document.getElementById('page-header').innerHTML = html;
+				})
+				.catch(error => console.error('Error al cargar el fragmento:', error));
+		</script>
+	</header>
+
+
+
+
+	<!-- MAIN CONTAINER -->
+	<main class="page-wrapper bg-light-1" id="page-wrapper">
+		<div class="page-wrapper__content" id="page-wrapper__content">
+
+
+
+			<!--  BACK BUTTON + TITLE + TAB-->
+			<section class="section section-content pt-header-height mb-medium" data-arts-component-name="Content"
+				data-arts-os-animation="true">
+				<div class="container">
+
+					<!--  TIITLE BACK BUTTON -->
+					<div class="back-button" data-arts-os-animation-name="animatedJump">
+						<a href="#" data-arts-component-name="BackButton">
+							<img src="img/icons/icon_back.svg" width="40" height="40" loading="eager" />
+							<h4>08:50 - 10:20 <br>Wednesday 06</h4>
+						</a>
+					</div>
+
+					<!--  TAB BALLROM -->
+					<div data-arts-component-name="Tabs" data-arts-os-animation="true">
+						<div class="tab-menu-mobile row g-3">
+							<div class="col-6" data-arts-os-animation-name="animatedJump">
+								<a class="button-shadow text-center padding-1" data-tab="ballroom-1">Ballroom A</a>
+							</div>
+							<div class="col-6" data-arts-os-animation-name="animatedJump">
+								<a class="button-shadow text-center padding-1" data-tab="ballroom-2">Ballroom B</a>
+							</div>
+						</div>
+						<div class="w-100 b-solid-gray my-4" data-arts-os-animation-name="animatedBorderHorizontal">
+						</div>
+
+						<div class="mt-xsmall">
+
+
+							<!--  TAB BALLROM #1-->
+							<div id="ballroom-1">
+
+								<!--  IMG -->
+								<div class="w-100 h-100 overflow-hidden"
+									data-arts-os-animation-name="animatedMaskFromTop">
+									<div class="w-100 h-100 js-animated-mask-inner overflow-hidden">
+										<div class="lazy-wrapper b-radius">
+											<img class="lazy"
+												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+												decoding="async" data-src="img/mobile/session.jpg" width="1920"
+												height="1280" alt="" />
+										</div>
+
+
+									</div>
+								</div>
+
+
+								<div class="border-gray">
+
+									<!--  MODERATOR -->
+									<div class="padding pt-2 d-flex align-items-center"
+										data-arts-split-text-preset="animatedLines">
+										<div class="ico-size-1 material-symbols-outlined pe-3">record_voice_over</div>
+										<h5 class="color-dark-2 m-0"><span class="fw-700">Moderator:</span> Ricardo
+											Oyarzún, Academic, Universidad de La Serena</h5>
+									</div>
+
+									<!--  SPONSOR -->
+									<div class="padding section-logos-3 d-flex"
+										data-arts-os-animation-name="animatedJump">
+										<div class="col-5 d-flex justify-content-center align-items-center">
+											<h5 class="color-gray-1 fw-500">Session Sponsor</h5>
+										</div>
+										<div class="col-7 px-4">
+											<div class="lazy-wrapper" style="max-width: 240px; margin: 0 auto">
+												<img class="lazy of-cover"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+													decoding="async" data-src="img/home/logo_eramet.jpg" alt="" />
+											</div>
+										</div>
+
+
+									</div>
+
+									<!--  #1 -->
+									<div class="padding" data-arts-split-text-preset="animatedLines">
+										<h3 class="color-dark-2 fw-800 mb-2 mt-0">13:50</h3>
+										<p class="color-dark-1 fw-600"> <span class="tag-small">eng</span> Lorem ipsum
+											dolor,
+											sit amet consectetur
+											adipisicing elit.
+											Inventore expedita earum velit
+											quas soluta quasi tenetur iusto corporis eum cupiditate impedit, illo
+											placeat.
+											Perspiciatis, cum. Sit quia cumque quis beatae?</p>
+										<p class="color-gray-1 paragraph-4">
+											<span class="text-decoration-underline">Zamora y
+												Jean Paul</span> Bueno, Cerro Lindo, Nexa Resources, Perú
+										</p>
+									</div>
+
+									<!--  #2 -->
+									<div class="padding" data-arts-split-text-preset="animatedLines">
+										<h3 class="color-dark-2 fw-800 mb-2 mt-0">13:50</h3>
+										<p class="color-dark-1 fw-600"> <span class="tag-small">eng</span> Lorem ipsum
+											dolor,
+											sit amet consectetur
+											adipisicing elit.
+											Inventore expedita earum velit
+											quas soluta quasi tenetur iusto corporis eum cupiditate impedit, illo
+											placeat.
+											Perspiciatis, cum. Sit quia cumque quis beatae?</p>
+										<p class="color-gray-1 paragraph-4">
+											<span class="text-decoration-underline">Zamora y
+												Jean Paul</span> Bueno, Cerro Lindo, Nexa Resources, Perú
+										</p>
+									</div>
+									<!--  #3 -->
+									<div class="padding" data-arts-split-text-preset="animatedLines">
+										<h3 class="color-dark-2 fw-800 mb-2 mt-0">13:50</h3>
+										<p class="color-dark-1 fw-600"> <span class="tag-small">eng</span> Lorem ipsum
+											dolor,
+											sit amet consectetur
+											adipisicing elit.
+											Inventore expedita earum velit
+											quas soluta quasi tenetur iusto corporis eum cupiditate impedit, illo
+											placeat.
+											Perspiciatis, cum. Sit quia cumque quis beatae?</p>
+										<p class="color-gray-1 paragraph-4">
+											<span class="text-decoration-underline">Zamora y
+												Jean Paul</span> Bueno, Cerro Lindo, Nexa Resources, Perú
+										</p>
+									</div>
+								</div>
+
+
+								<!--  ITEM TEXT  -->
+								<div class="mt-small js-move-responsive" data-arts-component-name="MoveResposive"
+									data-arts-os-animation="true" data-arts-component-options="{
+										initContent: '.move-init',
+										finishContent: '.move-finish',
+										screenWidth: 991
+									}">
+									<!--  ITEM ICON TIMESLOT + TITLE  -->
+									<a href="mobile-coffe-break.html" class="accordion__finish social d-block mb-3"
+										data-arts-os-animation-name="animatedJumpScale">
+										<div class="accordion__padding">
+											<div class="row g-3 g-md-4 g-lg-5 g-xl-6">
+												<!--  ICON + TIMESLOT -->
+												<div class="w-lg-20 br-solid">
+													<div class="social__icon">
+														<div class="lazy-wrapper">
+															<img class="lazy"
+																src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																decoding="async" data-src="img/icons/icon_social.svg"
+																width="60" height="43" alt />
+														</div>
+													</div>
+													<div class="move-init">
+														<h3 class="h3 fw-600">9:40 - 10:20</h3>
+													</div>
+												</div>
+												<!--  TITLE -->
+												<div class="w-lg-80">
+													<div class="move-finish"></div>
+													<h4 class="fw-500">Coffee Break & Posters Session</h4>
+												</div>
+
+											</div>
+
+										</div>
+
+									</a>
+								</div>
+
+
+
+
+
+							</div>
+
+							<!--  TAB BALLROM #1-->
+							<div id="ballroom-2">
+
+								<!--  IMG -->
+								<div class="w-100 h-100 overflow-hidden"
+									data-arts-os-animation-name="animatedMaskFromTop">
+									<div class="w-100 h-100 js-animated-mask-inner overflow-hidden">
+										<div class="lazy-wrapper b-radius">
+											<img class="lazy"
+												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+												decoding="async" data-src="img/mobile/session.jpg" width="1920"
+												height="1280" alt="" />
+										</div>
+
+
+									</div>
+								</div>
+
+								<!--  LIST TEXT -->
+								<div class="border-gray">
+
+									<!--  MODERATOR -->
+									<div class="padding pt-2 d-flex align-items-center"
+										data-arts-split-text-preset="animatedLines">
+										<div class="ico-size-1 material-symbols-outlined pe-3">record_voice_over</div>
+										<h5 class="color-dark-2 m-0"><span class="fw-700">Moderator:</span> Ricardo
+											Oyarzún, Academic, Universidad de La Serena</h5>
+									</div>
+
+
+									<!--  #1 -->
+									<div class="padding" data-arts-split-text-preset="animatedLines">
+										<h3 class="color-dark-2 fw-800 mb-2 mt-0">13:50</h3>
+										<p class="color-dark-1 fw-600"> <span class="tag-small">eng</span> Lorem ipsum
+											dolor,
+											sit amet consectetur
+											adipisicing elit.
+											Inventore expedita earum velit
+											quas soluta quasi tenetur iusto corporis eum cupiditate impedit, illo
+											placeat.
+											Perspiciatis, cum. Sit quia cumque quis beatae?</p>
+										<p class="color-gray-1 paragraph-4">
+											<span class="text-decoration-underline">Zamora y
+												Jean Paul</span> Bueno, Cerro Lindo, Nexa Resources, Perú
+										</p>
+									</div>
+
+									<!--  #2 -->
+									<div class="padding" data-arts-split-text-preset="animatedLines">
+										<h3 class="color-dark-2 fw-800 mb-2 mt-0">13:50</h3>
+										<p class="color-dark-1 fw-600"> <span class="tag-small">eng</span> Lorem ipsum
+											dolor,
+											sit amet consectetur
+											adipisicing elit.
+											Inventore expedita earum velit
+											quas soluta quasi tenetur iusto corporis eum cupiditate impedit, illo
+											placeat.
+											Perspiciatis, cum. Sit quia cumque quis beatae?</p>
+										<p class="color-gray-1 paragraph-4">
+											<span class="text-decoration-underline">Zamora y
+												Jean Paul</span> Bueno, Cerro Lindo, Nexa Resources, Perú
+										</p>
+									</div>
+									<!--  #3 -->
+									<div class="padding" data-arts-split-text-preset="animatedLines">
+										<h3 class="color-dark-2 fw-800 mb-2 mt-0">13:50</h3>
+										<p class="color-dark-1 fw-600"> <span class="tag-small">eng</span> Lorem ipsum
+											dolor,
+											sit amet consectetur
+											adipisicing elit.
+											Inventore expedita earum velit
+											quas soluta quasi tenetur iusto corporis eum cupiditate impedit, illo
+											placeat.
+											Perspiciatis, cum. Sit quia cumque quis beatae?</p>
+										<p class="color-gray-1 paragraph-4">
+											<span class="text-decoration-underline">Zamora y
+												Jean Paul</span> Bueno, Cerro Lindo, Nexa Resources, Perú
+										</p>
+									</div>
+								</div>
+
+
+								<!--  ITEM TEXT  -->
+								<div class="mt-2 js-move-responsive" data-arts-component-name="MoveResposive"
+									data-arts-os-animation="true" data-arts-component-options="{
+										initContent: '.move-init',
+										finishContent: '.move-finish',
+										screenWidth: 991
+									}">
+									<!--  ITEM ICON TIMESLOT + TITLE + SPONSOR  -->
+									<a href="mobile-coffe-break.html" class="accordion__finish social d-block mb-3"
+										data-arts-os-animation-name="animatedJumpScale">
+										<div class="accordion__padding">
+											<div class="row g-3 g-md-4 g-lg-5 g-xl-6">
+												<!--  ICON + TIMESLOT -->
+												<div class="w-lg-20 br-solid">
+													<div class="social__icon">
+														<div class="lazy-wrapper">
+															<img class="lazy"
+																src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																decoding="async" data-src="img/icons/icon_social.svg"
+																width="60" height="43" alt />
+														</div>
+													</div>
+													<div class="move-init">
+														<h3 class="h3 fw-600">9:40 - 10:20</h3>
+													</div>
+												</div>
+												<!--  TITLE-->
+												<div class="w-lg-40">
+													<div class="move-finish"></div>
+													<h4 class="fw-500">Coffee Break & Posters Session</h4>
+												</div>
+												<!--  SPONSOR -->
+												<div class="w-lg-40">
+													<div class="sponsor">
+														<div class="lazy-wrapper">
+															<img class="lazy"
+																src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																decoding="async" data-src="img/sponsor/logo_arcadis.jpg"
+																alt />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+
+
+
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</main>
+	<!-- - MAIN CONTAINER -->
+
+
+	<!-- TEMPLATE SCRIPTS -->
+	<script src="js/vendor.js"></script>
+	<script src="js/framework.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

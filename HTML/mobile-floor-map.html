@@ -49,21 +49,25 @@
 
 
 			<!--  BACK BUTTON + TITLE + IMG -->
-			<section class="section section-content pt-header-height" data-arts-component-name="Content"
+			<section class="section section-content pt-header-height mb-medium" data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<div class="container">
 					<div class="back-button" data-arts-os-animation-name="animatedJump">
-						<a href="#" data-arts-component-name="BackButton" >
+						<a href="#" data-arts-component-name="BackButton">
 							<img src="img/icons/icon_back.svg" width="40" height="40" loading="eager" />
 							<h4>Floor Map</h4>
 						</a>
 					</div>
-					<div class="lazy-wrapper">
-						<img class="lazy"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-							width="1920" height="1280" alt="" />
+					<div class="w-100 h-100 overflow-hidden" data-arts-os-animation-name="animatedMaskFromTop">
+						<div class="w-100 h-100 js-animated-mask-inner overflow-hidden">
+							<div class="lazy-wrapper" style="max-width: 390px; margin: 0 auto">
+								<img class="lazy"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/mobile/floor.jpg" width="390" height="841" alt="" />
+							</div>
+						</div>
 					</div>
+
 			</section>
 
 

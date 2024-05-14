@@ -141,7 +141,6 @@ window.app = {
 			.then(() => Promise.all(app.componentsManager.init({
 				scope: app.containerEl
 			})))
-			.then(() => app.utilities.scrollToAnchorFromHash())
 			.then(() => {
 				app.loadLazy();
 				ScrollTrigger.refresh();
@@ -355,10 +354,6 @@ window.app = {
 			dependencies: [],
 			file: './components/countdown/CountDown.js'
 		},
-		'Acordion': {
-			dependencies: [],
-			file: './components/acordion/Acordion.js'
-		},
 		'Tabs': {
 			dependencies: [],
 			file: './components/tabs/Tabs.js'
@@ -369,11 +364,15 @@ window.app = {
 		},
 		'Accordion': {
 			dependencies: [],
-			file: './components/acordion/Accordion.js'
+			file: './components/accordion/Accordion.js'
 		},
-		'TecnicalProgram': {
-			dependencies: ['jspdf','html2canvas'],
-			file: './components/tecnicalProgram/TecnicalProgram.js'
+		'AccordionProgram': {
+			dependencies: [],
+			file: './components/accordionProgram/AccordionProgram.js'
+		},
+		'CreatePDF': {
+			dependencies: ['jspdf', 'html2canvas'],
+			file: './components/accordionProgram/CreatePDF.js'
 		},
 		'BackButton': {
 			dependencies: [],

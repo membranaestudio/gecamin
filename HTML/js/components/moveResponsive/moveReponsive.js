@@ -30,33 +30,34 @@ export default class MoveResponsive extends BaseComponent {
 
 
   isMoveResponsive() {
-    const initContent = this.element.querySelector(this.options.initContent);
-    const finishContent = this.element.querySelector(this.options.finishContent);
-    if (!initContent || !finishContent) {
-      return
+    const initContents = this.element.querySelectorAll('.js-move-responsive ' + this.options.initContent);
+    const finishContents = this.element.querySelectorAll('.js-move-responsive ' + this.options.finishContent);
+
+    if (!initContents.length || !finishContents.length) {
+      return;
     } else {
-      this.moveHTML();
+      initContents.forEach((initContent, index) => {
+        const finishContent = finishContents[index];
+        this.moveHTML(initContent, finishContent);
+      });
       // window.addEventListener('resize', () => {
       //  this.moveHTML();
       // });
     }
   }
 
-  moveHTML() {
+  moveHTML(initContent, finishContent) {
     const screenWidth = window.innerWidth;
-    const initContent = this.element.querySelector(this.options.initContent);
-    const finishContent = this.element.querySelector(this.options.finishContent);
     const initDisplayStyle = window.getComputedStyle(initContent).display;
     const finishDisplayStyle = window.getComputedStyle(finishContent).display;
 
     if (screenWidth < this.options.screenWidth) {
       initContent.style.display = 'none';
       finishContent.style.display = 'block';
-      finishContent.setAttribute('data-arts-os-animation-name', 'animatedJumpScale');
+      finishContent.setAttribute('data-arts-os-animation-name', 'animatedJump');
       while (initContent.firstChild) {
         finishContent.appendChild(initContent.firstChild);
       }
-
     } else {
       initContent.style.display = 'block';
       finishContent.style.display = 'none';
@@ -64,9 +65,6 @@ export default class MoveResponsive extends BaseComponent {
         initContent.appendChild(finishContent.firstChild);
       }
     }
-
-
-
   }
 
 

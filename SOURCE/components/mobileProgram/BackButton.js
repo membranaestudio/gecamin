@@ -11,11 +11,10 @@ export default class BackButton extends BaseComponent {
       parent,
       element,
       // Component default options
-      defaults: {
-      },
+      defaults: {},
       // Component inner elements
       innerElements: {
-       
+
       }
     });
 
@@ -25,12 +24,17 @@ export default class BackButton extends BaseComponent {
 
   // Component code goes here
   init() {
-    this.myFunction1();
+    this._backButton();
   }
 
-  myFunction1() {
-    console.log('1. Custom code here...');
+  _backButton() {
+    const backButton = document.querySelector('.back-button');
+
+    backButton.addEventListener('click', function (event) {
+      event.preventDefault(); 
+      history.back(); 
+    });
   }
 
-  
+
 }

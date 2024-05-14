@@ -71,7 +71,10 @@ p
 	margin-bottom: 1em
 	letter-spacing: -0.5px
 	line-height: 1.4
-	+fluid('font-size', 16, 19)
+	+fluid('font-size', 15, 19)
+	letter-spacing: 0.1px
+
+
 
 .nm-paragraph
 	p
@@ -141,3 +144,7 @@ blockquote
 		height: auto
 		margin-top: 4px
 		fill: currentColor
+
++max-screen-md
+	.color-md-dark-2
+		color: var(--color-dark-2)

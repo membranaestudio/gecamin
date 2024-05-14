@@ -127,6 +127,7 @@
 		text-transform: uppercase
 		font-weight: 700
 		letter-spacing: 1px
+		+fluid('font-size', 15, 17)
 
 .button-home
 	border-radius: 14px
@@ -180,25 +181,25 @@
 .button-shadow
 	width: 100%
 	display: block
-	padding: 22px
-	border-radius: 18px
-	font-size: 16px
+	+fluid('padding', 15, 25)
+	border-radius: 14px
+	font-size: 15px
 	color: var(--color-dark-1)
 	font-weight: 500
 	line-height: 1.3
+	cursor: pointer
+	border: none
 	@extend .boxshadow-1
 	&.padding-1
 		padding: 12px 10px		
-	&.style-1
+	&.icons
 		display: flex
 		align-items: center
+		justify-content: space-between
 		padding: 16px 20px
 		font-weight: 600
 		.material-icons
-			padding-left: 4px
-			font-size: 28px
-
-
+			font-size: 30px
 	&.active
 		background: var(--color-dark-2) 
 		color: var(--color-light-1)
@@ -210,19 +211,38 @@
 	flex-direction: column
 	justify-content: center
 	align-items: center
-	width: 100%
 	color: var(--color-dark-1)
-	.material-symbols-outlined	
+	.icon
 		@extend .boxshadow-1
 		padding: 20px
 		border-radius: 14px
 		font-size: 40px
-		width: 100%
-		text-align: center
+		text-align: center	
 	.button__title
 		margin-top: 10px
 		font-weight: 500
 		font-size: 15px
-		padding: 0 10px	
 		text-align: center
 		line-height: 1.2	
+
+
+
+.button-shadow-3
+	display: flex
+	flex-direction: column
+	justify-content: center
+	color: var(--color-dark-2)
+	@extend .boxshadow-1
+	border-radius: 14px
+	padding: 15px 0
+	.icon
+		font-size: 40px
+		text-align: center
+		margin-top: 5px	
+	.button__title
+		margin-top: 10px
+		font-weight: 500
+		font-size: 15px
+		text-align: center
+		line-height: 1.2			
+	
