@@ -2,7 +2,7 @@
 	display: flex
 	+fluid('margin-bottom', 20, 60)
 	@media screen and (max-width: $md)
-		flex-direction: column
+		flex-wrap: wrap
 	a
 		cursor: pointer
 		color: var(--color-dark-1)
@@ -12,6 +12,11 @@
 		border-bottom: 1px solid #000
 		padding-bottom: 20px
 		line-height: 1.3
+		@media screen and (max-width: $md)
+			width: 50%
+			box-sizing: border-box
+			flex: none
+			padding: 15px 0
 
 		span
 			color: var(--color-dark-2)
@@ -20,9 +25,8 @@
 			border-bottom: 2px solid var(--color-dark-2)
 			line-height: 0
 		@media screen and (max-width: $xs)
-			width: 100%
 			margin-bottom: 5px
-			padding: 6px 10px
+
 		&:hover
 			opacity: 0.95
 			+trans1
@@ -47,5 +51,3 @@
 		border-bottom: 1px solid #000
 		@media screen and (max-width: $md)
 			margin-bottom: 25px
-
-

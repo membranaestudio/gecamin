@@ -62,26 +62,49 @@
 			<section class="section section-content py-small" data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<div class="container" style="max-width: 800px;">
-					<div class="row g-6 overflow-hidden">
+					<div class="row g-0 g-md-5 g-xl-6 overflow-hidden">
 						<div class="col-md-6 mb-3 mb-lg-0">
-							<a id="downloadButton" class="button button_icon button_bordered button-big overflow-hidden"
-								data-arts-os-animation-name="animatedJumpScale" href="#">
-								<span class="button__label button__label-normal">
-									<span
-										class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_right">
-										download
+							<div class="position-relative">
+								<a id="downloadButton"
+									class="button button_icon button_bordered button-big overflow-hidden"
+									data-arts-os-animation-name="animatedJumpScale">
+									<span class="button__label button__label-normal">
+										<span
+											class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_right">
+											download
+										</span>
+										<span class="button__title">Download <br> full program</span>
+
 									</span>
-									<span class="button__title">Download <br> full program</span>
+									<span class="button__label button__label-hover">
+										<span
+											class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_righ">
+											download</span>
+										<span class="button__title">Download <br> full program</span>
 
-								</span>
-								<span class="button__label button__label-hover">
-									<span
-										class="button__icon button__icon_before material-symbols-outlined keyboard_arrow_righ">
-										download</span>
-									<span class="button__title">Download <br> full program</span>
+									</span>
+								</a>
+								<div class="pdfMessage">
+									<a id="downloadButton"
+										class="loading button button_icon button_bordered button-big overflow-hidden opacity-50 pointer-events-none"
+										data-arts-os-animation-name="animatedJumpScale">
+										<span class="button__label button__label-normal">
+											<span class="button__icon button__icon_before">
+												<img src="img/icons/icon_loader.svg" width="60" height="60" />
+											</span>
+											<span class="button__title">Loading pdf</span>
 
-								</span>
-							</a>
+										</span>
+									</a>
+									<div id="text-pdf" class="h6 fw-600 color-dark-1 text-center mt-2">
+										Generating technical program in pdf format. Download will start soon
+									</div>
+								</div>
+							</div>
+
+
+
+
 						</div>
 						<div class="col-md-6 mb-3 mb-lg-0">
 							<a class="button button_icon button_bordered button-big overflow-hidden"
@@ -118,134 +141,150 @@
 			<!-- ACCORDION  -->
 			<section class="section section-content pb-small" data-arts-component-name="Content"
 				data-arts-os-animation="true">
-				<div class="container" >
+				<div class="container">
 
 					<div data-arts-component-name="CreatePDF" data-arts-os-animation="true">
-						<div class="tab-menu" data-arts-component-name="Tabs" data-arts-os-animation-name="animatedJump" >
+						<div class="tab-menu" data-arts-component-name="Tabs"
+							data-arts-os-animation-name="animatedJump">
 							<a class="h3 fw-400" data-tab="tab-1">Mon <br> June 12</a>
-
+							<a class="h3 fw-400" data-tab="tab-2">Wed <br> June 14</a>
+							<a class="h3 fw-400" data-tab="tab-3">Thurs <br> June 15</a>
+							<a class="h3 fw-400" data-tab="tab-3">Fri <br> June 16</a>
 
 						</div>
 						<div id="tab-1" data-arts-os-animation-name="animatedJumpScale">
-							<div class="accordion-program" data-arts-component-name="AccordionProgram" data-arts-os-animation="true">
-
-								<div class="accordion__item">
-									<div class="accordion__wrapper" id="content-to-capture">
+							<div class="accordion-program" data-arts-component-name="AccordionProgram"
+								data-arts-os-animation="true">
 
 
-										<div class="accordion__button  pdf-item" data-arts-color-theme="dark">
-											<div class="accordion__bullet start">
-												<div class="bullet__start"></div>
-											</div>
-											<div class="accordion__padding bg-dark-2">
-												<span class="arrow material-symbols-outlined">
-													expand_more
-												</span>
-												<div class="row g-6">
-													<div class="w-lg-20 br-solid text-lg-center">
-														<h3 class="h3 fw-600">9:40 - 10:20</h3>
-													</div>
-													<div class="w-lg-80">
-														<h3 class="fw-600">Innaugural Ceremony</h3>
-														<h3 class="fw-400">Ballroom A & B</h3>
-													</div>
+								<div id="content-to-capture">
+									
+									<div class="pdf-item pdf-only">
+										<h1 class="color-dark-2 fw-600 pb-5">Technical & Social Program</h1>
+									</div>
+
+									<div class="pdf-item pdf-only">
+										<h3 class="color-dark-2 fw-400 pb-4">September 04</h3>
+									</div>
+
+									
+									<div class="accordion__item">
+										<div class="accordion__wrapper">
+
+
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
 												</div>
-											</div>
-										</div>
-
-										<div class="accordion-content">
-
-											<div class="time-slote-head pdf-item">
-												<div class="d-flex by-solid text-center text-uppercase">
-													<div class="w-lg-15 padding-1">
-														<h5>Hour</h5>
-													</div>
-													<div class="w-lg-85 padding-1">
-														<h5>Ballroom A&B</h5>
-													</div>
-												</div>
-												<div class="d-flex bb-solid">
-													<div class="w-lg-15 padding-2 ">
-													</div>
-													<div class="w-lg-85 padding-2">
-														<h2>Innaugural Ceremony</h2>
-													</div>
-												</div>
-											</div>
-
-											<div class="time-slot pdf-item">
-
-												<div class="d-flex bb-solid">
-													<div class="w-lg-15 padding-1">
-														<h2>18:00</h2>
-													</div>
-													<div class="w-lg-85 padding-1">
-														<div class="tag bg-dark-1">
-															<span>SPA</span>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined hidden-pdf">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
 														</div>
-														<p><span class="fw-700">Welcoleme Words</span></p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-
-													</div>
-												</div>
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex">
-													<div class="w-lg-15 padding-1">
-														<h2>18:00</h2>
-													</div>
-													<div class="w-lg-85 padding-1">
-														<div class="tag bg-dark-1">
-															<span>SPA</span>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
 														</div>
-														<p><span class="fw-700">Welcoleme Words</span></p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-														<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
-																Words</span>,
-															Conference Manager, Gecamin,
-															Chile</p>
-
 													</div>
 												</div>
 											</div>
 
+											<div class="accordion-content ">
 
-										</div>
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-15 padding-1">
+															<h5>Hour</h5>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<h5>Ballroom A&B</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-15 padding-2 ">
+														</div>
+														<div class="w-lg-85 padding-2">
+															<h2>Innaugural Ceremony</h2>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot">
+
+													<div class="d-flex bb-solid">
+														<div class="w-lg-15 padding-1">
+															<h2>18:00111</h2>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<div class="tag bg-dark-1">
+																<span>SPA</span>
+															</div>
+															<p><span class="fw-700">Welcoleme Words</span></p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-15 padding-1">
+															<h2>18:00</h2>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<div class="tag bg-dark-1">
+																<span>SPA</span>
+															</div>
+															<p><span class="fw-700">Welcoleme Words</span></p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+
+														</div>
+													</div>
+												</div>
 
 
-										<div class="accordion__finish social pdf-item">
+											</div>
+
+
+											<div class="accordion__finish social pdf-item pdf-item">
 												<div class="accordion__bullet end">
 													<div class="bullet__end"></div>
 												</div>
 												<div class="accordion__padding">
-													<div class="row g-6">
+													<div class="row g-0 g-md-5 g-xl-6">
 														<div class="w-lg-20 br-solid">
 															<div class="social__icon">
 																<div class="lazy-wrapper">
@@ -280,522 +319,2045 @@
 
 											</div>
 
+										</div>
 									</div>
+
+									
+									<div class="accordion__item">
+										<div class="accordion__wrapper">
+
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-10 padding-1">
+															<h5 class="">Hour</h5>
+														</div>
+														<div class="w-lg-45 padding-1">
+															<h5>Ballroom A</h5>
+														</div>
+														<div class="w-lg-45 padding-1">
+															<h5>Ballroom B</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-1">
+
+														</div>
+														<div class="w-lg-45 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">111Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">11Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+
+														
+														<div class="w-lg-45 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+													</div>
+
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="accordion__finish pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+								
+									<div class="accordion__item">
+										<div class="accordion__wrapper">
+
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-10 padding-1">
+															<h5 class="">Hour</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom A</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom B</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom C</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-1">
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+													</div>
+
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion__finish pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 
-								<div class="accordion__item">
-									<div class="accordion__wrapper">
-										<div class="accordion__button" data-arts-color-theme="dark">
-											<div class="accordion__bullet start">
-												<div class="bullet__start"></div>
-											</div>
-											<div class="accordion__padding bg-dark-2">
-												<span class="arrow material-symbols-outlined">
-													expand_more
-												</span>
-												<div class="row g-6">
-													<div class="w-lg-20 br-solid text-lg-center">
-														<h3 class="h3 fw-600">9:40 - 10:20</h3>
-													</div>
-													<div class="w-lg-80">
-														<h3 class="fw-600">Innaugural Ceremony</h3>
-														<h3 class="fw-400">Ballroom A & B</h3>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="content-to-capture" class="accordion-content">
-
-											<div class="time-slote-head height-item">
-												<div class="d-flex by-solid text-center text-uppercase">
-													<div class="w-lg-10 padding-1">
-														<h5 class="">Hour</h5>
-													</div>
-													<div class="w-lg-45 padding-1">
-														<h5>Ballroom A</h5>
-													</div>
-													<div class="w-lg-45 padding-1">
-														<h5>Ballroom B</h5>
-													</div>
-												</div>
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-1">
-
-													</div>
-													<div class="w-lg-45 padding-3">
-														<div class="d-flex align-items-center mb-3">
-															<div class="lazy-wrapper" style="width: 16px;">
-																<img class="lazy"
-																	src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-																	decoding="async"
-																	data-src="img/icons/flecha_diagonal.svg" />
-															</div>
-															<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
-														</div>
-														<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit.</h4>
-														<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit..</p>
-
-													</div>
-													<div class="w-lg-45 padding-3">
-														<div class="d-flex align-items-center mb-3">
-															<div class="lazy-wrapper" style="width: 16px;">
-																<img class="lazy"
-																	src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-																	decoding="async"
-																	data-src="img/icons/flecha_diagonal.svg" />
-															</div>
-															<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
-														</div>
-														<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit.</h4>
-														<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit..</p>
-
-													</div>
-												</div>
-
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-1">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-													</div>
-
-												</div>
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-												</div>
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-												</div>
-											</div>
+							</div>
+						</div>
 
 
-											<div class="time-slot pdf-item">
-												<div class="d-flex">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-45 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-												</div>
-											</div>
+						<div id="tab-2" data-arts-os-animation-name="animatedJumpScale">
+							<div class="accordion-program" data-arts-component-name="AccordionProgram"
+								data-arts-os-animation="true">
 
 
-
-
-
-
-
-										</div>
-										<div class="accordion__finish">
-											<div class="accordion__bullet end">
-												<div class="bullet__end"></div>
-											</div>
-											<div class="accordion__padding">
-												<div class="row g-6">
-													<div class="w-lg-20 br-solid text-center">
-														<h3 class="h3 fw-600">9:40 - 10:20</h3>
-													</div>
-													<div class="w-lg-40">
-														<h3 class="fw-600">Innaugural Ceremony</h3>
-														<h3 class="fw-400">Ballroom A & B</h3>
-													</div>
-													<div class="w-lg-40">
-														<div class="sponsor">
-															<div class="lazy-wrapper">
-																<img class="lazy"
-																	src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-																	decoding="async"
-																	data-src="img/sponsor/logo_arcadis.jpg" alt />
-															</div>
-														</div>
-
-
-													</div>
-												</div>
-
-											</div>
-
-										</div>
-
+								<div id="content-to-capture">
+									
+									
+									<div class="pdf-item pdf-only">
+										<h3 class="color-dark-2 fw-400 pb-4">September 05</h3>
+										
 									</div>
+									<div class="accordion__item">
+										<div class="accordion__wrapper">
+
+
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-15 padding-1">
+															<h5>Hour</h5>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<h5>Ballroom A&B</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-15">
+														</div>
+														<div class="w-lg-85 padding-2">
+															<h2>Innaugural Ceremony</h2>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item pdf-space-3">
+
+													<div class="d-flex bb-solid">
+														<div class="w-lg-15 padding-1">
+															<h2>18:00</h2>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<div class="tag bg-dark-1">
+																<span>SPA</span>
+															</div>
+															<p><span class="fw-700">Welcoleme Words</span></p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-15 padding-1">
+															<h2>18:00</h2>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<div class="tag bg-dark-1">
+																<span>SPA</span>
+															</div>
+															<p><span class="fw-700">Welcoleme Words</span></p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+
+														</div>
+													</div>
+												</div>
+
+
+											</div>
+
+
+											<div class="accordion__finish social pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid">
+															<div class="social__icon">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/icon_social.svg" width="60"
+																		height="43" alt />
+																</div>
+															</div>
+
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Coffee Break & <br> Posters Session</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+									
+									<div class="accordion__item" data-date-pdf="September 06">
+										<div class="accordion__wrapper">
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-10 padding-1">
+															<h5 class="">Hour</h5>
+														</div>
+														<div class="w-lg-45 padding-1">
+															<h5>Ballroom A</h5>
+														</div>
+														<div class="w-lg-45 padding-1">
+															<h5>Ballroom B</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-1">
+
+														</div>
+														<div class="w-lg-45 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-45 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+													</div>
+
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion__finish pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+								
+									<div class="accordion__item" data-date-pdf="September 07">
+										<div class="accordion__wrapper">
+
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-10 padding-1">
+															<h5 class="">Hour</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom A</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom B</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom C</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-1">
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+													</div>
+
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion__finish pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 
-								<div class="accordion__item">
-									<div class="accordion__wrapper">
-										<div class="accordion__button" data-arts-color-theme="dark">
-											<div class="accordion__bullet start">
-												<div class="bullet__start"></div>
-											</div>
-											<div class="accordion__padding bg-dark-2">
-												<span class="arrow material-symbols-outlined">
-													expand_more
-												</span>
-												<div class="row g-6">
-													<div class="w-lg-20 br-solid text-lg-center">
-														<h3 class="h3 fw-600">9:40 - 10:20</h3>
-													</div>
-													<div class="w-lg-80">
-														<h3 class="fw-600">Innaugural Ceremony</h3>
-														<h3 class="fw-400">Ballroom A & B</h3>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="content-to-capture" class="accordion-content">
-
-											<div class="time-slote-head height-item">
-												<div class="d-flex by-solid text-center text-uppercase">
-													<div class="w-lg-10 padding-1">
-														<h5 class="">Hour</h5>
-													</div>
-													<div class="w-lg-30 padding-1">
-														<h5>Ballroom A</h5>
-													</div>
-													<div class="w-lg-30 padding-1">
-														<h5>Ballroom B</h5>
-													</div>
-													<div class="w-lg-30 padding-1">
-														<h5>Ballroom C</h5>
-													</div>
-												</div>
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-1">
-
-													</div>
-													<div class="w-lg-30 padding-3">
-														<div class="d-flex align-items-center mb-3">
-															<div class="lazy-wrapper" style="width: 16px;">
-																<img class="lazy"
-																	src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-																	decoding="async"
-																	data-src="img/icons/flecha_diagonal.svg" />
-															</div>
-															<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
-														</div>
-														<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit.</h4>
-														<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit..</p>
-
-													</div>
-													<div class="w-lg-30 padding-3">
-														<div class="d-flex align-items-center mb-3">
-															<div class="lazy-wrapper" style="width: 16px;">
-																<img class="lazy"
-																	src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-																	decoding="async"
-																	data-src="img/icons/flecha_diagonal.svg" />
-															</div>
-															<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
-														</div>
-														<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit.</h4>
-														<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit..</p>
-
-													</div>
-													<div class="w-lg-30 padding-3">
-														<div class="d-flex align-items-center mb-3">
-															<div class="lazy-wrapper" style="width: 16px;">
-																<img class="lazy"
-																	src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-																	decoding="async"
-																	data-src="img/icons/flecha_diagonal.svg" />
-															</div>
-															<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
-														</div>
-														<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit.</h4>
-														<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor sit
-															amet
-															consectetur adipisicing elit..</p>
-
-													</div>
-												</div>
-
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-													</div>
-												</div>
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-1">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-												</div>
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex bb-solid">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-1">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-												</div>
-											</div>
-
-											<div class="time-slot pdf-item">
-												<div class="d-flex">
-													<div class="w-lg-10 padding-4">
-														<h3 class="fw-400">18:00</h3>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-2">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-													<div class="w-lg-30 padding-4">
-														<div class="tag bg-dark-1">
-															<span>SP</span>
-														</div>
-														<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
-														<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit amet
-															consectetur adipisicing elit. Ducimus distinctio praesentium
-															libero
-															suscipit non quas recusandae consequuntur minima delectus,
-															quibusdam, nihil laudantium.</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="accordion__finish">
-											<div class="accordion__bullet end">
-												<div class="bullet__end"></div>
-											</div>
-											<div class="accordion__padding">
-												<div class="row g-6">
-													<div class="w-lg-20 br-solid text-lg-center">
-														<h3 class="h3 fw-600">9:40 - 10:20</h3>
-													</div>
-													<div class="w-lg-40">
-														<h3 class="fw-600">Innaugural Ceremony</h3>
-														<h3 class="fw-400">Ballroom A & B</h3>
-													</div>
-													<div class="w-lg-40">
-														<div class="sponsor">
-															<div class="lazy-wrapper">
-																<img class="lazy"
-																	src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-																	decoding="async"
-																	data-src="img/sponsor/logo_arcadis.jpg" alt />
-															</div>
-														</div>
+							</div>
+						</div>
 
 
-													</div>
-												</div>
+						<div id="tab-3" data-arts-os-animation-name="animatedJumpScale">
+							<div class="accordion-program" data-arts-component-name="AccordionProgram"
+								data-arts-os-animation="true">
 
-											</div>
 
-										</div>
-
+								<div id="content-to-capture">
+									
+									
+									<div class="pdf-item pdf-only">
+										<h3 class="color-dark-2 fw-400 pb-4">September 06</h3>
+										
 									</div>
+									<div class="accordion__item">
+										<div class="accordion__wrapper">
+
+
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-15 padding-1">
+															<h5>Hour</h5>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<h5>Ballroom A&B</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-15 padding-2 ">
+														</div>
+														<div class="w-lg-85 padding-2">
+															<h2>Innaugural Ceremony</h2>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item pdf-space-3">
+
+													<div class="d-flex bb-solid">
+														<div class="w-lg-15 padding-1">
+															<h2>18:00</h2>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<div class="tag bg-dark-1">
+																<span>SPA</span>
+															</div>
+															<p><span class="fw-700">Welcoleme Words</span></p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-15 padding-1">
+															<h2>18:00</h2>
+														</div>
+														<div class="w-lg-85 padding-1">
+															<div class="tag bg-dark-1">
+																<span>SPA</span>
+															</div>
+															<p><span class="fw-700">Welcoleme Words</span></p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+															<p><span class="fw-700 color-dark-1 bb-solid">• Welcoleme
+																	Words</span>,
+																Conference Manager, Gecamin,
+																Chile</p>
+
+														</div>
+													</div>
+												</div>
+
+
+											</div>
+
+
+											<div class="accordion__finish social pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid">
+															<div class="social__icon">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/icon_social.svg" width="60"
+																		height="43" alt />
+																</div>
+															</div>
+
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Coffee Break & <br> Posters Session</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+									
+									<div class="accordion__item" data-date-pdf="September 06">
+										<div class="accordion__wrapper">
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-10 padding-1">
+															<h5 class="">Hour</h5>
+														</div>
+														<div class="w-lg-45 padding-1">
+															<h5>Ballroom A</h5>
+														</div>
+														<div class="w-lg-45 padding-1">
+															<h5>Ballroom B</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-1">
+
+														</div>
+														<div class="w-lg-45 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-45 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+													</div>
+
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-45 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion__finish pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+								
+									<div class="accordion__item" data-date-pdf="September 07">
+										<div class="accordion__wrapper">
+
+											<div class="accordion__button pdf-item" data-arts-color-theme="dark">
+												<div class="accordion__bullet start">
+													<div class="bullet__start"></div>
+												</div>
+												<div class="accordion__padding bg-dark-2">
+													<span class="arrow material-symbols-outlined">
+														expand_more
+													</span>
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-80">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content">
+
+												<div class="time-slote-head pdf-item">
+													<div class="d-flex by-solid text-center text-uppercase">
+														<div class="w-lg-10 padding-1">
+															<h5 class="">Hour</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom A</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom B</h5>
+														</div>
+														<div class="w-lg-30 padding-1">
+															<h5>Ballroom C</h5>
+														</div>
+													</div>
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-1">
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+														<div class="w-lg-30 padding-3">
+															<div class="d-flex align-items-center mb-3">
+																<div class="lazy-wrapper" style="width: 16px;">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/icons/flecha_diagonal.svg" />
+																</div>
+																<h5 class="ps-2 text-uppercase ls-1">Session 1</h5>
+															</div>
+															<h4 class="color-dark-2 fw-500 lh-1-2">Lorem ipsum dolor sit
+																amet
+																consectetur adipisicing elit.</h4>
+															<p class="paragraph-3 color-gray-1 fw-500">Lorem ipsum dolor
+																sit
+																amet
+																consectetur adipisicing elit..</p>
+
+														</div>
+													</div>
+
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex bb-solid">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="time-slot pdf-item">
+													<div class="d-flex">
+														<div class="w-lg-10 padding-4">
+															<h3 class="fw-400">18:00</h3>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-2">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+														<div class="w-lg-30 padding-4">
+															<div class="tag bg-dark-1">
+																<span>SP</span>
+															</div>
+															<p class="paragraph-2 fw-600">Lorem ipsum dolor sit amet</p>
+															<p class="paragraph-3 fw-400 lh-1-3">Lorem, ipsum dolor sit
+																amet
+																consectetur adipisicing elit. Ducimus distinctio
+																praesentium
+																libero
+																suscipit non quas recusandae consequuntur minima
+																delectus,
+																quibusdam, nihil laudantium.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion__finish pdf-item">
+												<div class="accordion__bullet end">
+													<div class="bullet__end"></div>
+												</div>
+												<div class="accordion__padding">
+													<div class="row g-0 g-md-5 g-xl-6">
+														<div class="w-lg-20 br-solid text-lg-center">
+															<h3 class="h3 fw-600">9:40 - 10:20</h3>
+														</div>
+														<div class="w-lg-40">
+															<h3 class="fw-600">Innaugural Ceremony</h3>
+															<h3 class="fw-400">Ballroom A & B</h3>
+														</div>
+														<div class="w-lg-40">
+															<div class="sponsor">
+																<div class="lazy-wrapper">
+																	<img class="lazy"
+																		src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+																		decoding="async"
+																		data-src="img/sponsor/logo_arcadis.jpg" alt />
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
 								</div>
 
 							</div>
@@ -814,7 +2376,17 @@
 
 
 			<!-- CLONE IMG CAPTURE   -->
-			<div class="pdf-clone" style="max-width:1260px; margin: 0 auto"></div>
+			<div id="pdf-clone" class="pdf-clone" style="max-width:1260px; margin: 0 auto">
+
+
+			
+
+				
+
+
+
+
+			</div>
 
 
 
@@ -824,20 +2396,6 @@
 
 
 
-
-			<!-- <div class="container" id="content-to-capture">
-
-				<div class="row">
-					<div class="col-6">
-						<h2 class="title">Título 3</h2>
-					</div>
-					<div class="col-6" data-change-class="col-3">
-						<h2 class="title">Título 3</h2>
-
-					</div>
-
-				</div>
-			</div> -->
 
 
 

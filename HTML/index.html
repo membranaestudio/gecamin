@@ -44,15 +44,152 @@
 		<div class="page-wrapper__content" id="page-wrapper__content">
 
 			<!-- SLIDER FULLHEIGHT -->
-			<section id="slider" class="section-fullheight-column">
-				<script>
-					fetch('template/slider.html')
-						.then(response => response.text())
-						.then(html => {
-							document.getElementById('slider').innerHTML = html;
-						})
-						.catch(error => console.error('Error al cargar el fragmento:', error));
-				</script>
+			<section class="section-fullheight-column">
+				<!-- swiper slider -->
+				<div class="d-flex" data-arts-component-name="Swipper" data-arts-os-animation="true"
+					data-arts-component-options="{
+						autoplay: {
+						delay: 7000
+						},
+						grabCursor: true
+					}">
+					<div class="swiper section-fullheight__inner pt-header-height">
+						<div class="swiper-wrapper">
+
+							<!-- slide -->
+							<div class="swiper-slide">
+								<div class="slider-fullpage-backgrounds__section">
+									<!-- content -->
+									<div class="slider-fullpage-backgrounds__wrapper-content h-100 text-center">
+										<div class="slider-fullpage-backgrounds__container">
+											<div data-arts-split-text-preset="animatedLines">
+												<h2 class="h3 fw-400 d-inline bb-solid-2 color-dark-1">September 4-6
+												</h2>
+												<h1 class="xl color-dark-1">Technical Courses <br>& Networking</h1>
+												<div class="mt-xxsmall">
+													<a class="button button_bordered" href="#">
+														<span class="button__label button__label-normal">
+															<span class="button__title">Early Bird Registation</span>
+														</span>
+														<span class="button__label button__label-hover">
+															<span class="button__title">Early Bird Registation</span>
+														</span>
+													</a>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<!-- image -->
+									<div class="slider-fullpage-backgrounds__wrapper-background">
+										<video class="lazy of-cover of-cover-absolute" src="#"
+											data-src="img/home/video.mp4" width="1920" height="1080" autoplay="autoplay"
+											playsinline="playsinline" muted="muted" loop="loop" crossorigin=""></video>
+										<img class="lazy of-cover-absolute"
+											src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+											decoding="async" data-src="img/home/cover-landscape.jpg" width="1920"
+											height="1280" alt="" />
+									</div>
+									<!-- Overlay -->
+									<!-- <div class="slider-fullpage-backgrounds__overlay overlay overlay_light overlay_opacity-10 ">
+          </div> -->
+								</div>
+							</div>
+
+							<!-- slide -->
+							<div class="swiper-slide" data-arts-color-theme="dark">
+								<div class="slider-fullpage-backgrounds__section">
+									<!-- content -->
+									<div class="slider-fullpage-backgrounds__wrapper-content h-100 text-center">
+										<div class="slider-fullpage-backgrounds__container">
+											<div data-arts-split-text-preset="animatedLines">
+												<h2 class="h3 fw-400 d-inline bb-solid-2">September 4-6</h2>
+												<h1 class="xl">Technical Courses <br>& Networking</h1>
+												<div class="mt-xxsmall">
+													<a class="button button_bordered" href="#">
+														<span class="button__label button__label-normal">
+															<span class="button__title">Early Bird Registation</span>
+														</span>
+														<span class="button__label button__label-hover">
+															<span class="button__title">Early Bird Registation</span>
+														</span>
+													</a>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<!-- image -->
+									<div class="slider-fullpage-backgrounds__wrapper-background">
+										<img class="lazy of-cover-absolute"
+											src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+											decoding="async" data-src="img/home/05-cover-1-landscape.jpg" width="1920"
+											height="1280" alt="" />
+									</div>
+									<!-- Overlay -->
+									<div
+										class="slider-fullpage-backgrounds__overlay overlay overlay_dark overlay_opacity-20 ">
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+
+				</div>
+				<!-- marquee  -->
+				<div class="section-fullheight__marquee" data-arts-component-name="Content"
+					data-arts-os-animation="true" data-arts-color-theme="dark">
+					<div class="row h-100" data-arts-os-animation-name="animatedReveal">
+						<div id="wrapper-countdown"
+							class="col-lg-6 col-xxl-5 d-flex align-items-center justify-content-center">
+
+							<h5 class="h4 fw-500 m-0">See you in</h5>
+							<div id="countdown" data-arts-component-name="CountDown"
+								data-arts-component-options='{"countdownDate": "12 31, 2024 15:37:25", "expiredText": "Concluded"}'>
+
+								<div class="days">
+									<div class="number"></div>
+									<div class="small">Days.</div>
+								</div>
+								<div class="hours">
+									<div class="number"></div>
+									<div class="small">hr.</div>
+								</div>
+								<div class="minutes">
+									<div class="number"></div>
+									<div class="small">min.</div>
+								</div>
+								<div class="seconds">
+									<div class="number"></div>
+									<div class="small">sec.</div>
+								</div>
+							</div>
+
+
+						</div>
+
+						<div class="d-none d-lg-flex col-lg-6 col-xxl-7" data-arts-component-name="MarqueeHeader">
+							<div class="overflow-hidden h-100">
+								<div
+									class="d-flex flex-nowrap align-items-center h-100 text-nowrap js-marquee-header__list-lane">
+									<div class="marquee-header__item d-inline-block js-marquee-header__list-item">
+										<h1 class="my-0 js-marquee-header__label h3">Lorem ipsum dolor sit amet
+											consectetur adipisicing
+											elit.
+										</h1>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
 			</section>
 
 
@@ -65,6 +202,7 @@
 							<h4 class="h4 m-0">Organizers</h4>
 						</div>
 						<div class="col-lg-10">
+							<!-- swiper logos  -->
 							<div data-arts-component-name="Swipper" data-arts-os-animation="true"
 								data-arts-component-options="{
 									autoplay: {
@@ -212,8 +350,8 @@
 			<!-- CONTENT TITLE -->
 			<section class="section section-content pt-small pb-large" data-arts-component-name="Content"
 				data-arts-os-animation="true">
-				<div class="container js-move-responsive" data-arts-component-name="MoveResposive" data-arts-os-animation="true"
-					data-arts-component-options="{
+				<div class="container js-move-responsive" data-arts-component-name="MoveResposive"
+					data-arts-os-animation="true" data-arts-component-options="{
             		initContent: '.move-init',
 					finishContent: '.move-finish',
 					screenWidth: 991
@@ -240,7 +378,8 @@
 						<div class="col-lg-7">
 							<div class="text-strong strong-dark-2" data-arts-split-text-preset="animatedLines">
 								<p class="h4"><strong>Water Congress 2024</strong> is an opportunity to learn and
-									exchange knowledge, practices and solutions over the most relevant water management issues related to
+									exchange knowledge, practices and solutions over the most relevant water management
+									issues related to
 									the global industry. The congress brings together executives, professionals and
 									academics mainly from areas related to the environment, sustainability and water
 									management.</p>
@@ -260,8 +399,8 @@
 						<div class="w-100 h-100 js-animated-mask-inner">
 							<img class="lazy of-cover-absolute of-cover-absolute js-parallax__inner"
 								src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-								decoding="async" data-src="img/home/img_conference.jpg"
-								width="1920" height="912" alt="" />
+								decoding="async" data-src="img/home/img_conference.jpg" width="1920" height="912"
+								alt="" />
 
 						</div>
 					</div>
@@ -284,8 +423,8 @@
 								<div class="lazy-wrapper" style="width: 70px">
 									<img class="lazy"
 										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-										decoding="async" data-src="img/icons/icon_participants.svg" width="70" height="70"
-										alt="" />
+										decoding="async" data-src="img/icons/icon_participants.svg" width="70"
+										height="70" alt="" />
 								</div>
 
 
@@ -381,7 +520,7 @@
 									conference program. The editorial committee reviews the written works that are
 									received, establishing the highest technical quality. All committee members have a
 									special discount on registrations.</p>
-								<div class="mt-4">
+								<div class="mt-5">
 									<a class="button button_icon button_bordered" href="#">
 										<span class="button__label button__label-normal">
 											<span
@@ -416,12 +555,12 @@
 							</div>
 						</div>
 						<div class="p-3 p-lg-4 text-strong" data-arts-split-text-preset="animatedLines">
-							<h4 class="h3 mt-0 mb-2"><span class="fw-700">Ingrid Oyarzún /</span><span class="italic">
-									Congress Chair</span></h4>
-							<p class="m-0 h4 fw-200"><span class="fw-400"> President,</span> Eramet Ideas & VP
-								Innovation,
-								Eramet,
-								Francia.</p>
+							<h4 class="h3 mt-0 mb-1">
+								<span class="fw-700">Ingrid Oyarzún /</span>
+								<span class="italic">Congress Chair</span>
+							</h4>
+							<p class="m-0 h4 fw-200 lh-1-1"><span class="fw-400"> President,</span> Eramet Ideas & VP
+								Innovation, Eramet, Francia.</p>
 						</div>
 
 					</div>
@@ -430,8 +569,7 @@
 			</section>
 
 			<!-- BANNER  -->
-			<section id="banner-1" class="section my-medium" data-arts-component-name="Content"
-				data-arts-os-animation="true">
+			<section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
 				<div class="container bg-dark-1" style="max-width: 1200px" data-arts-color-theme="dark">
 					<div class="row">
 						<div class="w-lg-35 w-md-40 w-xs-100 p-0">
@@ -440,25 +578,29 @@
 								<div class="overflow-hidden h-100" data-arts-os-animation-name="animatedMaskFromTop">
 									<div class="js-animated-mask-inner h-100">
 										<img class="lazy of-cover js-parallax__inner"
-										src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-										decoding="async" data-src="img/home/img_early_bird_registration.jpg" width="900" height="776" alt="" />
+											src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+											decoding="async" data-src="img/home/img_early_bird_registration.jpg"
+											width="900" height="776" alt="" />
 
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="w-lg-55 w-md-60 w-xs-100 d-flex align-items-center">
-							<div class="text-strong py-4 px-2 px-md-3 px-lg-4" data-arts-split-text-preset="animatedLines">
-								<h2 class="h1 lh-1-1 mb-4">Early Bird Registration until <span class="fw-bold">July 4, 2024</span> </h2>
+						<div class="w-lg-65 w-md-60 w-xs-100 d-flex align-items-center">
+							<div class="text-strong py-4 px-2 px-md-3 px-lg-4"
+								data-arts-os-animation-name="animatedJump">
+								<h2 class="display-caps lh-1-2 mb-4" style="max-width: 540px">Early Bird Registration
+									until <span class="fw-bold">July 4,
+										2024</span> </h2>
 
 								<div class="mt-3 mb-3 mb-lg-0">
 									<a class="button button_bordered padding_big" href="#">
 										<span class="button__label button__label-normal">
-										<span class="button__title">Register here</span>
+											<span class="button__title">Register here</span>
 
 										</span>
 										<span class="button__label button__label-hover">
-										<span class="button__title">Register here</span>
+											<span class="button__title">Register here</span>
 
 										</span>
 									</a>
@@ -479,10 +621,13 @@
 						<div class="col-lg-8 col-xl-7 pe-xl-5">
 							<div class="text-strong strong-dark-2" data-arts-split-text-preset="animatedLines">
 								<p class="h4">Visit the <strong>Congress 2024 Streaming Platform</strong>, a space we
-									have created to enrich the technical program of the conference, which takes place in person.
+									have created to enrich the technical program of the conference, which takes place in
+									person.
 									<br>
-									Here, you will be able to access the Virtual Technical Courses that will be held live.
-									They will also be recorded and uploaded here so that you can watch them as many times as
+									Here, you will be able to access the Virtual Technical Courses that will be held
+									live.
+									They will also be recorded and uploaded here so that you can watch them as many
+									times as
 									you want.
 
 								</p>
@@ -510,72 +655,403 @@
 			<!-- TAB -->
 			<section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true">
 				<div class="container">
-					<h1 class="mb-small" data-arts-split-text-preset="animatedLines">Registration</h1>
-					<div id="tabs">
-						<script>
-							fetch('template/tabs-payment.html')
-								.then(response => response.text())
-								.then(html => {
-									document.getElementById('tabs').innerHTML = html;
-								})
-								.catch(error => console.error('Error al cargar el fragmento:', error));
-						</script>
+					<h1 class="mb-small text-center txt-md-left" data-arts-split-text-preset="animatedLines">
+						Registration</h1>
+					<div data-arts-component-name="Tabs" data-arts-os-animation="true">
+						<div class="tab-menu" data-arts-os-animation-name="animatedJump">
+							<a class="h3 fw-600" data-tab="tab-1">Normal Payment</a>
+							<a class="h3 fw-600" data-tab="tab-2">Early Bird Payment <span>20% Dto.</span></a>
+
+						</div>
+						<div id="tab-1" class="row b-solid-black">
+							<div class="col-sm-6 col-lg-4" data-arts-os-animation-name="animatedJump">
+								<div style="max-width: 300px; margin: 0 auto">
+									<h4 class="h3 fw-500 mt-0 mb-3">General</h4>
+									<h4 class="h2 fw-600 m-0">$1070 <span
+											class="h5 color-dark-2 text-uppercase fw-700">usd</span></h4>
+									<p class="color-dark-2 paragraph-3">* You can review the details of the services you
+										will have access
+										to by
+										checking here.</p>
+									<div class="mt-5">
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all plenary and technical sessions</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to congress materials</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all social activities</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Publication in the congress book</p>
+										</div>
+									</div>
+
+									<div class="mt-5 text-center">
+										<a class="button button_fullwidth color-dark-2" href="#">
+											<span class="button__label button__label-normal">
+												<span class="button__title">Get Started</span>
+
+											</span>
+											<span class="button__label button__label-hover">
+												<span class="button__title">Get Started</span>
+											</span>
+										</a>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4" data-arts-os-animation-name="animatedJump">
+								<div style="max-width: 300px; margin: 0 auto">
+									<h4 class="h3 fw-500 mt-0 mb-3">General</h4>
+									<h4 class="h2 fw-500 m-0">$1070 <span
+											class="h5 color-dark-2 text-uppercase">usd</span></h4>
+									<p class="color-dark-2 paragraph-3">* You can review the details of the services you
+										will have access
+										to by
+										checking here.</p>
+									<div class="mt-5">
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all plenary and technical sessions</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to congress materials</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all social activities</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Publication in the congress book</p>
+										</div>
+									</div>
+
+									<div class="mt-5 text-center">
+										<a class="button button_fullwidth color-dark-2" href="#">
+											<span class="button__label button__label-normal">
+												<span class="button__title">Get Started</span>
+
+											</span>
+											<span class="button__label button__label-hover">
+												<span class="button__title">Get Started</span>
+											</span>
+										</a>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4" data-arts-os-animation-name="animatedJump">
+								<div style="max-width: 300px; margin: 0 auto">
+									<h4 class="h3 fw-500 mt-0 mb-3">General</h4>
+									<h4 class="h2 fw-500 m-0">$1070 <span
+											class="h5 color-dark-2 text-uppercase">usd</span></h4>
+									<p class="color-dark-2 paragraph-3">* You can review the details of the services you
+										will have access
+										to by
+										checking here.</p>
+									<div class="mt-5">
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all plenary and technical sessions</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to congress materials</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all social activities</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Publication in the congress book</p>
+										</div>
+									</div>
+
+									<div class="mt-5 text-center">
+										<a class="button button_fullwidth color-dark-2" href="#">
+											<span class="button__label button__label-normal">
+												<span class="button__title">Get Started</span>
+
+											</span>
+											<span class="button__label button__label-hover">
+												<span class="button__title">Get Started</span>
+											</span>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+
+
+						</div>
+						<div id="tab-2" class="row b-solid-black">
+							<div class="col-sm-6 col-lg-4" data-arts-os-animation-name="animatedJump">
+								<div style="max-width: 300px; margin: 0 auto">
+									<h4 class="h3 fw-500 mt-0 mb-3">General</h4>
+									<h4 class="h2 fw-600 m-0">$1070 <span
+											class="h5 color-dark-2 text-uppercase fw-700">usd</span></h4>
+									<p class="color-dark-2 paragraph-3">* You can review the details of the services you
+										will have access
+										to by
+										checking here.</p>
+									<div class="mt-5">
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all plenary and technical sessions</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to congress materials</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all social activities</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Publication in the congress book</p>
+										</div>
+									</div>
+
+									<div class="mt-5 text-center">
+										<a class="button button_fullwidth color-dark-2" href="#">
+											<span class="button__label button__label-normal">
+												<span class="button__title">Get Started</span>
+
+											</span>
+											<span class="button__label button__label-hover">
+												<span class="button__title">Get Started</span>
+											</span>
+										</a>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4" data-arts-os-animation-name="animatedJump">
+								<div style="max-width: 300px; margin: 0 auto">
+									<h4 class="h3 fw-500 mt-0 mb-3">General</h4>
+									<h4 class="h2 fw-500 m-0">$1070 <span
+											class="h5 color-dark-2 text-uppercase">usd</span></h4>
+									<p class="color-dark-2 paragraph-3">* You can review the details of the services you
+										will have access
+										to by
+										checking here.</p>
+									<div class="mt-5">
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all plenary and technical sessions</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to congress materials</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all social activities</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Publication in the congress book</p>
+										</div>
+									</div>
+
+									<div class="mt-5 text-center">
+										<a class="button button_fullwidth color-dark-2" href="#">
+											<span class="button__label button__label-normal">
+												<span class="button__title">Get Started</span>
+
+											</span>
+											<span class="button__label button__label-hover">
+												<span class="button__title">Get Started</span>
+											</span>
+										</a>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4" data-arts-os-animation-name="animatedJump">
+								<div style="max-width: 300px; margin: 0 auto">
+									<h4 class="h3 fw-500 mt-0 mb-3">General</h4>
+									<h4 class="h2 fw-500 m-0">$1070 <span
+											class="h5 color-dark-2 text-uppercase">usd</span></h4>
+									<p class="color-dark-2 paragraph-3">* You can review the details of the services you
+										will have access
+										to by
+										checking here.</p>
+									<div class="mt-5">
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all plenary and technical sessions</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to congress materials</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Access to all social activities</p>
+										</div>
+										<div class="icon-list">
+											<div class="material-symbols-outlined">
+												done
+											</div>
+											<p>Publication in the congress book</p>
+										</div>
+									</div>
+
+									<div class="mt-5 text-center">
+										<a class="button button_fullwidth color-dark-2" href="#">
+											<span class="button__label button__label-normal">
+												<span class="button__title">Get Started</span>
+
+											</span>
+											<span class="button__label button__label-hover">
+												<span class="button__title">Get Started</span>
+											</span>
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+
+
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- BUTTON QUESTION -->
-			<section id="button-question" class="section my-medium text-center" data-arts-component-name="Content"
+			<section class="section my-medium text-center" data-arts-component-name="Content"
 				data-arts-os-animation="true">
-				<script>
-					fetch('template/button-question.html')
-						.then(response => response.text())
-						.then(html => {
-							document.getElementById('button-question').innerHTML = html;
-						})
-						.catch(error => console.error('Error al cargar el fragmento:', error));
-				</script>
+				<div class="container" data-arts-os-animation-name="animatedJump">
+					<a class="mb-5 button button_icon button_bordered color-dark-2 padding_big fs-big" href="#">
+						<span class="button__label button__label-normal">
+							<span class="button__icon button__icon_before material-symbols-outlined">
+								credit_card
+							</span>
+							<span class="button__title">Payment Terms</span>
+
+						</span>
+						<span class="button__label button__label-hover">
+							<span class="button__icon button__icon_before material-symbols-outlined">
+								credit_card
+							</span>
+							<span class="button__title">Payment Terms</span>
+
+						</span>
+					</a>
+					<div class="d-flex justify-content-center">
+						<span class="ico-size-2 material-symbols-outlined color-dark-2 me-2">
+							mail
+						</span>
+						<h5 class="h4 m-0 fw-500 text-start"> Have a question?
+							<a class="color-dark-2 text-decoration-underline fw-700"
+								href="maitlo:watercongress@gecamin.com">watercongress@gecamin.com</a>
+						</h5>
+					</div>
+				</div>
 			</section>
 
 
 			<!-- BANNER  -->
-			<section id="banner-2" class="section my-medium" data-arts-component-name="Content"
-				data-arts-os-animation="true" data-arts-color-theme="dark">
-					<div class="container bg-dark-2" style="max-width: 1200px">
-						<div class="row">
-							<div class="w-lg-35 w-md-40 w-xs-100 p-0">
-								<div class="js-parallax h-100" data-arts-component-name="Parallax"
-									data-arts-component-options="{inner: {factor: {y: 0.1}}}" data-arts-os-animation="true">
-									<div class="overflow-hidden h-100" data-arts-os-animation-name="animatedMaskFromTop">
-										<div class="js-animated-mask-inner h-100">
-											<img class="lazy of-cover js-parallax__inner"
+			<section class="section my-medium" data-arts-component-name="Content" data-arts-os-animation="true"
+				data-arts-color-theme="dark">
+				<div class="container bg-dark-2" style="max-width: 1200px">
+					<div class="row">
+						<div class="w-lg-35 w-md-40 w-xs-100 p-0">
+							<div class="js-parallax h-100" data-arts-component-name="Parallax"
+								data-arts-component-options="{inner: {factor: {y: 0.1}}}" data-arts-os-animation="true">
+								<div class="overflow-hidden h-100" data-arts-os-animation-name="animatedMaskFromTop">
+									<div class="js-animated-mask-inner h-100">
+										<img class="lazy of-cover js-parallax__inner"
 											src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-											decoding="async" data-src="img/home/img_sponsor_watercongress_2024.jpg" width="900" height="776" alt="" />
+											decoding="async" data-src="img/home/img_sponsor_watercongress_2024.jpg"
+											width="900" height="776" alt="" />
 
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="w-lg-55 w-md-60 w-xs-100 d-flex align-items-center">
-								<div class="text-strong py-4 px-2 px-md-3 px-lg-4" data-arts-split-text-preset="animatedLines">
-									<h2 class="h1 lh-1-1 mb-4">Sponsor <span class="fw-bold">Water Congress 2024</span> and find the target audience your company needs!</h2>
-
-									<div class="mt-3 mb-3 mb-lg-0">
-										<a class="button button_bordered padding_big" href="#">
-											<span class="button__label button__label-normal">
-											<span class="button__title">I want to sponsor</span>
-
-											</span>
-											<span class="button__label button__label-hover">
-											<span class="button__title">I want to sponsor</span>
-
-											</span>
-										</a>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="w-lg-65 w-md-60 w-xs-100 d-flex align-items-center">
+							<div class="text-strong py-4 px-2 px-md-3 px-lg-4"
+								data-arts-os-animation-name="animatedJump">
+								<h2 class="display-caps lh-1-2 mb-4" style="max-width: 600px">Sponsor <span
+										class="fw-bold">Water Congress 2024</span> and
+									find the target audience your company needs!</h2>
+
+								<div class="mt-3 mb-3 mb-lg-0">
+									<a class="button button_bordered padding_big" href="#">
+										<span class="button__label button__label-normal">
+											<span class="button__title">I want to sponsor</span>
+
+										</span>
+										<span class="button__label button__label-hover">
+											<span class="button__title">I want to sponsor</span>
+
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
+				</div>
 			</section>
 
 			<!-- LOGOS -->
@@ -585,151 +1061,152 @@
 					<h1 class="mb-4" data-arts-split-text-preset="animatedLines">Our Sponsors</h1>
 					<div class="row">
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Main Sponsor</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_eramet.jpg" alt="" />
-						</div>
-						</div>
-						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Silver</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_coletanche.jpg" alt="" />
-						</div>
+							<h6>Main Sponsor</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_eramet.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Silver</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_smi.jpg" alt="" />
-						</div>
-						</div>
-						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Silver</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_we_techs.jpg" alt="" />
-						</div>
+							<h6>Silver</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_coletanche.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Official material</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_wsp.jpg" alt="" />
-						</div>
-						</div>
-						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Official material</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_ausenco.jpg" alt="" />
-						</div>
+							<h6>Silver</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_smi.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Social</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_arcadis.jpg" alt="" />
-						</div>
-						</div>
-						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Social</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_black_veatch.jpg" alt="" />
-						</div>
+							<h6>Silver</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_we_techs.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Official media</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_revista_nme.jpg" alt="" />
-						</div>
-						</div>
-						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Media Partners</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_panorama_minero.jpg" alt="" />
-						</div>
+							<h6>Official material</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_wsp.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Media Partners</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_retema.jpg" alt="" />
-						</div>
+							<h6>Official material</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_ausenco.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<h6>Media Partners</h6>
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_gwi.jpg" alt="" />
+							<h6>Social</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_arcadis.jpg" alt="" />
+							</div>
 						</div>
+						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
+							<h6>Social</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_black_veatch.jpg" alt="" />
+							</div>
+						</div>
+						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
+							<h6>Official media</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_revista_nme.jpg" alt="" />
+							</div>
+						</div>
+						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
+							<h6>Media Partners</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_panorama_minero.jpg" alt="" />
+							</div>
+						</div>
+						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
+							<h6>Media Partners</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_retema.jpg" alt="" />
+							</div>
+						</div>
+						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
+							<h6>Media Partners</h6>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_gwi.jpg" alt="" />
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
+			<!-- LOGOS -->
 			<section id="logos-2" class="section pt-5 my-medium section-logos" data-arts-component-name="Content"
 				data-arts-os-animation="true">
 				<div class="container">
 					<h1 class="mb-4" data-arts-split-text-preset="animatedLines">Institutional Partners</h1>
 					<div class="row">
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_min_mineria.jpg" alt="" />
-						</div>
-						</div>
-						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_cochilco.jpg" alt="" />
-						</div>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_min_mineria.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_sernageomin.jpg" alt="" />
-						</div>
-						</div>
-						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_women_in_mining.jpg" alt="" />
-						</div>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_cochilco.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_red_ingenieras_de_minas.jpg" alt="" />
-						</div>
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_sernageomin.jpg" alt="" />
+							</div>
 						</div>
 						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
-						<div class="lazy-wrapper">
-							<img class="lazy of-cover"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-							decoding="async" data-src="img/home/logo_fundacion_minera_chile.jpg" alt="" />
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_women_in_mining.jpg" alt="" />
+							</div>
 						</div>
+						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_red_ingenieras_de_minas.jpg" alt="" />
+							</div>
+						</div>
+						<div class="col-6 ol-sm-4 col-lg-3" data-arts-os-animation-name="animatedJump">
+							<div class="lazy-wrapper">
+								<img class="lazy of-cover"
+									src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+									decoding="async" data-src="img/home/logo_fundacion_minera_chile.jpg" alt="" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -782,7 +1259,7 @@
 							</div>
 
 						</div>
-						<div class="col-md-6 pointer-events-none">
+						<div class="col-md-6">
 							<div class="w-100 h-100 overflow-hidden" data-arts-os-animation-name="animatedMaskFromTop">
 								<div class="w-100 h-100 js-animated-mask-inner overflow-hidden">
 									<iframe
