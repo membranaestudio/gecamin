@@ -12,7 +12,6 @@
 	+fluid('padding-left', 0, 160)
 	+fluid('padding-right', 0, 30)
 
-
 .swipper-category
 	position: absolute
 	top: 0
@@ -25,3 +24,21 @@
 	font-weight: 700
 	border-bottom-left-radius: 10px
 	border-top-right-radius: 10px
+
+.swiper-button-next, .swiper-button-prev
+	span
+		+fluid('font-size', 30, 40)
+		color: var(--color-dark-1)
+		background: #fff
+		border-radius: 50%
+		padding: 2px
+
+.swiper-button-next
+	+fluid('right', 5, 15)
+	@media screen and (max-width: $sm)
+		display: none
+
+.swiper-button-prev
+	+fluid('lef', 5, 15)
+	@media screen and (max-width: $sm)
+		display: none
