@@ -1,343 +1,222 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Gecamin</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<meta content="telephone=no" name="format-detection" />
-	<meta name="HandheldFriendly" content="true" />
-	<meta name="description" content />
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
-	<!-- Styles  -->
-	<link rel="stylesheet" type="text/css" href="css/vendor.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<!-- Favicon -->
-
-</head>
-
-<body>
-
-	<!-- HEADER -->
-	<header class="header js-header header_classic-menu-right" id="page-header" data-arts-component-name="Header">
-		<script>
-			fetch('template/header.html')
-				.then(response => response.text())
-				.then(html => {
-					document.getElementById('page-header').innerHTML = html;
-				})
-				.catch(error => console.error('Error al cargar el fragmento:', error));
-		</script>
-	</header>
-
-
-
-
-	<!-- MAIN CONTAINER -->
-	<main class="page-wrapper bg-light-1" id="page-wrapper">
-		<div class="page-wrapper__content" id="page-wrapper__content">
-
-
-			<!--  TITLE -->
-			<section class="section section-content mt-header-height bg-dark-2" data-arts-component-name="Content"
-				data-arts-os-animation="true" data-arts-color-theme="dark">
-				<div class="container py-4 py-lg-5">
-					<div data-arts-split-text-preset="animatedChars">
-						<h1 class="xxl">Committees</h1>
-					</div>
-				</div>
-			</section>
-
-			<!-- CONTENT TITLE -->
-			<section class="section section-content py-small" data-arts-component-name="Content"
-				data-arts-os-animation="true">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-5" data-arts-split-text-preset="animatedLines">
-							<h1 class="h1">About the <br> Conference</h1>
-						</div>
-						<div class="col-lg-7">
-							<div class="text-strong strong-dark-2" data-arts-split-text-preset="animatedLines">
-								<p class="h4">The <strong>Organizing, Advisory and Editorial committees</strong> support
-									the promotion of the conference.
-									Likewise, they support by determining the technical focus of the conference program.
-									The editorial committee reviews the written works that are received, establishing
-									the highest technical quality.
-									All committee members have a special discount on registrations.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- ACCORDION TEAM -->
-			<section class="section section-content pb-medium" data-arts-component-name="Content"
-				data-arts-os-animation="true">
-				<div class="container">
-					<div class="border-dark" data-arts-component-name="Accordion" data-arts-os-animation="true">
-
-						<div class="accordion" data-arts-os-animation-name="animatedJump">
-							<h2 class="js-title h3 fw-300">Organizing Committee / Executive</h2>
-						</div>
-						<div class="accordion-content" data-arts-os-animation-name="animatedJump">
-							<div class="padding-1">
-								<div class="row g-3 g-md-4 g-lg-5">
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a1.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzún</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Eramet Ideas & VP Innovation, Eramet, Francia</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a2.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Sofía Mordojovich</h5>
-										<h5 class="fw-500 m-0">2023 Chair</h5>
-										<p class="h5 fw-300 lh-1-2">Water Resources Manager, Teck Resources, Chile</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a3.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Andreina García</h5>
-										<h5 class="fw-500 m-0">Co-Organizer</h5>
-										<p class="h5 fw-300 lh-1-2">Associate Professor, Dpto. Ingeniería de Minas
-											(DIMIN), Universidad de Chile</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a4.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Gladys Vidal</h5>
-										<h5 class="fw-500 m-0">Co-Organizer</h5>
-										<p class="h5 fw-300 lh-1-2">Director, Centro de Recursos Hídricos para la
-											Agricultura y la Minería (CRHIAM), Chile</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a5.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Jacques Wiertz</h5>
-										<h5 class="fw-500 m-0">Program Chair</h5>
-										<p class="h5 fw-300 lh-1-2">Associate Professor, Universidad de Chile</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a6.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Carlos Barahona</h5>
-										<h5 class="fw-500 m-0">Executive Director</h5>
-										<p class="h5 fw-300 lh-1-2">General Manager, Gecamin, Chile</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a7.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Mimy Mackenzie</h5>
-										<h5 class="fw-500 m-0">Conferences and Publications Manager</h5>
-										<p class="h5 fw-300 lh-1-2">Gecamin, Chile</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async" data-src="img/committees/1/a8.jpg" width="544"
-												height="544" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Rodrigo Reyes</h5>
-										<h5 class="fw-500 m-0">Coordinator</h5>
-										<p class="h5 fw-300 lh-1-2">International Conferences Senior Coordinator,
-											Gecamin, Chile</p>
-									</div>
-								</div>
-
-
-							</div>
-
-						</div>
-
-						<div class="accordion" data-arts-os-animation-name="animatedJump">
-							<h2 class="js-title h3 fw-300">Advisory Committee </h2>
-						</div>
-						<div class="accordion-content" data-arts-os-animation-name="animatedJump">
-							<div class="padding-1">
-								<div class="row g-3 g-md-4 g-lg-5">
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-									<div class="col-6 col-md-4 col-lg-3">
-										<div class="lazy-wrapper">
-											<img class="lazy"
-												src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
-												decoding="async"
-												data-src="img/assets/postsPortfolio/project01/01-cover-1-landscape.jpg"
-												width="1920" height="1280" alt="" />
-										</div>
-										<h5 class="text-uppercase fw-700 mb-0">Ingrid Oyarzun</h5>
-										<h5 class="fw-500 m-0">President</h5>
-										<p class="h5 fw-300 lh-1-2">Lorem ipsum dolor sit amet</p>
-									</div>
-
-								</div>
-							</div>
-
-						</div>
-
-
-
-						<div class="accordion" data-arts-os-animation-name="animatedJump">
-							<h2 class="js-title h3 fw-300">Editorial Committee</h2>
-						</div>
-						<div class="accordion-content" data-arts-os-animation-name="animatedJump">
-							<div class="padding-1">
-								
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-
-			<!-- FOOTER -->
-			<footer class="footer bg-dark-1" id="page-footer" data-arts-color-theme="dark">
-				<script>
-					fetch('template/footer.html')
-						.then(response => response.text())
-						.then(html => {
-							document.getElementById('page-footer').innerHTML = html;
-						})
-						.catch(error => console.error('Error al cargar el fragmento:', error));
-				</script>
-			</footer>
-
-
-
-
-
-
-		</div>
-	</main>
-	<!-- - MAIN CONTAINER -->
-
-
-	<!-- TEMPLATE SCRIPTS -->
-	<script src="js/vendor.js"></script>
-	<script src="js/framework.js"></script>
-	<script src="js/app.js"></script>
-
-</body>
-
-</html>
+<div class="row g-3 g-md-4 g-lg-5">
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b17.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Carlos Castillo</h5>
+        <p class="h5 fw-300 lh-1-2">Superintendent Water and Tailings Planning, El Teniente Division, Codelco, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b18.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Eugenio Celedón</h5>
+        <p class="h5 fw-300 lh-1-2">Presidente, Hidrogestión Ingeniería y Proyectos, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b19.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Jorge Chávez</h5>
+        <p class="h5 fw-300 lh-1-2">General Manager, EnvPhys, Peru</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b20.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Pablo Chong</h5>
+        <p class="h5 fw-300 lh-1-2">Head of Projects and Innovation, Hídrica Consultores, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b21.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Juan Coeymans</h5>
+        <p class="h5 fw-300 lh-1-2">Business Development Manager, CyD Ingeniería, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b22.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Damián Córdoba</h5>
+        <p class="h5 fw-300 lh-1-2">Hydrogeological Engineer, Codelco, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b23.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Claire Coté</h5>
+        <p class="h5 fw-300 lh-1-2">Director, SMI-CWiMI, University of Queensland, Australia</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b24.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Luis Cordet</h5>
+        <p class="h5 fw-300 lh-1-2">General Manager, Skarn Water, Netherlands</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b25.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Gino Cruz</h5>
+        <p class="h5 fw-300 lh-1-2">Partner Lawyer, Cruz Jullian Abogados Consultores, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b26.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Víctor Cruz</h5>
+        <p class="h5 fw-300 lh-1-2">Water Resources Engineer, Codelco, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b27.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Marcela Cubillos</h5>
+        <p class="h5 fw-300 lh-1-2">Project Coordinator, Gestiona Consultores, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b28.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Marcela Curotto</h5>
+        <p class="h5 fw-300 lh-1-2">Geochemical Discipline and Mine Closure Leader, SRK Consulting, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b29.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Amparo Domínguez</h5>
+        <p class="h5 fw-300 lh-1-2">Head of Innovation and Marketing, Hydroscada, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b30.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Francisco Donoso</h5>
+        <p class="h5 fw-300 lh-1-2">Advisor, Andess, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b31.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Guillermo Donoso</h5>
+        <p class="h5 fw-300 lh-1-2">Professor, Pontificia Universidad Católica, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b32.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Robin Dufour</h5>
+        <p class="h5 fw-300 lh-1-2">Vice President, Mining, DHI, Peru</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b33.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Gastón Dussaillant</h5>
+        <p class="h5 fw-300 lh-1-2">Gerente Comercial y de Finanzas, Capta Hydro, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b34.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Raúl Farfán</h5>
+        <p class="h5 fw-300 lh-1-2">Vice President Sustainability, PetroTal, Peru</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b35.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Julio Faúndes</h5>
+        <p class="h5 fw-300 lh-1-2">General Manager, Hidrica Consultores, Chile</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="lazy-wrapper">
+            <img class="lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%3E%3C/svg%3E"
+                decoding="async"
+                data-src="img/committees/2/b36.jpg"
+                width="544" height="544" alt="" />
+        </div>
+        <h5 class="text-uppercase fw-700 mb-0">Caterina Fiocco</h5>
+        <p class="h5 fw-300 lh-1-2">Permit Engineer, Minera Candelaria, Lundin Mining, Chile</p>
+    </div>
+</div>
