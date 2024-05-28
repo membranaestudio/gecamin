@@ -1,10 +1,10 @@
 {
   "name": "gecamin",
   "version": "1.0",
-  "description": "",
+  "description": "membrana theme gecamin",
   "main": "gulpfile.js",
   "author": "membranaestudio",
-  "license": "",
+   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
