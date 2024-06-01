@@ -194,7 +194,12 @@
 	&:hover
 		.accordion__padding
 			background: var(--color-dark-1) !important
-			+trans1
+			+trans1	
+	.w-lg-80
+		display: flex
+		flex-direction: column
+		justify-content: center			
+
 
 .accordion__finish
 	position: relative
@@ -233,6 +238,10 @@
 			+fluid('width', 35, 50)
 			margin-bottom: 10px
 			
+	.w-lg-40
+		display: flex
+		flex-direction: column
+		justify-content: center	
 
 	.accordion__finish
 		.row
@@ -253,8 +262,8 @@
 	p
 		margin: 15px 0
 	.padding-1
-		+fluid('padding-top', 15, 25)
-		+fluid('padding-bottom', 15, 25)
+		+fluid('padding-top', 15, 20)
+		+fluid('padding-bottom', 15, 20)
 		padding-left: var(--width-program)
 		padding-right: var(--width-program)
 	.padding-2
@@ -297,6 +306,7 @@
 				display: none
 	.w-lg-10
 		position: relative
+		text-align: center
 		&::after
 			content: ''
 			position: absolute
