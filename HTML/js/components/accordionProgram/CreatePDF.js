@@ -29,6 +29,26 @@ export default class CreatePDF extends BaseComponent {
         });
     }
 
+    async addHeader(pdf, pdfWidth, headerHeight, pageNumber) {
+        if (pageNumber === 1) {
+            const img = new Image();
+            img.src = 'header.png';
+            await new Promise(resolve => {
+                img.onload = () => {
+                    pdf.addImage(img, 'PNG', 0, 0, pdfWidth, headerHeight);
+                    console.log('Encabezado añadido');
+                    resolve();
+                };
+            });
+        }
+    }
+
+    async addMarginTop(pdf, marginTop) {
+        pdf.setDrawColor(0, 0, 0);
+        pdf.setFillColor(255, 255, 255);
+        pdf.rect(0, marginTop, pdf.internal.pageSize.width, 1, 'F');
+    }
+
     async CreatePDF() {
         const pdfWidth = 1380;
         const pdfHeight = 1800;
@@ -50,7 +70,6 @@ export default class CreatePDF extends BaseComponent {
         let pageNumber = 1;
         await this.addHeader(pdf, pdfWidth, headerHeight, pageNumber);
         pageNumber++;
-       
 
         for (const [index, container] of containers.entries()) {
             if (index > 0) {
@@ -65,10 +84,14 @@ export default class CreatePDF extends BaseComponent {
                 pdfCloneContainer.appendChild(clone);
                 console.log(`Clon ${idx + 1} de contenedor ${index + 1} preparado para inspección`);
                 let additionalSpace = 0;
+                let marginTop = 0;
                 if (clone.classList.contains('accordion__button')) {
                     additionalSpace = 60;
                 } else if (clone.classList.contains('accordion__finish')) {
                     additionalSpace = 140;
+                    marginTop = 60;
+                    currentPageHeight += marginTop; 
+                    await this.addMarginTop(pdf, currentPageHeight);
                 } else if (clone.classList.contains('pdf-space-3')) {
                     additionalSpace = 0;
                 }
