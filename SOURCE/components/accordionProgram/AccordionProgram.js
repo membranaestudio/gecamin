@@ -18,6 +18,10 @@ export default class AccordionProgram extends BaseComponent {
         this.accordionProgram();
     }
 
+    init() {
+        this.accordionProgram();
+    }
+
     accordionProgram() {
         const accordionBtns = document.querySelectorAll(".accordion__button");
         accordionBtns.forEach((accordionBtn) => {
@@ -28,13 +32,13 @@ export default class AccordionProgram extends BaseComponent {
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.maxHeight = "100%";
                 }
             };
             const accordionItem = accordionBtn.closest(".accordion__item");
             if (accordionItem.classList.contains("is-open")) {
                 let content = accordionBtn.nextElementSibling;
-                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.maxHeight = "100%";
             }
         });
     }

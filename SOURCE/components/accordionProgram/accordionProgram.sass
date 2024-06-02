@@ -174,7 +174,7 @@
 	position: relative
 	+fluid('margin-bottom', 15, 35)
 	.accordion__padding
-		+fluid('padding', 18, 25)
+		+fluid('padding', 18, 26)
 		border-radius: 10px
 		+trans1
 	.arrow
@@ -301,6 +301,8 @@
 	.w-lg-10
 		position: relative
 		text-align: center
+		@media screen and (max-width: $md)
+			text-align: left 
 		&::after
 			content: ''
 			position: absolute
@@ -344,18 +346,78 @@
 	left: -10000px
 	top: -10000px
 
-.pdf-clone
+#pdf-clone
 	.pdf-style
-		.tag span
-			position: relative
-			top: -12px !important
+		.w-lg-15, .w-lg-10
+			width: 15% !important	
+		.w-lg-85	
+			width: 85% !important
+		.w-lg-45
+			width: 45% !important
+		&.accordion__button .br-solid
+			border-right: 3px solid var(--color-border-solid) !important
+		&.accordion__finish.social 
+			.accordion__padding
+				border: 2px solid var(--color-dark-2) !important
+		.accordion__padding
+			padding: 25px !important
+		.w-lg-15
+			text-align: center !important
+		.tag 
+			display: inline-block !important
+			margin-bottom: 0px !important
+			span
+				position: relative
+				top: -12px !important
+				font-size: 14px !important
+				font-weight: 500 !important
+
+		.w-lg-10 
+			h3
+				font-size: 22px !important	
+				font-weight: 300 !important	
 		h4, h3, h5, h6
 			position: relative
 			top: -8px !important	
 		h1
-			font-size: 42px !important
+			font-size: 38px !important
+			font-weight: 600 !important
 		h2	
-			font-size: 32px !important
+			font-size: 28px !important
+		h3
+			font-size: 25px !important
+			font-weight: 400 !important
+
+		h4
+			font-size: 20px !important
+			font-weight: 300 !important
+
+		h5
+			font-size: 17px !important
+			position: relative
+			top: -9px !important
+		h6
+			font-size: 15px !important
+
+		p
+			font-size: 17px !important
+			line-height: 1.4 !important
+			font-weight: 300 !important
+			margin: 10px 0 !important
+		.accordion-content p:last-child
+			margin-bottom: 0px !important
+		p.paragraph-3
+			font-size: 15px !important 	
+		p.fw-600
+			font-weight: 500 !important
+		p.fw-700, span.fw-700
+			font-weight: 600 !important
+				
+		.sponsor
+			.lazy-wrapper
+				max-width: 130px !important
+		p.bb-solid, span.bb-solid
+			border: none !important		
 
 .pdf-only
 	display: none
@@ -365,3 +427,11 @@
 		display: block !important
 	.hidden-pdf
 		display: none !important
+
+.accordion-program
+	.hidden-bullet
+		margin-left: 0px
+		.accordion__bullet
+			display: none !important
+		.accordion__wrapper::after	
+			display: none !important

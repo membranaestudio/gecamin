@@ -53,8 +53,8 @@ export default class CreatePDF extends BaseComponent {
         const pdfWidth = 1380;
         const pdfHeight = 1800;
         let headerHeight = 174;
-        const spaceBelowHeader = 80;
-        const footerSpace = 80;
+        const spaceBelowHeader = 70;
+        const footerSpace = 50;
         const pdf = new jspdf.jsPDF({
             orientation: 'portrait',
             unit: 'px',
@@ -86,10 +86,10 @@ export default class CreatePDF extends BaseComponent {
                 let additionalSpace = 0;
                 let marginTop = 0;
                 if (clone.classList.contains('accordion__button')) {
-                    additionalSpace = 60;
+                    additionalSpace = 40;
                 } else if (clone.classList.contains('accordion__finish')) {
-                    additionalSpace = 140;
-                    marginTop = 60;
+                    additionalSpace = 120;
+                    marginTop = 50;
                     currentPageHeight += marginTop; 
                     await this.addMarginTop(pdf, currentPageHeight);
                 } else if (clone.classList.contains('pdf-space-3')) {
