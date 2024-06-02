@@ -195,6 +195,20 @@
 		flex-direction: column
 		justify-content: center
 
+.sponsor
+	display: flex
+	justify-content: end
+	align-items: center
+	position: relative
+	height: 100%
+	@media screen and (max-width: $sm)
+		justify-content: start
+		//margin-top: 10px
+	.lazy-wrapper
+		+fluid('max-width', 120, 180)
+		margin-left: 15px
+		@media screen and (max-width: $sm)		
+
 .accordion__finish
 	position: relative
 	.br-solid
@@ -205,20 +219,6 @@
 		border: 2px solid var(--color-dark-1)
 		+fluid('padding', 15, 25)
 		border-radius: 10px
-	.sponsor
-		display: flex
-		justify-content: end
-		align-items: center
-		position: relative
-		height: 100%
-		@media screen and (max-width: $sm)
-			justify-content: start
-			//margin-top: 10px
-		.lazy-wrapper
-			+fluid('max-width', 120, 180)
-			margin-left: 15px
-			@media screen and (max-width: $sm)
-
 	&.social
 		.accordion__padding
 			border: 3px solid var(--color-dark-2)

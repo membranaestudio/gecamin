@@ -89,7 +89,7 @@ export default class CreatePDF extends BaseComponent {
                     additionalSpace = 60;
                 } else if (clone.classList.contains('accordion__finish')) {
                     additionalSpace = 140;
-                    marginTop = 60;
+                    marginTop = 80;
                     currentPageHeight += marginTop; 
                     await this.addMarginTop(pdf, currentPageHeight);
                 } else if (clone.classList.contains('pdf-space-3')) {
